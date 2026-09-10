@@ -491,7 +491,7 @@ class Component extends DCLogic {
   };
   show(i){
     const secs = this.sections(); if (!secs.length) return;
-    secs.forEach((s, k) => { s.style.display = k === i ? 'block' : 'none'; });
+    secs.forEach((s, k) => { s.style.display = (this.mobile || k === i) ? 'block' : 'none'; });
     const bg = getComputedStyle(secs[i]).backgroundColor;
     this.outerRef.current.style.background = bg; document.body.style.background = bg;
     this.cur = i;
