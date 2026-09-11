@@ -1,569 +1,95 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>Кирилл Паскаль — Руководитель направления автоматизации и ИИ‑продуктов</title>
+<meta name="description" content="Руководитель направления автоматизации и ИИ‑продуктов — Кирилл Паскаль">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'))}catch(e){}})();</script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-html,body{margin:0;padding:0;background:#23409f;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-a:hover{opacity:.92}
-@keyframes kUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-@keyframes kShot{from{opacity:0;transform:perspective(1400px) rotateY(-18deg) translateX(80px)}to{opacity:1;transform:perspective(1400px) rotateY(-8deg) translateX(0)}}
-@keyframes kSlide{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:translateX(0)}}
-@keyframes kDraw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-@keyframes kGrowX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-@keyframes kFlip{from{opacity:0;transform:perspective(1200px) rotateY(-90deg)}to{opacity:1;transform:perspective(1200px) rotateY(0)}}
-@keyframes kFade{from{opacity:0}to{opacity:1}}
-@keyframes kPop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
-@keyframes kDrift{from{transform:translate(0,0)}to{transform:translate(28px,-22px)}}
-@media (max-width:767px){
-  [data-ch]{position:static!important;height:auto!important;min-height:0!important;padding:56px 24px 72px!important;display:block!important;overflow-wrap:anywhere}
-  [data-ch] *{max-width:100%!important}
-  [data-grid]{grid-template-columns:1fr!important;gap:32px!important}
-  [data-shot],[data-shot] *{transform:none!important}
-  [data-fan]{position:static!important;height:auto!important;display:grid!important;gap:20px!important}
-  [data-fan]>div{position:static!important;width:100%!important;transform:none!important}
-  [data-h1]{font-size:34px!important}
-  [data-hero]{font-size:42px!important}
-  [data-lead]{font-size:18px!important}
-  [data-num]{font-size:36px!important}
-  [data-row]{flex-wrap:wrap!important}
-  [data-circles]{display:none!important}
-  [data-photo]{width:200px!important;height:200px!important}
-  [data-tl]{grid-template-columns:1fr!important;gap:28px!important}
-  [data-tlline]{display:none!important}
-  [data-ctr]{position:static!important;margin-top:40px!important;display:block!important;overflow-wrap:anywhere}
-  [data-ch] *{max-width:100%!important}
-  [data-hide-m]{display:none!important}
-}
-</style>
-</helmet>
-<div ref="{{ outerRef }}" onClick="{{ onClick }}" style="position:fixed;inset:0;overflow:hidden;background:#23409f;font-family:Manrope,sans-serif;color:#fff">
-  <div ref="{{ stageRef }}" style="position:absolute;left:50%;top:50%;width:1440px;height:900px;transform:translate(-50%,-50%) scale(1);transform-origin:center center">
+<div class="progress" aria-hidden="true"></div>
+<nav class="top"><div class="wrap">
+  <a class="name" href="index.html">Кирилл Паскаль</a>
+  <ul data-spy><li><a href="#hero">Кто я</a></li><li><a href="#platform">Платформа</a></li><li><a href="#metrics">Показатели</a></li><li><a href="#rhythm">Ритм Дела</a></li><li><a href="#omnerio">Omnerio</a></li><li><a href="#how">Как работаю</a></li><li><a href="#contacts">Контакты</a></li></ul>
+  
+  <button class="btn icon" id="copy" type="button" title="Скопировать ссылку" aria-label="Скопировать ссылку"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>Скопировать ссылку</span></button>
+  <a class="btn primary" href="resume.pdf">Резюме в PDF</a>
+  <button class="btn theme" id="theme" type="button" aria-label="Переключить тему"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</div></nav>
 
-    <!-- 01 Hero -->
-    <section data-ch="1" data-screen-label="01" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#23409f;color:#fff;display:block">
-      <div data-grid style="display:grid;grid-template-columns:1.2fr .8fr;gap:40px;height:100%;align-items:center">
-        <div style="display:flex;flex-direction:column;gap:28px;position:relative;z-index:1">
-          <div data-a="up" data-d="0" style="font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#f4c76b">Портфолио 2026</div>
-          <h1 data-hero style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:84px;line-height:.98;letter-spacing:-0.02em;margin:0;color:#fff">
-            <span data-a="up" data-d="0.15" style="display:block">Строю</span>
-            <span data-a="up" data-d="0.3" style="display:block">ИИ‑продукты,</span>
-            <span data-a="up" data-d="0.45" style="display:block">которые внедряются</span>
-          </h1>
-          <p data-a="up" data-d="0.6" data-lead style="font-size:20px;line-height:1.5;color:rgba(255,255,255,.85);margin:0;max-width:600px">Кирилл Паскаль · Руководитель направления автоматизации и ИИ-продуктов. Корпоративная платформа на 14 модулей, личный ИИ-собеседник, таск-менеджер — от идеи до продуктива, один человек и ИИ-агенты.</p>
-          <div data-a="up" data-d="0.75" data-row style="display:flex;gap:16px;align-items:center">
-            <a href="#" onClick="{{ goProjects }}" style="display:inline-flex;align-items:center;height:56px;padding:0 32px;border-radius:999px;background:#f4c76b;color:#182b6e;font-weight:700;font-size:17px">Смотреть проекты</a>
-            <a href="resume.pdf" style="display:inline-flex;align-items:center;height:56px;padding:0 32px;border-radius:999px;border:2px solid rgba(255,255,255,.5);color:#fff;font-weight:700;font-size:17px;box-sizing:border-box">Скачать резюме</a>
-          </div>
-          <div data-a="up" data-d="0.9" style="font-size:14px;color:rgba(255,255,255,.85)">Санкт-Петербург · +7 (921) 859-84-84 · kirillzakrasovsky@yandex.ru</div>
-        </div>
-        <div style="position:relative;height:100%;display:flex;align-items:center;justify-content:center">
-          <div data-circles style="position:absolute;inset:0">
-            <div data-a="drift" style="position:absolute;width:480px;height:480px;border-radius:50%;background:#182b6e;left:calc(50% - 240px);top:calc(50% - 300px)"></div>
-            <div data-a="drift" data-d="-10" style="position:absolute;width:300px;height:300px;border-radius:50%;background:#f4c76b;left:calc(50% - 20px);top:calc(50% - 20px)"></div>
-          </div>
-          <div data-a="pop" data-d="0.5" data-photo style="position:relative;z-index:1;width:300px;height:300px;border-radius:50%;border:6px solid #fff;box-shadow:0 0 0 10px #182b6e;overflow:hidden;box-sizing:border-box">
-            <img src="uploads/photo.jpg" alt="Кирилл Паскаль" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 02 Кто я -->
-    <section data-ch="2" data-screen-label="02" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#fff;color:#131f52;display:none">
-      <div style="display:flex;flex-direction:column;gap:40px;height:100%;justify-content:center">
-        <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:52px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#131f52;max-width:1100px">
-          <span data-a="up" data-d="0" style="display:block">Из закупок — в разработку продуктов</span>
-        </h1>
-        <div data-grid style="display:grid;grid-template-columns:1fr 64px 1fr 64px 1fr;gap:0;align-items:stretch">
-          <div data-a="slide" data-d="0.3" style="background:#edf0f9;border-radius:18px;padding:36px 32px;display:flex;flex-direction:column;gap:18px;min-height:340px">
-            <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:700;font-size:24px;color:#23409f">Закупки и тендеры</div>
-            <p style="margin:0;font-size:19px;line-height:1.5;color:rgba(19,31,82,.75)">10 лет: тендерный отдел с нуля, 1,5 млрд ₽ выигранных тендеров, ~2 млрд ₽ урегулированных процедур, 44-ФЗ и 223-ФЗ, ЭТП, договорная работа.</p>
-          </div>
-          <div data-hide-m style="display:flex;align-items:center;justify-content:center"><svg width="64" height="24" viewBox="0 0 64 24" fill="none" stroke="#23409f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path data-a="draw" data-d="0.6" pathLength="1" stroke-dasharray="1" d="M4 12h52M44 3l12 9-12 9"></path></svg></div>
-          <div data-a="slide" data-d="0.45" style="background:#edf0f9;border-radius:18px;padding:36px 32px;display:flex;flex-direction:column;gap:18px;min-height:340px">
-            <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:700;font-size:24px;color:#23409f">Автоматизация процессов</div>
-            <p style="margin:0;font-size:19px;line-height:1.5;color:rgba(19,31,82,.75)">Макросы, Power Query, боты и интеграции с 1С: пакет документов к комиссии собирается сам, письма разбираются в реестр, согласование ЗРДС — 1 минута вместо 3.</p>
-          </div>
-          <div data-hide-m style="display:flex;align-items:center;justify-content:center"><svg width="64" height="24" viewBox="0 0 64 24" fill="none" stroke="#23409f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path data-a="draw" data-d="0.75" pathLength="1" stroke-dasharray="1" d="M4 12h52M44 3l12 9-12 9"></path></svg></div>
-          <div data-a="slide" data-d="0.6" style="background:#edf0f9;border-radius:18px;padding:36px 32px;display:flex;flex-direction:column;gap:18px;min-height:340px">
-            <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:700;font-size:24px;color:#23409f">Собственные продукты</div>
-            <p style="margin:0;font-size:19px;line-height:1.5;color:rgba(19,31,82,.75)">Корпоративная ИИ-платформа на 14 модулей для группы Газстройпром, таск‑менеджер «Ритм Дела», Omnerio. Спроектировал, построил, внедрил и обучил людей.</p>
-          </div>
-        </div>
-        <p data-a="up" data-d="0.9" data-lead style="margin:0;font-size:24px;line-height:1.4;color:#131f52;max-width:1000px">Знаю процесс изнутри — поэтому строю то, чем реально пользуются.</p>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:rgba(19,31,82,.75)">02 / 11</div>
-    </section>
-
-    <!-- 03 Хронология -->
-    <section data-ch="3" data-screen-label="03" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#23409f;color:#fff;display:none">
-      <div style="display:flex;flex-direction:column;gap:64px;height:100%;justify-content:center">
-        <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:52px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#fff;max-width:1200px">
-          <span data-a="up" data-d="0" style="display:block">2015 — 2025: от тендерного отдела</span>
-          <span data-a="up" data-d="0.15" style="display:block">до платформы в продуктиве</span>
-        </h1>
-        <div style="position:relative">
-          <div data-tlline data-a="growx" data-d="0.3" style="position:absolute;left:0;right:0;top:78px;height:3px;background:rgba(255,255,255,.35);transform-origin:left center"></div>
-          <div data-tl style="display:grid;grid-template-columns:repeat(6,1fr);gap:20px">
-            <div style="display:flex;flex-direction:column;gap:14px">
-              <div data-a="up" data-d="0.5" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#f4c76b;line-height:1">2015</div>
-              <div data-a="pop" data-d="0.5" style="width:18px;height:18px;border-radius:50%;background:#f4c76b;margin:6px 0 10px"></div>
-              <div style="font-weight:700;font-size:18px;color:#fff">Питерэнергомаш</div>
-              <p style="margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.85)">собрал тендерный отдел из 3 человек и выиграл тендеров примерно на 1,5 млрд ₽</p>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:14px">
-              <div data-a="up" data-d="0.65" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#f4c76b;line-height:1">2020</div>
-              <div data-a="pop" data-d="0.65" style="width:18px;height:18px;border-radius:50%;background:#f4c76b;margin:6px 0 10px"></div>
-              <div style="font-weight:700;font-size:18px;color:#fff">«Единая экология»</div>
-              <p style="margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.85)">коммерческий отдел из 2 человек, контракты примерно на 30 млн ₽</p>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:14px">
-              <div data-a="up" data-d="0.8" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#f4c76b;line-height:1">2021</div>
-              <div data-a="pop" data-d="0.8" style="width:18px;height:18px;border-radius:50%;background:#f4c76b;margin:6px 0 10px"></div>
-              <div style="font-weight:700;font-size:18px;color:#fff">«Уралпроектинжиниринг»</div>
-              <p style="margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.85)">открыл филиал в Петербурге: офис, серверная, 5 человек коммерческой службы и 7 технического отдела</p>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:14px">
-              <div data-a="up" data-d="0.95" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#f4c76b;line-height:1">2022</div>
-              <div data-a="pop" data-d="0.95" style="width:18px;height:18px;border-radius:50%;background:#f4c76b;margin:6px 0 10px"></div>
-              <div style="font-weight:700;font-size:18px;color:#fff">ГСП-Комплектация</div>
-              <p style="margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.85)">конкурсные процедуры, регламенты, первые автоматизации</p>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:14px">
-              <div data-a="up" data-d="1.1" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:34px;color:#f4c76b;line-height:1.15;white-space:nowrap">2023–24</div>
-              <div data-a="pop" data-d="1.1" style="width:18px;height:18px;border-radius:50%;background:#f4c76b;margin:6px 0 10px"></div>
-              <div style="font-weight:700;font-size:18px;color:#fff">Автоматизация закупок</div>
-              <p style="margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.85)">конвейер документов к комиссии, поток «почта → реестр», бот отсутствий, интеграция ЗРДС с 1С</p>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:14px">
-              <div data-a="up" data-d="1.25" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#f4c76b;line-height:1">2025</div>
-              <div data-a="pop" data-d="1.25" style="width:18px;height:18px;border-radius:50%;background:#f4c76b;margin:6px 0 10px"></div>
-              <div style="font-weight:700;font-size:18px;color:#fff">Корпоративная ИИ-платформа</div>
-              <p style="margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.85)">с 2025: платформа, 14 модулей в продуктиве</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:#f4c76b">03 / 11</div>
-    </section>
-
-    <!-- 04 Платформа -->
-    <section data-ch="4" data-screen-label="04" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#fff;color:#131f52;display:none">
-      <div data-grid style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;height:100%;align-items:center">
-        <div style="display:flex;flex-direction:column;gap:28px">
-          <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:42px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#131f52">
-            <span data-a="up" data-d="0" style="display:block">Корпоративная ИИ‑платформа:</span>
-            <span data-a="up" data-d="0.15" style="display:block">14 модулей, три месяца,</span>
-            <span data-a="up" data-d="0.3" style="display:block">один человек</span>
-          </h1>
-          <p data-a="up" data-d="0.45" data-lead style="margin:0;font-size:20px;line-height:1.5;color:rgba(19,31,82,.75)">7 июня 2026 года — первый коммит в пустой репозиторий. Сегодня 14 модулей: письма, спецификации, цены, акты, задачи, чат, метрики. Модель работает внутри контура — облачный ИИ здесь запрещён. 2222 автотеста, 640 pull request, 650+ сотрудников.</p>
-          <div data-a="up" data-d="0.6" data-row style="display:flex;gap:28px;align-items:baseline;font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#23409f;line-height:1;font-variant-numeric:tabular-nums">
-            <span data-count="14" data-d="0.6" style="display:inline-block;min-width:2ch;text-align:right">14</span><span style="color:rgba(19,31,82,.3)">·</span>
-            <span data-count="2222" data-d="0.6" style="display:inline-block;min-width:4.6ch;text-align:right">2 222</span><span style="color:rgba(19,31,82,.3)">·</span>
-            <span data-count="640" data-d="0.6" style="display:inline-block;min-width:3ch;text-align:right">640</span><span style="color:rgba(19,31,82,.3)">·</span>
-            <span data-count="650" data-suf="+" data-d="0.6" style="display:inline-block;min-width:4ch;text-align:right">650+</span>
-          </div>
-          <div data-a="up" data-d="0.75"><a href="platform.html" style="display:inline-flex;align-items:center;height:56px;padding:0 32px;border-radius:999px;background:#f4c76b;color:#182b6e;font-weight:700;font-size:17px">Подробная презентация платформы</a></div>
-        </div>
-        <div data-fan style="position:relative;height:520px">
-          <div style="position:absolute;left:0;top:0;width:380px;z-index:1">
-            <div data-a="shot" data-d="0.4" data-shot style="border-radius:18px;overflow:hidden;box-shadow:0 40px 80px rgba(10,20,65,.25);background:#edf0f9">
-              <div style="height:44px;background:#131f52;display:flex;align-items:center;gap:8px;padding:0 16px"><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span></div>
-              <img src="uploads/home.png" alt="Общий вид платформы" style="width:100%;display:block;aspect-ratio:1.6;object-fit:cover">
-            </div>
-          </div>
-          <div style="position:absolute;left:70px;top:120px;width:380px;z-index:2">
-            <div data-a="shot" data-d="0.55" data-shot style="border-radius:18px;overflow:hidden;box-shadow:0 40px 80px rgba(10,20,65,.25);background:#edf0f9">
-              <div style="height:44px;background:#131f52;display:flex;align-items:center;gap:8px;padding:0 16px"><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span></div>
-              <img src="uploads/letters.png" alt="Модуль писем" style="width:100%;display:block;aspect-ratio:1.6;object-fit:cover">
-            </div>
-          </div>
-          <div style="position:absolute;left:140px;top:240px;width:380px;z-index:3">
-            <div data-a="shot" data-d="0.7" data-shot style="border-radius:18px;overflow:hidden;box-shadow:0 40px 80px rgba(10,20,65,.25);background:#edf0f9">
-              <div style="height:44px;background:#131f52;display:flex;align-items:center;gap:8px;padding:0 16px"><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span></div>
-              <img src="uploads/udo_metrics.png" alt="Метрики руководителю" style="width:100%;display:block;aspect-ratio:1.6;object-fit:cover">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:rgba(19,31,82,.75)">04 / 11</div>
-    </section>
-
-    <!-- 05 Task Manager -->
-    <section data-ch="5" data-screen-label="05" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#23409f;color:#fff;display:none">
-      <div data-grid style="display:grid;grid-template-columns:1fr 1fr;gap:40px;height:100%;align-items:center">
-        <div style="display:flex;flex-direction:column;gap:28px">
-          <div data-a="up" data-d="0" style="font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#f4c76b">Собственный продукт · в эксплуатации</div>
-          <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:48px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#fff">
-            <span data-a="up" data-d="0.15" style="display:block">Ритм Дела —</span>
-            <span data-a="up" data-d="0.3" style="display:block">внутренний таск‑менеджер</span>
-          </h1>
-          <p data-a="up" data-d="0.45" data-lead style="margin:0;font-size:18px;line-height:1.5;color:rgba(255,255,255,.85)">Ритм Дела — таск‑менеджер для компании: веб и PWA, Telegram-бот и Mini App как второй вход. Четыре роли — администратор, старший руководитель, руководитель, сотрудник; изолированные рабочие области команд, проверяющий у каждой задачи, журнал аудита каждого действия, восстановление удалённого по правилу двух ключей. Django, 240 автотестов, в эксплуатации.</p>
-          <div data-row style="display:flex;gap:12px;flex-wrap:wrap">
-            <div data-a="fade" data-d="0.6" style="background:#182b6e;border-radius:12px;padding:12px 18px;font-weight:700;font-size:15px">Администратор</div>
-            <div data-a="fade" data-d="0.75" style="background:#182b6e;border-radius:12px;padding:12px 18px;font-weight:700;font-size:15px">Старший руководитель</div>
-            <div data-a="fade" data-d="0.9" style="background:#182b6e;border-radius:12px;padding:12px 18px;font-weight:700;font-size:15px">Руководитель</div>
-            <div data-a="fade" data-d="1.05" style="background:#182b6e;border-radius:12px;padding:12px 18px;font-weight:700;font-size:15px">Сотрудник</div>
-          </div>
-          <div data-a="up" data-d="0.6" data-row style="display:flex;gap:16px;align-items:baseline">
-            <span data-num data-count="240" data-d="0.6" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#f4c76b;line-height:1;font-variant-numeric:tabular-nums;display:inline-block;min-width:3ch;text-align:right">240</span>
-            <span style="font-size:14px;color:rgba(255,255,255,.85)">автотестов</span>
-          </div>
-        </div>
-        <div data-a="shot" data-d="0.4" data-shot style="border-radius:18px;overflow:hidden;box-shadow:0 40px 80px rgba(10,20,65,.25);background:#fff;color:#131f52">
-          <div style="height:44px;background:#131f52;display:flex;align-items:center;gap:8px;padding:0 16px"><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span><span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)"></span></div>
-          <img src="uploads/taskmanager.png" alt="Ритм Дела — календарь задач" style="width:100%;display:block;aspect-ratio:1.6;object-fit:cover;object-position:0 0">
-        </div>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:#f4c76b">05 / 11</div>
-    </section>
-
-    <!-- 06 Omnerio -->
-    <section data-ch="6" data-screen-label="06" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#fff;color:#131f52;display:none">
-      <div style="display:flex;flex-direction:column;gap:32px;height:100%">
-        <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:52px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#131f52;max-width:1200px">
-          <span data-a="up" data-d="0" style="display:block">Omnerio — ИИ‑собеседник,</span>
-          <span data-a="up" data-d="0.15" style="display:block">который помнит человека</span>
-        </h1>
-        <div data-grid style="display:grid;grid-template-columns:1.1fr .9fr;gap:40px;flex:1;min-height:0;align-items:center">
-          <div style="display:flex;flex-direction:column;gap:28px">
-            <p data-a="up" data-d="0.3" data-lead style="margin:0;font-size:17px;line-height:1.5;color:rgba(19,31,82,.75)">Личный ИИ‑собеседник в Telegram: голосовые и текстовые сообщения, фото. Ядро — древо памяти: ассистент по ходу общения узнаёт человека — семья, работа, события, предпочтения — и сам уместно возвращается к этому в разговоре, а не отвечает и забывает. Голос в обе стороны: распознавание речи и озвучка ответов. Личный кабинет в вебе: что ассистент помнит, о чём говорили, планы и напоминания, расход, настройки характера и стиля — подстраивается под человека. Доступ по приглашениям с подтверждением возраста; интеграция с браслетом Fitbit — утренний дайджест по сну. Инфраструктура: домашний сервер плюс облачная VM, свой домен.</p>
-            <div data-a="up" data-d="0.45" data-row style="display:flex;gap:48px;align-items:baseline">
-              <div style="display:flex;flex-direction:column;gap:8px"><span data-num data-count="461" data-d="0.45" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#23409f;line-height:1;font-variant-numeric:tabular-nums;display:inline-block;min-width:3ch">461</span><span style="font-size:14px;color:rgba(19,31,82,.75)">автотест</span></div>
-              <div style="display:flex;flex-direction:column;gap:8px"><span data-num data-count="74" data-d="0.45" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#23409f;line-height:1;font-variant-numeric:tabular-nums;display:inline-block;min-width:2ch">74</span><span style="font-size:14px;color:rgba(19,31,82,.75)">PR</span></div>
-            </div>
-          </div>
-          <div data-row style="display:flex;gap:24px;justify-content:center;align-items:center">
-            <div data-a="up" data-d="0.5" style="flex:none;width:250px;height:500px;border-radius:40px;background:#131f52;padding:12px;box-sizing:border-box;box-shadow:0 40px 80px rgba(10,20,65,.25)">
-              <div style="width:100%;height:100%;border-radius:30px;background:#edf0f9;overflow:hidden;box-sizing:border-box;display:flex;flex-direction:column">
-                <div style="height:64px;background:#23409f;color:#fff;display:flex;align-items:center;gap:10px;padding:16px 16px 0;box-sizing:border-box">
-                  <div style="width:30px;height:30px;border-radius:50%;background:#f4c76b"></div>
-                  <div style="font-weight:700;font-size:14px">Omnerio</div>
-                </div>
-                <div style="flex:1;display:flex;flex-direction:column;gap:10px;justify-content:flex-end;padding:16px 12px 18px">
-                  <div data-a="up" data-d="0.9" style="align-self:flex-end;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:16px 16px 4px 16px;background:#23409f;color:#fff;font-size:12px;font-weight:700">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M8 1v14M4 5v6M12 5v6M1.5 7v2M14.5 7v2"></path></svg>
-                    <span>Голосовое · 0:42</span>
-                  </div>
-                  <div data-a="up" data-d="1.05" style="align-self:flex-start;width:170px;padding:12px 14px;border-radius:16px 16px 16px 4px;background:#fff;display:flex;flex-direction:column;gap:6px"><div style="font-size:11px;font-weight:700;color:#23409f">Ответ ассистента</div><div style="height:6px;border-radius:3px;background:#edf0f9"></div><div style="height:6px;border-radius:3px;background:#edf0f9;width:80%"></div><div style="height:6px;border-radius:3px;background:#edf0f9;width:60%"></div></div>
-                  <div data-a="up" data-d="1.2" style="align-self:flex-start;padding:10px 14px;border-radius:16px 16px 16px 4px;background:#fff;color:#131f52;font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:#f4c76b"></span>Напоминание</div>
-                </div>
-              </div>
-            </div>
-            <div data-a="up" data-d="0.7" style="flex:none;width:220px;background:#fff;border:1px solid rgba(19,31,82,.12);border-radius:18px;padding:22px;box-sizing:border-box;box-shadow:0 24px 60px rgba(10,20,65,.12);display:flex;flex-direction:column;gap:16px">
-              <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:700;font-size:14px;color:#131f52">Что я о тебе помню</div>
-              <div data-a="fade" data-d="1.1" style="display:flex;align-items:center;gap:10px"><span style="flex:none;width:10px;height:10px;border-radius:50%;background:#23409f"></span><div style="flex:1;height:8px;border-radius:4px;background:#edf0f9"></div></div>
-              <div data-a="fade" data-d="1.25" style="display:flex;align-items:center;gap:10px"><span style="flex:none;width:10px;height:10px;border-radius:50%;background:#23409f"></span><div style="flex:1;height:8px;border-radius:4px;background:#edf0f9;max-width:75%"></div></div>
-              <div data-a="fade" data-d="1.4" style="display:flex;align-items:center;gap:10px"><span style="flex:none;width:10px;height:10px;border-radius:50%;background:#23409f"></span><div style="flex:1;height:8px;border-radius:4px;background:#edf0f9;max-width:85%"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:rgba(19,31,82,.75)">06 / 11</div>
-    </section>
-
-    <!-- 07 Малые автоматизации -->
-    <section data-ch="7" data-screen-label="07" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#fff;color:#131f52;display:none">
-      <div style="display:flex;flex-direction:column;gap:40px;height:100%;justify-content:center">
-        <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:52px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#131f52;max-width:1200px">
-          <span data-a="up" data-d="0" style="display:block">Автоматизации, которые</span>
-          <span data-a="up" data-d="0.15" style="display:block">вернули людям недели</span>
-        </h1>
-        <div data-grid style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px">
-          <div data-a="up" data-d="0.3" style="display:grid;grid-template-rows:auto 1fr;border-radius:18px;overflow:hidden;background:#edf0f9">
-            <div style="padding:28px 28px 24px;display:flex;flex-direction:column;gap:12px">
-              <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:700;font-size:20px;line-height:1.2;color:#131f52">Пакет документов к закупочной комиссии</div>
-              <p style="margin:0;font-size:16px;line-height:1.5;color:rgba(19,31,82,.75)"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(19,31,82,.5)">Было: </span>четыре сотрудника собирают комплект вручную, ошибки в данных.</p>
-            </div>
-            <div data-a="flip" data-d="0.9" style="background:#23409f;color:#fff;padding:24px 28px 28px;display:flex;flex-direction:column;gap:10px;transform-origin:top center">
-              <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#f4c76b">стало</div>
-              <p style="margin:0;font-size:16px;line-height:1.5;color:rgba(255,255,255,.85)">конвейер с валидацией собирает пакет сам.</p>
-              <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:26px;color:#f4c76b;line-height:1.1;margin-top:4px">−240 человеко‑дней в год</div>
-            </div>
-          </div>
-          <div data-a="up" data-d="0.45" style="display:grid;grid-template-rows:auto 1fr;border-radius:18px;overflow:hidden;background:#edf0f9">
-            <div style="padding:28px 28px 24px;display:flex;flex-direction:column;gap:12px">
-              <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:700;font-size:20px;line-height:1.2;color:#131f52">Поток «почта → реестр закупок»</div>
-              <p style="margin:0;font-size:16px;line-height:1.5;color:rgba(19,31,82,.75)"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(19,31,82,.5)">Было: </span>письма читают, копируют в реестр, теряют.</p>
-            </div>
-            <div data-a="flip" data-d="1.05" style="background:#23409f;color:#fff;padding:24px 28px 28px;display:flex;flex-direction:column;gap:10px;transform-origin:top center">
-              <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#f4c76b">стало</div>
-              <p style="margin:0;font-size:16px;line-height:1.5;color:rgba(255,255,255,.85)">приём, разбор и автозаполнение реестра.</p>
-              <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:26px;color:#f4c76b;line-height:1.1;margin-top:4px">−113 человеко‑дней в год, без пропусков</div>
-            </div>
-          </div>
-          <div data-a="up" data-d="0.6" style="display:grid;grid-template-rows:auto 1fr;border-radius:18px;overflow:hidden;background:#edf0f9">
-            <div style="padding:28px 28px 24px;display:flex;flex-direction:column;gap:12px">
-              <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:700;font-size:20px;line-height:1.2;color:#131f52">Согласование ЗРДС</div>
-              <p style="margin:0;font-size:16px;line-height:1.5;color:rgba(19,31,82,.75)"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(19,31,82,.5)">Было: </span>3 минуты на заявку, данные вбивают руками.</p>
-            </div>
-            <div data-a="flip" data-d="1.2" style="background:#23409f;color:#fff;padding:24px 28px 28px;display:flex;flex-direction:column;gap:10px;transform-origin:top center">
-              <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#f4c76b">стало</div>
-              <p style="margin:0;font-size:16px;line-height:1.5;color:rgba(255,255,255,.85)">данные из 1С подаются в маршрут сами — 1 минута; при 50 согласованиях в день — 50 минут вместо 150.</p>
-            </div>
-          </div>
-        </div>
-        <p data-a="up" data-d="1.4" style="margin:0;font-size:17px;line-height:1.5;color:rgba(19,31,82,.75);max-width:1100px">Плюс бот отсутствий и командировок, выгрузка броней Bnovo в Excel, генератор коммерческих предложений и ТЗ из кода (PDF и DOCX).</p>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:rgba(19,31,82,.75)">07 / 11</div>
-    </section>
-
-    <!-- 08 Как я работаю -->
-    <section data-ch="8" data-screen-label="08" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#23409f;color:#fff;display:none">
-      <div style="display:flex;flex-direction:column;gap:44px;height:100%;justify-content:center">
-        <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:52px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#fff;max-width:1250px">
-          <span data-a="up" data-d="0" style="display:block">Конвейер с ИИ‑агентами</span>
-          <span data-a="up" data-d="0.15" style="display:block">вместо команды</span>
-        </h1>
-        <p data-a="up" data-d="0.3" data-lead style="margin:0;font-size:20px;line-height:1.5;color:rgba(255,255,255,.85);max-width:1150px">Я сам плюс ИИ‑агенты разработки (Claude Code, Codex). Каждая задача идёт по конвейеру: спека → дизайн → план → тесты → реализация → ревью вторым агентом → PR → релиз с инструкцией для пользователей. Так за три месяца платформа выросла до 14 модулей: 1 741 коммит, 640 PR, 2 222 автотеста.</p>
-        <div style="position:relative">
-          <div data-tlline data-a="growx" data-d="0.45" style="position:absolute;left:40px;right:40px;top:50%;height:2px;background:rgba(255,255,255,.35);transform-origin:left center"></div>
-          <div data-row style="position:relative;display:flex;justify-content:space-between;gap:10px">
-            <div data-a="pop" data-d="0.5" style="background:#182b6e;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px">Спека</div>
-            <div data-a="pop" data-d="0.62" style="background:#182b6e;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px">Дизайн</div>
-            <div data-a="pop" data-d="0.74" style="background:#182b6e;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px">План</div>
-            <div data-a="pop" data-d="0.86" style="background:#182b6e;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px">Тесты</div>
-            <div data-a="pop" data-d="0.98" style="background:#182b6e;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px">Реализация</div>
-            <div data-a="pop" data-d="1.1" style="background:#182b6e;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px">Ревью вторым агентом</div>
-            <div data-a="pop" data-d="1.22" style="background:#182b6e;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px">PR</div>
-            <div data-a="pop" data-d="1.34" style="background:#f4c76b;border:2px solid #f4c76b;color:#182b6e;border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px">Релиз с инструкцией</div>
-          </div>
-        </div>
-        <div data-a="up" data-d="0.6" data-row style="display:flex;gap:48px;align-items:baseline;flex-wrap:wrap">
-          <div style="display:flex;flex-direction:column;gap:8px"><span data-num data-count="1741" data-d="0.6" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#fff;line-height:1;font-variant-numeric:tabular-nums;display:inline-block;min-width:4.6ch">1 741</span><span style="font-size:14px;color:rgba(255,255,255,.85)">коммит</span></div>
-          <div style="display:flex;flex-direction:column;gap:8px"><span data-num data-count="640" data-d="0.6" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#fff;line-height:1;font-variant-numeric:tabular-nums;display:inline-block;min-width:3ch">640</span><span style="font-size:14px;color:rgba(255,255,255,.85)">PR</span></div>
-          <div style="display:flex;flex-direction:column;gap:8px"><span data-num data-count="2222" data-d="0.6" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#fff;line-height:1;font-variant-numeric:tabular-nums;display:inline-block;min-width:4.6ch">2 222</span><span style="font-size:14px;color:rgba(255,255,255,.85)">автотеста</span></div>
-        </div>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:#f4c76b">08 / 11</div>
-    </section>
-
-    <!-- 09 Эффект в цифрах -->
-    <section data-ch="9" data-screen-label="09" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#fff;color:#131f52;display:none">
-      <div style="display:flex;flex-direction:column;gap:36px;height:100%;justify-content:center">
-        <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:52px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#131f52">
-          <span data-a="up" data-d="0" style="display:block">Что изменилось для людей и процессов</span>
-        </h1>
-        <div data-grid style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
-          <div data-a="up" data-d="0.3" style="background:#edf0f9;border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-            <div data-num data-count="14" data-d="0.3" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#23409f;line-height:1;font-variant-numeric:tabular-nums;min-width:2ch">14</div>
-            <div style="font-size:14px;line-height:1.5;color:rgba(19,31,82,.75)">модулей платформы в продуктиве</div>
-          </div>
-          <div data-a="up" data-d="0.4" style="background:#edf0f9;border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-            <div data-num data-count="650" data-suf="+" data-d="0.4" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#23409f;line-height:1;font-variant-numeric:tabular-nums;min-width:4ch">650+</div>
-            <div style="font-size:14px;line-height:1.5;color:rgba(19,31,82,.75)">сотрудников в контуре платформы</div>
-          </div>
-          <div data-a="up" data-d="0.5" style="background:#edf0f9;border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-            <div data-num data-count="2222" data-d="0.5" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#23409f;line-height:1;font-variant-numeric:tabular-nums;min-width:4.6ch">2 222</div>
-            <div style="font-size:14px;line-height:1.5;color:rgba(19,31,82,.75)">автотеста</div>
-          </div>
-          <div data-a="up" data-d="0.6" style="background:#edf0f9;border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-            <div data-num data-count="240" data-pre="−" data-d="0.6" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#23409f;line-height:1;font-variant-numeric:tabular-nums;min-width:4ch">−240</div>
-            <div style="font-size:14px;line-height:1.5;color:rgba(19,31,82,.75)">человеко‑дней в год: документы к комиссии</div>
-          </div>
-          <div data-a="up" data-d="0.7" style="background:#edf0f9;border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-            <div data-num data-count="113" data-pre="−" data-d="0.7" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#23409f;line-height:1;font-variant-numeric:tabular-nums;min-width:4ch">−113</div>
-            <div style="font-size:14px;line-height:1.5;color:rgba(19,31,82,.75)">человеко‑дней в год: почта → реестр</div>
-          </div>
-          <div data-a="up" data-d="0.8" style="background:#edf0f9;border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-            <div data-num style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#23409f;line-height:1;display:flex;gap:10px;align-items:baseline;font-variant-numeric:tabular-nums"><span>3 →</span><span data-flick="3|1" style="display:inline-block;min-width:1ch">1</span><span style="font-size:22px">мин</span></div>
-            <div style="font-size:14px;line-height:1.5;color:rgba(19,31,82,.75)">согласование ЗРДС</div>
-          </div>
-          <div data-a="up" data-d="0.9" style="background:#edf0f9;border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-            <div data-num style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#23409f;line-height:1;display:flex;gap:10px;align-items:baseline;font-variant-numeric:tabular-nums"><span data-count="2" data-pre="~" data-d="0.9" style="display:inline-block;min-width:2ch">~2</span><span style="font-size:22px">млрд ₽</span></div>
-            <div style="font-size:14px;line-height:1.5;color:rgba(19,31,82,.75)">урегулированных закупочных процедур</div>
-          </div>
-          <div data-a="up" data-d="1.0" style="background:#edf0f9;border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-            <div data-num style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#23409f;line-height:1;display:flex;gap:10px;align-items:baseline;font-variant-numeric:tabular-nums"><span data-count="1.5" data-d="1.0" style="display:inline-block;min-width:3ch">1,5</span><span style="font-size:22px">млрд ₽</span></div>
-            <div style="font-size:14px;line-height:1.5;color:rgba(19,31,82,.75)">выигранных тендеров</div>
-          </div>
-          <div data-a="up" data-d="1.1" style="background:#edf0f9;border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-            <div data-num data-count="30" data-pre="−" data-suf=" %" data-d="1.1" style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:40px;color:#23409f;line-height:1;font-variant-numeric:tabular-nums;min-width:5ch">−30 %</div>
-            <div style="font-size:14px;line-height:1.5;color:rgba(19,31,82,.75)">времени операции после плагина AVEVA</div>
-          </div>
-        </div>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:rgba(19,31,82,.75)">09 / 11</div>
-    </section>
-
-    <!-- 10 Что дальше -->
-    <section data-ch="10" data-screen-label="10" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#23409f;color:#fff;display:none">
-      <div style="display:flex;flex-direction:column;gap:44px;height:100%;justify-content:center">
-        <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:52px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#fff">
-          <span data-a="up" data-d="0" style="display:block">Куда я веду это дальше</span>
-        </h1>
-        <div style="display:flex;flex-direction:column;gap:20px">
-          <div data-a="growx" data-d="0.3" data-dur="0.8" style="transform-origin:left center;background:#182b6e;border-radius:18px;padding:28px 36px;display:grid;grid-template-columns:72px 1fr;gap:24px;align-items:center">
-            <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#f4c76b;line-height:1">1</div>
-            <p style="margin:0;font-size:20px;line-height:1.5;color:rgba(255,255,255,.85)">Первое: вытеснить 1С там, где она не учётная система, — согласования, реестры, надстройки и ручной труд вокруг неё. Это моё видение, а не решение компании: учётное ядро остаётся в 1С.</p>
-          </div>
-          <div data-a="growx" data-d="0.45" data-dur="0.8" style="transform-origin:left center;background:#182b6e;border-radius:18px;padding:28px 36px;display:grid;grid-template-columns:72px 1fr;gap:24px;align-items:center">
-            <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#f4c76b;line-height:1">2</div>
-            <p style="margin:0;font-size:20px;line-height:1.5;color:rgba(255,255,255,.85)">Второе: ИИ-ассистент сотрудника, который отвечает по данным компании строго в рамках прав человека.</p>
-          </div>
-          <div data-a="growx" data-d="0.6" data-dur="0.8" style="transform-origin:left center;background:#182b6e;border-radius:18px;padding:28px 36px;display:grid;grid-template-columns:72px 1fr;gap:24px;align-items:center">
-            <div style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:44px;color:#f4c76b;line-height:1">3</div>
-            <p style="margin:0;font-size:20px;line-height:1.5;color:rgba(255,255,255,.85)">Третье: тиражирование платформы — в другой компании тот же контур поднимается на своём сервере.</p>
-          </div>
-        </div>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:#f4c76b">10 / 11</div>
-    </section>
-
-    <!-- 11 Контакты -->
-    <section data-ch="11" data-screen-label="11" style="position:absolute;inset:0;padding:72px;box-sizing:border-box;background:#131f52;color:#fff;display:none">
-      <div data-grid style="display:grid;grid-template-columns:1fr 1fr;gap:40px;height:100%;align-items:center">
-        <div style="display:flex;flex-direction:column;gap:28px">
-          <h1 data-h1 style="font-family:Unbounded,'Arial Black',sans-serif;font-weight:900;font-size:52px;line-height:1.02;letter-spacing:-0.02em;margin:0;color:#fff">
-            <span data-a="up" data-d="0.15" style="display:block">Давайте поговорим</span>
-          </h1>
-          <div style="display:flex;flex-direction:column;gap:10px;font-family:Unbounded,'Arial Black',sans-serif;font-weight:700;font-size:20px;line-height:1.3;color:#fff">
-            <div data-a="up" data-d="0.3">Кирилл Паскаль</div>
-            <div data-a="up" data-d="0.45">+7 (921) 859-84-84</div>
-            <div data-a="up" data-d="0.6">kirillzakrasovsky@yandex.ru</div>
-            <div data-a="up" data-d="0.75">Санкт-Петербург · английский B2</div>
-          </div>
-          <p data-a="up" data-d="0.9" style="margin:0;font-size:20px;line-height:1.5;color:rgba(255,255,255,.85)">Резюме в PDF и подробная презентация платформы — по ссылкам ниже.</p>
-          <div data-a="up" data-d="1.05" data-row style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
-            <a href="resume.pdf" style="display:inline-flex;align-items:center;height:56px;padding:0 32px;border-radius:999px;background:#f4c76b;color:#182b6e;font-weight:700;font-size:17px">Скачать резюме (PDF)</a>
-            <a href="platform.html" style="display:inline-flex;align-items:center;height:56px;padding:0 32px;border-radius:999px;border:2px solid rgba(255,255,255,.5);color:#fff;font-weight:700;font-size:17px;box-sizing:border-box">Презентация платформы</a>
-          </div>
-        </div>
-        <div style="display:flex;justify-content:center;align-items:center">
-          <div data-a="pop" data-d="0.2" data-photo style="width:300px;height:300px;border-radius:50%;border:6px solid #fff;box-shadow:0 0 0 10px #182b6e;overflow:hidden;box-sizing:border-box">
-            <img src="uploads/photo.jpg" alt="Кирилл Паскаль" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block">
-          </div>
-        </div>
-      </div>
-      <div data-ctr style="position:absolute;right:72px;bottom:72px;font-size:14px;color:#f4c76b">11 / 11</div>
-    </section>
+<section class="hero" id="hero"><div class="wrap">
+  <div>
+    <p class="role">Руководитель направления автоматизации и ИИ‑продуктов</p>
+    <h1>Построил ИИ‑платформу, которой закупки пользуются каждый день</h1>
+    <p class="lead">14 модулей для группы Газстройпром: письма, спецификации, цены, акты, задачи. Документы разбирает система на сервере компании, люди проверяют и подтверждают.</p>
+    <div class="who"><img src="assets/photo.jpg" alt="Кирилл Паскаль"><span>Санкт‑Петербург · <a href="tel:+79218598484">+7 (921) 859‑84‑84</a> · <a href="mailto:kirillzakrasovsky@yandex.ru">kirillzakrasovsky@yandex.ru</a></span></div>
+    <div class="myrole"><h2>Моя роль в платформе</h2><ol><li><strong>Спроектировал</strong><span>собрал требования у регистраторов, закупщиков и руководителей; описал модули и порядок их выхода</span></li><li><strong>Построил</strong><span>разработка через ИИ‑агентов по конвейеру: требования → план → тесты → код → проверка → релиз</span></li><li><strong>Внедрил</strong><span>пилот в одном управлении, затем раскатка по управлениям; обучение, инструкция к каждому релизу</span></li><li><strong>Считаю эффект</strong><span>по фактическому времени операций до и после — в человеко‑днях, а не по ощущениям</span></li></ol></div>
   </div>
-  <div ref="{{ curtainRef }}" style="position:fixed;inset:0;background:#131f52;transform:translateX(-100%);pointer-events:none;z-index:10"></div>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;autoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Автопрокрутка&quot;},&quot;autoplayDelay&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:12,&quot;min&quot;:3,&quot;max&quot;:60,&quot;unit&quot;:&quot;с&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Автопрокрутка&quot;}}">
-class Component extends DCLogic {
-  cur = 0; layoutBusy = false;
-  N = 11;
-  outerRef = React.createRef(); stageRef = React.createRef(); curtainRef = React.createRef();
-  busy = false; timer = null; wheelAt = 0;
-  KF = { up:['kUp',.8], shot:['kShot',1.1], slide:['kSlide',.6], draw:['kDraw',.6], growx:['kGrowX',1.1], flip:['kFlip',.6], fade:['kFade',.6], pop:['kPop',.5] };
-  get reduced(){ return matchMedia('(prefers-reduced-motion: reduce)').matches; }
-  get mobile(){ return matchMedia('(max-width: 767px)').matches; }
-  componentDidMount(){
-    this.layout(); this.show(0);
-    window.addEventListener('resize', this.layout);
-    window.addEventListener('keydown', this.onKey);
-    this.outerRef.current.addEventListener('wheel', this.onWheel, { passive:false });
-  }
-  componentWillUnmount(){
-    window.removeEventListener('resize', this.layout); window.removeEventListener('keydown', this.onKey);
-    clearTimeout(this.timer);
-  }
-  componentDidUpdate(p){ if (p.autoplay !== this.props.autoplay || p.autoplayDelay !== this.props.autoplayDelay) this.schedule(); }
-  sections(){ return this.stageRef.current ? Array.from(this.stageRef.current.querySelectorAll('[data-ch]')) : []; }
-  layout = () => {
-    const st = this.stageRef.current, o = this.outerRef.current; if (!st || this.layoutBusy) return;
-    this.layoutBusy = true;
-    try { if (this.mobile) {
-      Object.assign(o.style, { position:'static', overflow:'visible', background:'#fff' });
-      Object.assign(st.style, { position:'static', transform:'none', width:'auto', height:'auto' });
-      document.body.style.background = '#fff';
-      if (!this.mobileDone) { this.mobileDone = true; this.sections().forEach(s => { s.style.display='block'; this.animate(s); }); }
-    } else {
-      const sc = Math.min(innerWidth/1440, innerHeight/900);
-      Object.assign(o.style, { position:'fixed', overflow:'hidden' });
-      Object.assign(st.style, { position:'absolute', transform:`translate(-50%,-50%) scale(${sc})`, width:'1440px', height:'900px' });
-      if (this.mobileDone) { this.mobileDone = false; this.show(this.cur); }
-    } } finally { this.layoutBusy = false; }
-  };
-  show(i){
-    const secs = this.sections(); if (!secs.length) return;
-    secs.forEach((s, k) => { s.style.display = (this.mobile || k === i) ? 'block' : 'none'; });
-    const bg = getComputedStyle(secs[i]).backgroundColor;
-    this.outerRef.current.style.background = bg; document.body.style.background = bg;
-    this.cur = i;
-    this.animate(secs[i]);
-    this.schedule();
-  }
-  schedule(){
-    clearTimeout(this.timer);
-    if (this.props.autoplay && !this.mobile && this.cur < this.N - 1)
-      this.timer = setTimeout(() => this.go(this.cur + 1), (this.props.autoplayDelay ?? 12) * 1000);
-  }
-  animate(sec){
-    const red = this.reduced, ease = 'cubic-bezier(.2,.8,.2,1)';
-    sec.querySelectorAll('[data-a]').forEach(el => {
-      const t = el.dataset.a, d = +(el.dataset.d || 0);
-      el.style.animation = 'none'; void el.offsetWidth;
-      if (t === 'drift') { el.style.animation = red ? 'none' : `kDrift 20s ease-in-out ${d}s infinite alternate`; return; }
-      const [kf, dd] = this.KF[t] || ['kFade', .6], dur = +(el.dataset.dur || dd);
-      el.style.animation = red ? 'kFade .3s both' : `${kf} ${dur}s ${ease} ${d}s both`;
-    });
-    sec.querySelectorAll('[data-count]').forEach(el => this.count(el, red));
-    sec.querySelectorAll('[data-flick]').forEach(el => {
-      const [a, b] = el.dataset.flick.split('|'); el.textContent = a;
-      clearTimeout(el._t);
-      el._t = setTimeout(() => { el.textContent = b; el.style.animation = 'none'; void el.offsetWidth; el.style.animation = red ? 'kFade .3s both' : 'kUp .4s cubic-bezier(.2,.8,.2,1) both'; }, red ? 0 : 1300);
-    });
-  }
-  count(el, red){
-    const target = +el.dataset.count, pre = el.dataset.pre || '', suf = el.dataset.suf || '', d = +(el.dataset.d || 0) * 1000;
-    const dec = (String(el.dataset.count).split('.')[1] || '').length;
-    const fmt = v => { const s = v.toFixed(dec).replace('.', ','); const [i, f] = s.split(','); return i.replace(/\B(?=(\d{3})+(?!\d))/g, '\u2009') + (f ? ',' + f : ''); };
-    cancelAnimationFrame(el._raf); clearTimeout(el._t0);
-    if (red) { el.textContent = pre + fmt(target) + suf; return; }
-    el.textContent = pre + fmt(0) + suf;
-    el._t0 = setTimeout(() => {
-      const t0 = performance.now();
-      const step = now => {
-        const p = Math.min(1, (now - t0) / 1200), e = 1 - Math.pow(1 - p, 3);
-        el.textContent = pre + fmt(target * e) + suf;
-        if (p < 1) el._raf = requestAnimationFrame(step);
-      };
-      el._raf = requestAnimationFrame(step);
-    }, d);
-  }
-  go(i){
-    if (this.mobile || this.busy || i < 0 || i >= this.N || i === this.cur) return;
-    clearTimeout(this.timer);
-    if (this.reduced) { this.show(i); return; }
-    this.busy = true;
-    const c = this.curtainRef.current;
-    c.style.transition = 'transform .6s cubic-bezier(.2,.8,.2,1)';
-    c.style.transform = 'translateX(0)';
-    setTimeout(() => {
-      this.show(i);
-      c.style.transform = 'translateX(100%)';
-      setTimeout(() => { c.style.transition = 'none'; c.style.transform = 'translateX(-100%)'; this.busy = false; }, 620);
-    }, 620);
-  }
-  onKey = e => {
-    if (['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)) { e.preventDefault(); this.go(this.cur + 1); }
-    if (['ArrowLeft','ArrowUp','PageUp'].includes(e.key)) { e.preventDefault(); this.go(this.cur - 1); }
-  };
-  onWheel = e => {
-    if (this.mobile) return; e.preventDefault();
-    const now = Date.now(); if (now - this.wheelAt < 900 || Math.abs(e.deltaY) < 8) return;
-    this.wheelAt = now; this.go(this.cur + (e.deltaY > 0 ? 1 : -1));
-  };
-  renderVals(){
-    return {
-      outerRef: this.outerRef, stageRef: this.stageRef, curtainRef: this.curtainRef,
-      onClick: e => { if (e.target.closest('a,button')) return; this.go(this.cur + 1); },
-      goProjects: e => { e.preventDefault(); this.go(1); }
-    };
-  }
-}
-</script>
+  <div class="board">
+    <div class="hd"><h2>Модули платформы — нажмите, чтобы открыть</h2><span><b id="cnt">0</b> из 14</span></div>
+    <div class="grid" id="grid"><a class="m" href="modules.html#letters">Входящие письма<i></i></a><a class="m" href="modules.html#specs">Формирование спецификаций<i></i></a><a class="m" href="modules.html#sverka">Сверка спецификаций<i></i></a><a class="m" href="modules.html#spec-approval">Согласование спецификаций<i></i></a><a class="m" href="modules.html#prices">История цен закупок<i></i></a><a class="m" href="modules.html#m7">Акты М‑7<i></i></a><a class="m" href="modules.html#protocols">Протоколы совещаний<i></i></a><a class="m" href="modules.html#presentations">Презентации для руководства<i></i></a><a class="m" href="modules.html#tasks">Задачи<i></i></a><a class="m" href="modules.html#absences">Отсутствия и командировки<i></i></a><a class="m" href="modules.html#chat">Чат сотрудников<i></i></a><a class="m" href="modules.html#metrics">Метрики для руководства<i></i></a><a class="m" href="modules.html#assistant">ИИ‑помощник<i></i></a><a class="m" href="modules.html#admin">Права, журнал, безопасность<i></i></a></div>
+    <p class="ft">Каждый модуль — на отдельной странице: что было, что стало, результат и как устроено.</p>
+  </div>
+</div></section>
+
+<section class="s" id="platform"><div class="wrap">
+  <h2 class="t rv">Корпоративная ИИ‑платформа для закупок и комплектации</h2>
+  <p class="sub rv">Регистраторы, закупщики, руководители управлений — 650+ сотрудников в контуре платформы.</p>
+  <div class="two">
+    <div>
+      <div class="card rv"><h3>Что это</h3><p>Внутренняя система группы Газстройпром. Документы — письма поставщиков, спецификации, акты, протоколы — попадают в неё сами; языковая модель на сервере компании разбирает их и превращает в готовые карточки, реестры и отчёты. Человек проверяет и подтверждает, а не перепечатывает.</p></div>
+      <div class="card rv" style="margin-top:14px"><h3>Что было раньше</h3><p>Раньше один и тот же текст набирали три раза: из почты в таблицу, из таблицы в 1С, из 1С обратно в письмо. Ошибки находили через неделю.</p></div>
+      <div class="card rv" style="margin-top:14px"><h3>Где остаётся 1С</h3><p>Платформа заменяет ручные надстройки вокруг 1С — Excel‑реестры, переписку, согласование по почте. Сама 1С остаётся там, где она сильна: учёт, договоры, оплаты. Это моё видение, а не решение компании.</p></div>
+      <p style="margin-top:22px"><a class="btn primary" href="modules.html">Смотреть модули</a></p>
+    </div>
+    <div class="rv"><figure class="shot" style="margin:0"><div class="bar"><i></i><i></i><i></i>Платформа · главный экран сотрудника</div><img src="uploads/home.png" alt="Платформа · главный экран сотрудника" loading="lazy"></figure><p class="cap">Демо‑данные. Нажмите, чтобы увеличить.</p></div>
+  </div>
+</div></section>
+
+<section class="s" id="metrics"><div class="wrap">
+  <h2 class="t rv">Показатели</h2>
+  <p class="sub rv">Что изменилось для людей и что подтверждает качество системы.</p>
+  <div class="metrics"><div class="metric rv"><b>14</b><span>модулей в ежедневной работе</span></div><div class="metric rv"><b>650+</b><span>сотрудников в контуре платформы</span></div><div class="metric rv"><b>−240</b><span>человеко‑дней в год: пакет документов к закупочной комиссии</span></div><div class="metric rv"><b>−113</b><span>человеко‑дней в год: входящие письма</span></div><div class="metric rv"><b>3 → 1 мин</b><span>согласование заявки на расходование средств</span></div><div class="metric rv"><b>≈ 1 мин</b><span>регистрация письма вместо 10–15</span></div><div class="metric rv"><b>≈ минуты</b><span>сверка спецификации из 200 позиций вместо половины дня</span></div><div class="metric rv"><b>≈ 15 мин</b><span>протокол после совещания вместо половины дня</span></div><div class="metric rv"><b>2 222</b><span>автотеста, релизные ворота</span></div><div class="metric rv"><b>640</b><span>pull request за три месяца</span></div></div>
+  <p class="foot">Цифры со знаком ≈ — оценка по времени операций до и после; остальные — измерено.</p>
+</div></section>
+
+<section class="s" id="rhythm"><div class="wrap">
+  <h2 class="t rv">«Ритм Дела» — таск‑менеджер для компании</h2>
+  <p class="sub rv">Собственный продукт: система задач и внутренней переписки. Работает в вебе, как приложение на телефоне и через Telegram.</p>
+  <div class="two">
+    <div class="rv"><ul class="feat"><li><strong>Задачи</strong><span>постановка, передача исполнителю, срок, проверяющий, статусы; руководитель видит просроченное на одном экране</span></li><li><strong>Роли и команды</strong><span>администратор, старший руководитель, руководитель, сотрудник; у команд изолированные рабочие области</span></li><li><strong>Чат</strong><span>закрытая внутренняя переписка по задачам и без них — внутри собственного сайта компании</span></li><li><strong>Надёжность</strong><span>журнал каждого действия; удалённое восстанавливается по правилу двух ключей</span></li></ul><div class="idea">Продукт можно оформить на компанию и внести в реестр российского ПО Минцифры. У компании появляется свой сайт с закрытым чатом и задачами, который продолжает работать даже при ограничениях доступа к внешним сервисам («белые списки»).</div><p class="cap">В эксплуатации.</p></div>
+    <div class="rv"><figure class="shot" style="margin:0"><div class="bar"><i></i><i></i><i></i>«Ритм Дела» · календарь задач</div><img src="uploads/taskmanager.png" alt="«Ритм Дела» · календарь задач" loading="lazy"></figure></div>
+  </div>
+</div></section>
+
+<section class="s" id="omnerio"><div class="wrap">
+  <h2 class="t rv">Omnerio — ИИ‑собеседник, который помнит человека</h2>
+  <p class="sub rv">Личный ИИ‑собеседник в Telegram, который настраивается под того, кто им пользуется: характер, стиль общения, что помнить и о чём напоминать.</p>
+  <div class="rv"><ul class="feat"><li><strong>Древо памяти</strong><span>по ходу общения запоминает человека — семью, работу, события, предпочтения — и сам возвращается к этому в разговоре</span></li><li><strong>Голос и текст</strong><span>понимает голосовые сообщения, отвечает голосом</span></li><li><strong>Личный кабинет</strong><span>что помнит, о чём говорили, напоминания, планы, настройки характера</span></li><li><strong>Интеграции</strong><span>браслет Fitbit через Google Health — утренний дайджест по сну</span></li><li><strong>Доступ</strong><span>по приглашениям; данные под контролем владельца</span></li></ul><p class="cap">Работает у автора и приглашённых.</p></div>
+</div></section>
+
+<section class="s" id="how"><div class="wrap">
+  <h2 class="t rv">Как я это делаю</h2>
+  <div class="steps rv"><span class="hot">Требования</span><span class="">Дизайн</span><span class="">План</span><span class="">Тесты</span><span class="">Код</span><span class="hot">Проверка второй моделью</span><span class="">Релиз с инструкцией</span></div>
+  <p class="sub rv" style="margin-bottom:8px">Код пишут ИИ‑агенты; за мной — требования, архитектура, приёмка и внедрение по управлениям: обучение, инструкция к каждому релизу, эффект в человеко‑днях.</p>
+  <p class="cap">Платформа — 640 pull request и 2 222 автотеста за три месяца.</p>
+</div></section>
+
+<section class="s" id="contacts"><div class="wrap contacts">
+  <div>
+    <h2 class="t rv">Давайте поговорим</h2>
+    <p class="big rv" style="margin-top:14px">Кирилл Паскаль<br><a href="tel:+79218598484">+7 (921) 859‑84‑84</a><br><a href="mailto:kirillzakrasovsky@yandex.ru">kirillzakrasovsky@yandex.ru</a><br>Санкт‑Петербург · английский B2</p>
+    <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn primary" href="resume.pdf">Резюме в PDF</a><a class="btn" href="mailto:kirillzakrasovsky@yandex.ru">Написать письмо</a></p>
+    <p class="cap">Демонстрация платформы на демо‑данных — по договорённости.</p>
+  </div>
+  <img src="assets/photo.jpg" alt="">
+</div></section>
+<div class="lb" id="lb" role="dialog" aria-label="Скриншот на весь экран"><img alt=""></div>
+<footer><div class="wrap">Кирилл Паскаль · Руководитель направления автоматизации и ИИ‑продуктов. Скриншоты — демо‑данные, все названия и суммы вымышленные.</div></footer>
+<script src="assets/site.js"></script>
 </body>
 </html>
