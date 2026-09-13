@@ -31,7 +31,8 @@ nav.top li.on a{color:var(--text);box-shadow:inset 0 -2px 0 var(--accent)}
 .progress{position:fixed;left:0;top:0;height:3px;background:var(--accent);width:0;z-index:30}
 /* hero */
 .hero{padding:76px 0 60px}
-.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:'text board' 'role board';gap:0 56px;align-items:start}
+.hero .text{grid-area:text}.hero .myrole{grid-area:role}.hero .board{grid-area:board}
 .hero .wrap>div,.two>div,.mp>*{min-width:0}
 img{max-width:100%}
 .who span,.contacts .big{overflow-wrap:anywhere}
@@ -138,8 +139,15 @@ details.tech li{margin:6px 0}
 footer{padding:28px 0;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
 @media (max-width:980px){
   .wrap{padding:0 20px}.hero{padding:40px 0}
-  .hero .wrap,.two,.contacts,.mp{grid-template-columns:1fr}
+  .hero .wrap,.two,.contacts,.mp{grid-template-columns:1fr;gap:28px}
+  .hero .wrap{display:flex;flex-direction:column;gap:24px}.hero .text{order:1}.hero .board{order:2}.hero .myrole{order:3;margin-top:0}
   .hero h1{font-size:36px}.s h2.t{font-size:30px}
+  .lead{font-size:18px}
+  .myrole{margin-top:22px}.myrole li:last-child{border-bottom:0}
+  .board{padding:16px}.board .hd{flex-wrap:wrap;margin-bottom:10px}.board .hd h2{font-size:15px}
+  .grid{grid-template-columns:1fr;gap:8px}.m{padding:11px 12px;font-size:15px;opacity:1;transform:none}
+  .board .ft{font-size:13px}
+  section.s{padding:44px 0}
   .metrics{grid-template-columns:repeat(2,1fr)}
   .flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}
   .myrole ol{grid-template-columns:1fr}
