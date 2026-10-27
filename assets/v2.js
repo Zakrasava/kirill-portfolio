@@ -78,7 +78,7 @@
     function upd() {
       var y = window.scrollY + 200, cur = mods[0];
       mods.forEach(function (m) { if (m.offsetTop <= y) cur = m; });
-      links.forEach(function (l) { var on = l.getAttribute('href') === '#' + cur.id; l.classList.toggle('cur', on); if (on) l.scrollIntoView({ block: 'nearest', inline: 'nearest' }); });
+      links.forEach(function (l) { var on = l.getAttribute('href') === '#' + cur.id; l.classList.toggle('cur', on); if (on) { var box = modnav.querySelector('.wrap'); box.scrollLeft = l.offsetLeft - box.clientWidth / 2 + l.offsetWidth / 2; } });
     }
     window.addEventListener('scroll', upd, { passive: true }); upd();
   }
