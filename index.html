@@ -2,94 +2,173 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#EEEBE4">
 <title>Кирилл Паскаль — Руководитель направления автоматизации и ИИ‑продуктов</title>
-<meta name="description" content="Руководитель направления автоматизации и ИИ‑продуктов — Кирилл Паскаль">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<script>(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'))}catch(e){}})();</script>
+<meta name="description" content="Спроектировал, построил и внедрил ИИ‑платформу закупок для группы Газстройпром. Развиваю собственные продукты и учу сотрудников работать с ИИ.">
+<meta property="og:title" content="Кирилл Паскаль — Руководитель направления автоматизации и ИИ‑продуктов">
+<meta property="og:description" content="Спроектировал, построил и внедрил ИИ‑платформу закупок для группы Газстройпром. Развиваю собственные продукты и учу сотрудников работать с ИИ.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zakrasava.github.io/kirill-portfolio/">
+<meta property="og:image" content="https://zakrasava.github.io/kirill-portfolio/uploads/home.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/v2.css">
 </head>
-<body>
-<div class="progress" aria-hidden="true"></div>
-<nav class="top"><div class="wrap">
-  <a class="name" href="index.html">Кирилл Паскаль</a>
-  <ul data-spy><li><a href="#hero">Кто я</a></li><li><a href="#platform">Платформа</a></li><li><a href="#metrics">Показатели</a></li><li><a href="#rhythm">Ритм Дела</a></li><li><a href="#omnerio">Omnerio</a></li><li><a href="#how">Как работаю</a></li><li><a href="#contacts">Контакты</a></li></ul>
-  
-  <button class="btn icon" id="copy" type="button" title="Скопировать ссылку" aria-label="Скопировать ссылку"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>Скопировать ссылку</span></button>
-  <a class="btn primary" href="resume.pdf">Резюме в PDF</a>
-  <button class="btn theme" id="theme" type="button" aria-label="Переключить тему"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-</div></nav>
-
-<section class="hero" id="hero"><div class="wrap">
-  <div class="text">
-    <p class="role">Руководитель направления автоматизации и ИИ‑продуктов</p>
-    <h1>Построил ИИ‑платформу, которой закупки пользуются каждый день</h1>
-    <p class="lead">14 модулей для группы Газстройпром: письма, спецификации, цены, акты, задачи. Документы разбирает система на сервере компании, люди проверяют и подтверждают.</p>
-    <div class="who"><img src="assets/photo.jpg" alt="Кирилл Паскаль"><span>Санкт‑Петербург · <a href="tel:+79218598484">+7 (921) 859‑84‑84</a> · <a href="mailto:kirillzakrasovsky@yandex.ru">kirillzakrasovsky@yandex.ru</a></span></div>
-  </div>
-  <div class="myrole"><h2>Моя роль в платформе</h2><ol><li><strong>Спроектировал</strong><span>собрал требования у регистраторов, закупщиков и руководителей; описал модули и порядок их выхода</span></li><li><strong>Построил</strong><span>разработка через ИИ‑агентов по конвейеру: требования → план → тесты → код → проверка → релиз</span></li><li><strong>Внедрил</strong><span>пилот в одном управлении, затем раскатка по управлениям; обучение, инструкция к каждому релизу</span></li><li><strong>Считаю эффект</strong><span>по фактическому времени операций до и после — в человеко‑днях, а не по ощущениям</span></li></ol></div>
-  <div class="board">
-    <div class="hd"><h2>Модули платформы — нажмите, чтобы открыть</h2><span><b id="cnt">0</b> из 14</span></div>
-    <div class="grid" id="grid"><a class="m" href="modules.html#letters">Входящие письма<i></i></a><a class="m" href="modules.html#specs">Формирование спецификаций<i></i></a><a class="m" href="modules.html#sverka">Сверка спецификаций<i></i></a><a class="m" href="modules.html#spec-approval">Согласование спецификаций<i></i></a><a class="m" href="modules.html#prices">История цен закупок<i></i></a><a class="m" href="modules.html#m7">Акты М‑7<i></i></a><a class="m" href="modules.html#protocols">Протоколы совещаний<i></i></a><a class="m" href="modules.html#presentations">Презентации для руководства<i></i></a><a class="m" href="modules.html#tasks">Задачи<i></i></a><a class="m" href="modules.html#absences">Отсутствия и командировки<i></i></a><a class="m" href="modules.html#chat">Чат сотрудников<i></i></a><a class="m" href="modules.html#metrics">Метрики для руководства<i></i></a><a class="m" href="modules.html#assistant">ИИ‑помощник<i></i></a><a class="m" href="modules.html#admin">Права, журнал, безопасность<i></i></a></div>
-    <p class="ft">Каждый модуль — на отдельной странице: что было, что стало, результат и как устроено.</p>
-  </div>
-</div></section>
-
-<section class="s" id="platform"><div class="wrap">
-  <h2 class="t rv">Корпоративная ИИ‑платформа для закупок и комплектации</h2>
-  <p class="sub rv">Регистраторы, закупщики, руководители управлений — 650+ сотрудников в контуре платформы.</p>
-  <div class="two">
+<body><aside class="rail" aria-hidden="true"><svg viewBox="0 0 40 1000" preserveAspectRatio="none"><line class="ln" x1="20" y1="0" x2="20" y2="1000"/><line class="ln-on" x1="20" y1="0" x2="20" y2="1000"/></svg><i class="tok"></i></aside><header class="top" id="top"><div class="wrap"><a class="brand" href="#top"><i></i>Кирилл Паскаль</a><nav aria-label="Разделы"><a href="#route">Маршрут</a><a href="#platform">Платформа</a><a href="#metrics">Показатели</a><a href="#modules">Модули</a><a href="#ritm">Продукты</a><a href="#training">Обучение</a><a href="#how">Как работаю</a><a href="#cv">Опыт</a><a href="#contact">Контакты</a></nav><a class="btn sm" href="resume.pdf" download>Резюме в PDF</a></div></header><main>
+<section class="hero" id="start" data-in>
+  <div class="wrap grid">
     <div>
-      <div class="card rv"><h3>Что это</h3><p>Внутренняя система группы Газстройпром. Документы — письма поставщиков, спецификации, акты, протоколы — попадают в неё сами; языковая модель на сервере компании разбирает их и превращает в готовые карточки, реестры и отчёты. Человек проверяет и подтверждает, а не перепечатывает.</p></div>
-      <div class="card rv" style="margin-top:14px"><h3>Что было раньше</h3><p>Раньше один и тот же текст набирали три раза: из почты в таблицу, из таблицы в 1С, из 1С обратно в письмо. Ошибки находили через неделю.</p></div>
-      <div class="card rv" style="margin-top:14px"><h3>Где остаётся 1С</h3><p>Платформа заменяет ручные надстройки вокруг 1С — Excel‑реестры, переписку, согласование по почте. Сама 1С остаётся там, где она сильна: учёт, договоры, оплаты. Это моё видение, а не решение компании.</p></div>
-      <p style="margin-top:22px"><a class="btn primary" href="modules.html">Смотреть модули</a></p>
+      <div class="ph fx"><img class="photo" src="uploads/photo.jpg" alt="Кирилл Паскаль" width="120" height="120">
+        <div><div class="who"><i></i><span>Руководитель направления автоматизации и ИИ‑продуктов</span></div><div class="mono" style="margin-top:8px">Санкт‑Петербург · английский B2</div></div></div>
+      <h1 class="h-xl"><span class="mask"><span>Строю системы,</span></span><span class="mask"><span><em>которыми люди пользуются каждый день</em></span></span></h1>
+      <p class="lead fx">Спроектировал, построил и внедрил ИИ‑платформу закупок для группы Газстройпром. Развиваю собственные продукты и учу сотрудников работать с ИИ.</p>
+      <div class="cta fx">
+        <a class="btn" href="#platform">Смотреть платформу<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+        <a class="btn ghost" href="modules.html">16 модулей</a>
+        <a class="btn ghost" href="resume.html">Резюме</a>
+      </div>
     </div>
-    <div class="rv"><figure class="shot" style="margin:0"><div class="bar"><i></i><i></i><i></i>Платформа · главный экран сотрудника</div><img src="uploads/home.png" alt="Платформа · главный экран сотрудника" loading="lazy"></figure><p class="cap">Демо‑данные. Нажмите, чтобы увеличить.</p></div>
+    <div class="facts fx"><div class="fact"><b class="" data-count="16" data-pre="" data-suf="" data-fmt="">16</b><span>модулей платформы в ежедневной работе</span></div><div class="fact"><b class="" data-count="12000" data-pre="≈ " data-suf=" ч" data-fmt="">≈ 12 000 ч</b><span>человеко‑часов в год возвращают три модуля платформы</span></div><div class="fact"><b class="" data-count="13517" data-pre="" data-suf="" data-fmt="">13 517</b><span>автотестов проходят на сервере перед каждым выпуском</span></div></div>
   </div>
-</div></section>
-
-<section class="s" id="metrics"><div class="wrap">
-  <h2 class="t rv">Показатели</h2>
-  <p class="sub rv">Что изменилось для людей и что подтверждает качество системы.</p>
-  <div class="metrics"><div class="metric rv"><b>14</b><span>модулей в ежедневной работе</span></div><div class="metric rv"><b>650+</b><span>сотрудников в контуре платформы</span></div><div class="metric rv"><b>−240</b><span>человеко‑дней в год: пакет документов к закупочной комиссии</span></div><div class="metric rv"><b>−113</b><span>человеко‑дней в год: входящие письма</span></div><div class="metric rv"><b>3 → 1 мин</b><span>согласование заявки на расходование средств</span></div><div class="metric rv"><b>≈ 1 мин</b><span>регистрация письма вместо 10–15</span></div><div class="metric rv"><b>≈ минуты</b><span>сверка спецификации из 200 позиций вместо половины дня</span></div><div class="metric rv"><b>≈ 15 мин</b><span>протокол после совещания вместо половины дня</span></div><div class="metric rv"><b>2 222</b><span>автотеста, релизные ворота</span></div><div class="metric rv"><b>640</b><span>pull request за три месяца</span></div></div>
-  <p class="foot">Цифры со знаком ≈ — оценка по времени операций до и после; остальные — измерено.</p>
-</div></section>
-
-<section class="s" id="rhythm"><div class="wrap">
-  <h2 class="t rv">«Ритм Дела» — таск‑менеджер для компании</h2>
-  <p class="sub rv">Собственный продукт: система задач и внутренней переписки. Работает в вебе, как приложение на телефоне и через Telegram.</p>
-  <div class="two">
-    <div class="rv"><ul class="feat"><li><strong>Задачи</strong><span>постановка, передача исполнителю, срок, проверяющий, статусы; руководитель видит просроченное на одном экране</span></li><li><strong>Роли и команды</strong><span>администратор, старший руководитель, руководитель, сотрудник; у команд изолированные рабочие области</span></li><li><strong>Чат</strong><span>закрытая внутренняя переписка по задачам и без них — внутри собственного сайта компании</span></li><li><strong>Надёжность</strong><span>журнал каждого действия; удалённое восстанавливается по правилу двух ключей</span></li></ul><div class="idea">Продукт можно оформить на компанию и внести в реестр российского ПО Минцифры. У компании появляется свой сайт с закрытым чатом и задачами, который продолжает работать даже при ограничениях доступа к внешним сервисам («белые списки»).</div><p class="cap">В эксплуатации.</p></div>
-    <div class="rv"><figure class="shot" style="margin:0"><div class="bar"><i></i><i></i><i></i>«Ритм Дела» · календарь задач</div><img src="uploads/taskmanager.png" alt="«Ритм Дела» · календарь задач" loading="lazy"></figure></div>
+</section>
+<section id="route" data-stop="Маршрут" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">01</span><i></i><b>Маршрут</b></div>
+    <div class="sec-head"><h2 class="h-l mask"><span>От закупок к собственным продуктам</span></h2>
+      <p class="lead fx">Начал с тендеров и управления отделами. Автоматизировал свою работу, затем построил платформу, собственные продукты и программу обучения.</p></div>
+    <div class="route" aria-hidden="true"><svg viewBox="0 0 1600 60"><path class="ln draw" d="M60 30 H1540"/><circle class="st" cx="60" cy="30" r="16"/><circle class="st" cx="430" cy="30" r="16"/><circle class="st lit" cx="800" cy="30" r="16"/><circle class="st" cx="1170" cy="30" r="16"/><circle class="st" cx="1540" cy="30" r="16"/></svg></div>
+    <div class="stops"><div class="stop fx"><div class="y">2015–2022</div><h3>Закупки и тендеры</h3><p>Создавал тендерный и коммерческий отделы, открывал филиал, вёл конкурсные процедуры.</p><b>≈ 1,5 млрд ₽</b><span class="mono">выигранных тендеров</span></div><div class="stop fx"><div class="y">2022–2023</div><h3>Автоматизация отдела</h3><p>Макросы, Power Query и данные 1С прямо в маршруте согласования.</p><b>3 → 1 мин</b><span class="mono">согласование ЗРДС</span></div><div class="stop lit fx"><div class="y">2026</div><h3>Платформа ГСП</h3><p>От требований регистраторов до внедрения по управлениям. 16 модулей за четыре месяца.</p><b>16</b><span class="mono">модулей</span></div><div class="stop fx"><div class="y">2026</div><h3>Свои продукты</h3><p>«Ритм Дела», Omnerio, Autobahn: три рабочие системы с агентами Claude и Codex.</p><b>3</b><span class="mono">продукта в эксплуатации</span></div><div class="stop fx"><div class="y">2026</div><h3>Обучение людей</h3><p>Программа для холдинга и бот «Помощник ТЗ»: из рабочей задачи — пакет для запуска.</p><b>20</b><span class="mono">сотрудников в группе</span></div></div>
   </div>
-</div></section>
-
-<section class="s" id="omnerio"><div class="wrap">
-  <h2 class="t rv">Omnerio — ИИ‑собеседник, который помнит человека</h2>
-  <p class="sub rv">Личный ИИ‑собеседник в Telegram, который настраивается под того, кто им пользуется: характер, стиль общения, что помнить и о чём напоминать.</p>
-  <div class="rv"><ul class="feat"><li><strong>Древо памяти</strong><span>по ходу общения запоминает человека — семью, работу, события, предпочтения — и сам возвращается к этому в разговоре</span></li><li><strong>Голос и текст</strong><span>понимает голосовые сообщения, отвечает голосом</span></li><li><strong>Личный кабинет</strong><span>что помнит, о чём говорили, напоминания, планы, настройки характера</span></li><li><strong>Интеграции</strong><span>браслет Fitbit через Google Health — утренний дайджест по сну</span></li><li><strong>Доступ</strong><span>по приглашениям; данные под контролем владельца</span></li></ul><p class="cap">Работает у автора и приглашённых.</p></div>
-</div></section>
-
-<section class="s" id="how"><div class="wrap">
-  <h2 class="t rv">Как я это делаю</h2>
-  <div class="steps rv"><span class="hot">Требования</span><span class="">Дизайн</span><span class="">План</span><span class="">Тесты</span><span class="">Код</span><span class="hot">Проверка второй моделью</span><span class="">Релиз с инструкцией</span></div>
-  <p class="sub rv" style="margin-bottom:8px">Код пишут ИИ‑агенты; за мной — требования, архитектура, приёмка и внедрение по управлениям: обучение, инструкция к каждому релизу, эффект в человеко‑днях.</p>
-  <p class="cap">Платформа — 640 pull request и 2 222 автотеста за три месяца.</p>
-</div></section>
-
-<section class="s" id="contacts"><div class="wrap contacts">
-  <div>
-    <h2 class="t rv">Давайте поговорим</h2>
-    <p class="big rv" style="margin-top:14px">Кирилл Паскаль<br><a href="tel:+79218598484">+7 (921) 859‑84‑84</a><br><a href="mailto:kirillzakrasovsky@yandex.ru">kirillzakrasovsky@yandex.ru</a><br>Санкт‑Петербург · английский B2</p>
-    <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn primary" href="resume.pdf">Резюме в PDF</a><a class="btn" href="mailto:kirillzakrasovsky@yandex.ru">Написать письмо</a></p>
-    <p class="cap">Демонстрация платформы на демо‑данных — по договорённости.</p>
+</section>
+<section id="platform" data-stop="Платформа" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">02</span><i></i><b>Платформа ГСП</b></div>
+    <div class="sec-head"><h2 class="h-l mask"><span>Платформа, которая ведёт работу закупок</span></h2><p class="lead fx">Внутренняя система ООО «ГСП‑Комплектация» (группа Газстройпром): письма, спецификации, акты, согласования и отчёты. Языковые модели работают на сервере компании.</p></div>
+    <p class="mono fx" style="margin-bottom:18px">Кому: Регистраторы, закупщики, специалисты комплектации, руководители управлений.</p>
+    <div class="ws"><div class="was"><h4>было</h4><ul><li>Данные переносили из почты в таблицы, потом в учётную систему — один текст набирали три раза.</li><li>Спецификации сверяли построчно глазами, согласование восстанавливали по переписке.</li><li>Руководитель видел картину только после ручной сборки отчёта.</li></ul></div><div class="arrow" aria-hidden="true"><svg viewBox="0 0 72 40"><path d="M4 20 H58" /><path d="M46 8 L60 20 L46 32" /><circle cx="64" cy="20" r="5"/></svg></div><div class="now"><h4>стало</h4><ul><li>Документ попадает в систему сам; модель разбирает его и заполняет карточку или реестр.</li><li>Сотрудник проверяет и подтверждает одним нажатием, а не перепечатывает.</li><li>Руководитель видит поток, качество и динамику по неделям без запроса отчёта.</li></ul></div></div>
+    <div class="two wide-r" style="margin-top:64px">
+      <div class="prose">
+        <p class="big fx">1С хранит учёт. <em>Платформа ведёт работу.</em></p>
+        <p class="fx">Учёт, договоры и оплаты остаются в 1С. Платформа берёт из неё данные на чтение и заменяет ручные надстройки вокруг: Excel‑реестры, сверку глазами, согласование по почте. Это позиция автора, а не решение компании о замене 1С.</p>
+        <p class="fx" style="margin-top:22px;padding-top:22px;border-top:2px solid var(--ink)">Моя роль — руководитель и владелец продукта: требования, архитектура, постановка задач, приёмка каждого выпуска, внедрение по управлениям и замер эффекта.</p>
+      </div>
+      <div class="fx"><figure><div class="shot tilt"><div class="bar"><i></i><i></i><i></i><span>auto-aitech · рабочее место</span></div><img src="uploads/home.png" alt="Платформа · рабочее место сотрудника · демо‑данные" loading="lazy"></div><figcaption class="cap">Платформа · рабочее место сотрудника · демо‑данные</figcaption></figure></div>
+    </div>
   </div>
-  <img src="assets/photo.jpg" alt="">
-</div></section>
-<div class="lb" id="lb" role="dialog" aria-label="Скриншот на весь экран"><img alt=""></div>
-<footer><div class="wrap">Кирилл Паскаль · Руководитель направления автоматизации и ИИ‑продуктов. Скриншоты — демо‑данные, все названия и суммы вымышленные.</div></footer>
-<script src="assets/site.js"></script>
-</body>
-</html>
+</section>
+<section id="metrics" data-stop="Показатели" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">03</span><i></i><b>Показатели</b></div>
+    <div class="sec-head"><h2 class="h-l mask"><span>Что изменилось для людей</span></h2>
+      <p class="lead fx">Цифры из еженедельных отчётов по модулям, экранов руководства и журналов разработки. Экономия времени посчитана по объёму потока и времени операций до и после.</p></div>
+    <div class="stats"><div class="stat fx"><b class="" data-count="16" data-pre="" data-suf="" data-fmt="">16</b><span>модулей</span><small>14 рабочих и 2 экрана руководства</small></div><div class="stat fx"><b class="sig" data-count="12000" data-pre="≈ " data-suf=" ч" data-fmt="">≈ 12 000 ч</b><span>человеко‑часов в год</span><small>возвращают письма, акты М‑7 и сверка</small></div><div class="stat fx"><b class="" data-count="240" data-pre="−" data-suf="" data-fmt="">−240</b><span>человеко‑дней в год</span><small>пакет документов к закупочной комиссии</small></div><div class="stat fx"><b class="" data-count="113" data-pre="−" data-suf="" data-fmt="">−113</b><span>человеко‑дней в год</span><small>входящие письма без ручного переноса</small></div><div class="stat fx"><b class="sig" data-count="97.7" data-pre="" data-suf="" data-fmt="pct">97,7 %</b><span>точность полей карточки письма</span><small>14 полей, срез 08.10.2026</small></div><div class="stat fx"><b class="" data-count="81.7" data-pre="" data-suf="" data-fmt="pct">81,7 %</b><span>писем без единой правки</span><small>пик недели 21.09; старт в июле — 35 %</small></div><div class="stat fx"><b class="" data-count="99.5" data-pre="" data-suf="" data-fmt="pct">99,5 %</b><span>верных решений «регистрировать / нет»</span><small>220 из 221 за неделю</small></div><div class="stat fx"><b class="" data-count="90.3" data-pre="" data-suf="" data-fmt="pct">90,3 %</b><span>актов М‑7 без исправлений</span><small>392 из 434 Excel‑актов с 09.09</small></div><div class="stat fx"><b class="" data-count="13517" data-pre="" data-suf="" data-fmt="">13 517</b><span>автотестов на сервере</span><small>полный прогон перед каждым выпуском</small></div><div class="stat fx"><b class="" data-count="1050" data-pre="" data-suf="+" data-fmt="">1 050+</b><span>pull request</span><small>≈ 3 360 коммитов за четыре месяца</small></div><div class="stat fx"><b class="" data-count="73" data-pre="" data-suf="" data-fmt="">73</b><span>выпуска за 3,5 недели</span><small>«Журнал внедрений» для сотрудников</small></div><div class="stat fx"><b class="sig" data-count="19" data-pre="" data-suf="" data-fmt="">19</b><span>сотрудников за неделю</span><small>загружали документы в сверку; неделей раньше — 5</small></div></div>
+    <div style="margin-top:56px"><div class="chart fx"><h3>Доля писем без единой правки регистратора</h3><div class="mono">по рабочим неделям · под точкой — без правок / зарегистрировано · цель 85 %</div><svg viewBox="0 0 1160 380" role="img" aria-label="Доля писем без единой правки регистратора"><g class="grid"><line x1="60" y1="247.5" x2="1130" y2="247.5"/><text x="50" y="251.5" text-anchor="end">25 %</text><line x1="60" y1="175.0" x2="1130" y2="175.0"/><text x="50" y="179.0" text-anchor="end">50 %</text><line x1="60" y1="102.5" x2="1130" y2="102.5"/><text x="50" y="106.5" text-anchor="end">75 %</text><line x1="60" y1="30.0" x2="1130" y2="30.0"/><text x="50" y="34.0" text-anchor="end">100 %</text></g><line class="goal" x1="60" y1="73.5" x2="1130" y2="73.5"/><text x="1130" y="67.5" text-anchor="end" class="v lit">цель 85 %</text><path class="line" d="M60.0 218.8 L167.0 215.9 L274.0 188.3 L381.0 175.9 L488.0 148.9 L595.0 129.8 L702.0 113.5 L809.0 103.4 L916.0 83.1 L1023.0 95.8 L1130.0 96.1"/><circle class="dot" cx="60.0" cy="218.8" r="7" style="transition-delay:0.20s"/><text class="v" x="60.0" y="202.8" text-anchor="middle">34,9</text><text x="60.0" y="342" text-anchor="middle">27.07</text><text class="frac" x="60.0" y="358" text-anchor="middle" style="font-size:10px">51/146</text><circle class="dot" cx="167.0" cy="215.9" r="7" style="transition-delay:0.38s"/><text class="v" x="167.0" y="199.9" text-anchor="middle">35,9</text><text x="167.0" y="342" text-anchor="middle">03.08</text><text class="frac" x="167.0" y="358" text-anchor="middle" style="font-size:10px">47/131</text><circle class="dot" cx="274.0" cy="188.3" r="7" style="transition-delay:0.56s"/><text class="v" x="274.0" y="172.3" text-anchor="middle">45,4</text><text x="274.0" y="342" text-anchor="middle">10.08</text><text class="frac" x="274.0" y="358" text-anchor="middle" style="font-size:10px">99/218</text><circle class="dot" cx="381.0" cy="175.9" r="7" style="transition-delay:0.74s"/><text class="v" x="381.0" y="159.9" text-anchor="middle">49,7</text><text x="381.0" y="342" text-anchor="middle">17.08</text><text class="frac" x="381.0" y="358" text-anchor="middle" style="font-size:10px">168/338</text><circle class="dot" cx="488.0" cy="148.9" r="7" style="transition-delay:0.92s"/><text class="v" x="488.0" y="132.9" text-anchor="middle">59,0</text><text x="488.0" y="342" text-anchor="middle">24.08</text><text class="frac" x="488.0" y="358" text-anchor="middle" style="font-size:10px">190/322</text><circle class="dot" cx="595.0" cy="129.8" r="7" style="transition-delay:1.10s"/><text class="v" x="595.0" y="113.8" text-anchor="middle">65,6</text><text x="595.0" y="342" text-anchor="middle">31.08</text><text class="frac" x="595.0" y="358" text-anchor="middle" style="font-size:10px">137/209</text><circle class="dot" cx="702.0" cy="113.5" r="7" style="transition-delay:1.28s"/><text class="v" x="702.0" y="97.5" text-anchor="middle">71,2</text><text x="702.0" y="342" text-anchor="middle">07.09</text><text class="frac" x="702.0" y="358" text-anchor="middle" style="font-size:10px">198/278</text><circle class="dot" cx="809.0" cy="103.4" r="7" style="transition-delay:1.46s"/><text class="v" x="809.0" y="87.4" text-anchor="middle">74,7</text><text x="809.0" y="342" text-anchor="middle">14.09</text><text class="frac" x="809.0" y="358" text-anchor="middle" style="font-size:10px">275/368</text><circle class="dot lit" cx="916.0" cy="83.1" r="7" style="transition-delay:1.64s"/><text class="v lit" x="916.0" y="67.1" text-anchor="middle">81,7</text><text x="916.0" y="342" text-anchor="middle">21.09</text><text class="frac" x="916.0" y="358" text-anchor="middle" style="font-size:10px">174/213</text><circle class="dot" cx="1023.0" cy="95.8" r="7" style="transition-delay:1.82s"/><text class="v" x="1023.0" y="79.8" text-anchor="middle">77,3</text><text x="1023.0" y="342" text-anchor="middle">28.09</text><text class="frac" x="1023.0" y="358" text-anchor="middle" style="font-size:10px">306/396</text><circle class="dot" cx="1130.0" cy="96.1" r="7" style="transition-delay:2.00s"/><text class="v" x="1130.0" y="80.1" text-anchor="middle">77,2</text><text x="1130.0" y="342" text-anchor="middle">05.10</text><text class="frac" x="1130.0" y="358" text-anchor="middle" style="font-size:10px">149/193</text></svg></div></div>
+    <div class="sec-head fx" style="margin-top:72px;margin-bottom:28px"><h3 class="h-m">Что возвращают три модуля в человеко‑часах</h3><p class="lead">Объём потока за неделю — из еженедельного отчёта по модулям (08.10.2026). Время операций вручную — мои замеры до внедрения.</p></div>
+    <div class="tblwrap fx"><table class="hours"><thead><tr><th>Модуль</th><th>Поток в неделю</th><th>Вручную → с платформой</th><th>В неделю</th><th>В год</th></tr></thead><tbody><tr><td><b>Входящие письма</b></td><td>≈ 300 писем</td><td class="mono">12 мин → 1–2 мин</td><td class="num">≈ 55 ч</td><td class="num sig">≈ 2 600 ч</td></tr><tr><td><b>Акты М‑7</b></td><td>≈ 400 актов</td><td class="mono">15 мин → 2–3 мин</td><td class="num">≈ 85 ч</td><td class="num sig">≈ 4 000 ч</td></tr><tr><td><b>Сверка спецификаций</b></td><td>270 документов, 19 сотрудников</td><td class="mono">1,5 ч → 20 мин</td><td class="num">≈ 300 ч</td><td class="num sig">≈ 6 000 ч</td></tr><tr class="total"><td>Итого</td><td></td><td></td><td class="num">≈ 440 ч</td><td class="num sig">≈ 12 000 ч</td></tr></tbody></table></div>
+    <div class="stats three" style="margin-top:32px"><div class="stat fx"><b class="sig">≈ 440 ч</b><span>в неделю возвращают три модуля</span><small>письма, акты М‑7, сверка спецификаций</small></div>
+      <div class="stat fx"><b class="sig">6</b><span>штатных единиц — столько это в год</span><small>≈ 12 000 часов</small></div>
+      <div class="stat fx"><span style="margin-top:0;font-size:16px;color:var(--ink)">≈ 12 000 часов — это шесть штатных единиц, которые теперь заняты проверкой и решениями, а не перепечатыванием. Экономия времени не означает сокращение штата.</span></div></div>
+  </div>
+</section>
+<section id="built" data-stop="Как собрано" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">04</span><i></i><b>Как это собрано</b></div>
+    <div class="sec-head"><h2 class="h-l mask"><span>Путь изменения: от стола регистратора до выпуска</span></h2>
+      <p class="lead fx">Каждое изменение идёт по одному маршруту. Красные узлы — где я сам; чёрные — разработчик и агенты под моей приёмкой.</p></div>
+    <div class="chain"><ol><li class=me><div class="k">01</div><h4>Требования</h4><p>Разбираю документы и ручные действия регистраторов, закупщиков, руководителей.</p></li><li class=me><div class="k">02</div><h4>ТЗ</h4><p>Фиксирую результат, границы данных, права доступа и критерии приёмки.</p></li><li class=me><div class="k">03</div><h4>План</h4><p>Делю изменение на проверяемые этапы с явными проверками.</p></li><li><div class="k">04</div><h4>Тесты</h4><p>Ожидаемое поведение описано до кода; ошибки обработки — отдельными кейсами.</p></li><li><div class="k">05</div><h4>Код агентами</h4><p>Разработчик и агенты Claude Code и Codex реализуют согласованный план.</p></li><li><div class="k">06</div><h4>Ревью второй моделью</h4><p>Изменение проверяет модель, которая его не писала.</p></li><li><div class="k">07</div><h4>Релизные ворота</h4><p>Тесты, gitleaks, OSV, Bandit и контракт деплоя — зелёные или выпуска нет.</p></li><li><div class="k">08</div><h4>Деплой</h4><p>Резервная копия, развёртывание, smoke‑проверка основных сценариев.</p></li><li class=me><div class="k">09</div><h4>Инструкция и новость</h4><p>Сотрудники читают, что изменилось, в «Журнале внедрений».</p></li><li class=me><div class="k">10</div><h4>Замер эффекта</h4><p>Сравниваю время операции до и после, собираю правки как обратную связь.</p></li></ol></div>
+    <div class="two" style="margin-top:72px;align-items:start">
+      <div class="fx"><h3 class="h-s" style="margin-bottom:14px">Что внутри — для специалистов</h3><div class="tags"><span class="tag ghost">FastAPI</span><span class="tag ghost">SQLAlchemy</span><span class="tag ghost">SQLite</span><span class="tag ghost">Vanilla JS</span><span class="tag ghost">Docker</span><span class="tag ghost">nginx</span><span class="tag ghost">systemd</span><span class="tag ghost">GitHub Actions</span><span class="tag ghost">pytest · 13 517</span><span class="tag ghost">Ollama</span><span class="tag ghost">Qwen3‑30B</span><span class="tag ghost">Qwen2.5‑VL</span><span class="tag ghost">bge‑m3</span><span class="tag ghost">Qdrant</span><span class="tag ghost">faster‑whisper</span><span class="tag ghost">OCR на GPU</span><span class="tag ghost">LoRA‑дообучение</span><span class="tag ghost">152‑ФЗ · данные в РФ</span></div>
+        <p class="prose">Локальные модели через Ollama, семантический поиск в Qdrant, OCR на GPU, LoRA‑дообучение на эталонах сотрудников. Облачные модели документы платформы не видят.</p></div>
+      <div><h3 class="h-s fx" style="margin-bottom:14px">Как проверяю качество моделей</h3><div class="stats three"><div class="stat fx"><b class="sig" style="font-size:36px">82 → 90 %</b><span>точность отбора в A/B на 200 письмах</span></div><div class="stat fx"><b class="sig" style="font-size:36px">36 → 0</b><span>нестабильных писем после смены модели</span></div><div class="stat fx"><b class="sig" style="font-size:36px">3 / 0</b><span>исправления и новые ошибки в повторном прогоне 400 писем</span></div></div>
+        <p class="mono fx" style="margin-top:12px">Paired A/B на 200 письмах и повторный прогон 400 писем перед сменой модели: результат сравнения версий, а не ощущения.</p></div>
+    </div>
+  </div>
+</section>
+<section id="modules" data-stop="Модули" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">05</span><i></i><b>Модули</b></div>
+    <div class="sec-head"><h2 class="h-l mask"><span>16 остановок маршрута</span></h2>
+      <p class="lead fx">14 рабочих модулей и два экрана руководства. У каждого — что было, что стало, результат, скриншот и как устроено. <a href="modules.html" style="border-bottom:1.5px solid var(--signal)">Открыть все модули</a></p></div>
+    <div class="tickets"><a class="ticket fx" href="modules.html#letters"><div class="n"><span>01</span><i></i></div><h3>Входящие письма</h3><p>Карточка письма из скана, регистратор проверяет</p><b>97,7 %</b></a><a class="ticket fx" href="modules.html#spec"><div class="n"><span>02</span><i></i></div><h3>Генеральные спецификации</h3><p>Зеркальная спецификация из PDF поставщика</p><b>из PDF</b></a><a class="ticket fx" href="modules.html#specs"><div class="n"><span>03</span><i></i></div><h3>Формирование спецификаций</h3><p>Спецификация к договору из исходных данных</p><b>≈ минуты</b></a><a class="ticket fx" href="modules.html#prices"><div class="n"><span>04</span><i></i></div><h3>История цен закупок</h3><p>Почём брали в прошлом году — за секунды</p><b>≈ секунды</b></a><a class="ticket fx" href="modules.html#sverka"><div class="n"><span>05</span><i></i></div><h3>Сверка спецификаций (ЕСЦУЗ)</h3><p>19 проверок и готовое замечание</p><b>270</b></a><a class="ticket fx" href="modules.html#spec_approval"><div class="n"><span>06</span><i></i></div><h3>Согласование спецификаций</h3><p>Версии, замечания и голоса в одной карточке</p><b>одна версия</b></a><a class="ticket fx" href="modules.html#protocols"><div class="n"><span>07</span><i></i></div><h3>Протоколы совещаний</h3><p>Из аудиозаписи — черновик протокола</p><b>≈ 15 мин</b></a><a class="ticket fx" href="modules.html#presentations"><div class="n"><span>08</span><i></i></div><h3>Презентации для руководства</h3><p>Отчётная презентация по шаблону</p><b>≈ минуты</b></a><a class="ticket fx" href="modules.html#xml_pdf"><div class="n"><span>09</span><i></i></div><h3>Экспедиторские расписки</h3><p>XML → читаемый PDF</p><b>XML → PDF</b></a><a class="ticket fx" href="modules.html#absences"><div class="n"><span>10</span><i></i></div><h3>Отсутствия, командировки, отпуска</h3><p>Заявка, согласование, календарь, график отпусков</p><b>≈ минуты</b></a><a class="ticket fx" href="modules.html#tasks"><div class="n"><span>11</span><i></i></div><h3>Задачи</h3><p>Поручение с исполнителем, сроком и проверяющим</p><b>ничего не теряется</b></a><a class="ticket fx" href="modules.html#warehouse"><div class="n"><span>12</span><i></i></div><h3>Склад</h3><p>Учёт имущества из платформы</p><b>одно окно</b></a><a class="ticket fx" href="modules.html#gazprom_market"><div class="n"><span>13</span><i></i></div><h3>Газпром Маркет</h3><p>Выгрузки портала, эталон заказов, 14 дашбордов</p><b>≈ 14</b></a><a class="ticket fx" href="modules.html#m7"><div class="n"><span>14</span><i></i></div><h3>Акты М‑7</h3><p>Письмо или акт → реестр 33 столбца</p><b>90,3 %</b></a><a class="ticket fx" href="modules.html#udo_metrics"><div class="n"><span>15</span><i></i></div><h3>Метрики: входящие письма</h3><p>Экран руководства: поток, качество, динамика</p><b>по полям</b></a><a class="ticket fx" href="modules.html#m7_metrics"><div class="n"><span>16</span><i></i></div><h3>Показатели: акты М‑7</h3><p>Загрузка, сопоставление, проверка — до выгрузки</p><b>до выгрузки</b></a></div>
+  </div>
+</section>
+<section id="ritm" data-stop="Ритм Дела" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">06</span><i></i><b>Собственный продукт</b></div>
+    <div class="node">
+      <div class="txt"><h2 class="h-m mask"><span>«Ритм Дела» — таск‑менеджер для компании</span></h2><p class="lead fx">Задачи, команды, файлы и внутренняя переписка в вебе, на телефоне и в Telegram. Продукт можно оформить на компанию и внести в реестр российского ПО.</p>
+        <div class="tags fx"><span class="tag ok">в эксплуатации</span><span class="tag ghost">веб · PWA · Telegram</span></div>
+        <div class="fx"><ul class="feat"><li><b>Задачи</b><span>исполнитель, срок, проверяющий, статусы и история; просроченное видно руководителю</span></li><li><b>Четыре роли</b><span>администратор, старший руководитель, руководитель, сотрудник; области команд изолированы</span></li><li><b>Переписка и файлы</b><span>закрытый чат и вложения рядом с задачами, внутри собственного сайта компании</span></li><li><b>Надёжность</b><span>журнал каждого действия; удалённое восстанавливается по правилу двух ключей</span></li></ul></div><div class="mini"><div><b class="" data-count="4" data-pre="" data-suf="" data-fmt="">4</b><span>роли доступа</span></div><div><b class="" data-count="566" data-pre="" data-suf="" data-fmt="">566</b><span>автотестов</span></div><div><b class="" data-count="27" data-pre="" data-suf="" data-fmt="">27</b><span>пакетов результата</span></div></div>
+        <div class="tech fx"><h4>КАК СОБРАН</h4><p>Django, PostgreSQL, PWA, Telegram‑бот и Mini App; вход с TOTP, аудит, карантин и антивирус для файлов, transactional outbox.</p></div></div>
+      <div class="fx"><figure><div class="shot"><div class="bar"><i></i><i></i><i></i><span>ритм-дела · календарь</span></div><img src="uploads/taskmanager.png" alt="«Ритм Дела» · календарь задач · демо‑данные" loading="lazy"></div><figcaption class="cap">«Ритм Дела» · календарь задач · демо‑данные</figcaption></figure></div>
+    </div>
+  </div>
+</section>
+<section id="omnerio" data-stop="Omnerio" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">07</span><i></i><b>Собственный продукт</b></div>
+    <div class="node flip">
+      <div class="txt"><h2 class="h-m mask"><span>Omnerio помнит человека</span></h2><p class="lead fx">Личный ИИ‑собеседник в Telegram с древом памяти, голосом и кабинетом: запоминает людей, события и предпочтения и сам возвращается к ним в разговоре.</p>
+        <div class="tags fx"><span class="tag ok">работает у автора и приглашённых</span><span class="tag ghost">Telegram · голос · кабинет</span></div>
+        <div class="fx"><ul class="feat"><li><b>Древо памяти</b><span>события, связи и предпочтения; в кабинете их можно просмотреть и стереть</span></li><li><b>Голос и текст</b><span>понимает голосовые, отвечает текстом и голосом</span></li><li><b>Напоминания</b><span>создаются из живой речи; утренний дайджест с погодой и сном по браслету</span></li><li><b>Честность</b><span>правила запрещают выдумывать факты; потолок расхода на модели</span></li></ul></div><div class="mini"><div><b class="" data-count="136" data-pre="" data-suf="" data-fmt="">136</b><span>pull request</span></div><div><b class="" data-count="389" data-pre="" data-suf="" data-fmt="">389</b><span>коммитов за 7 недель</span></div><div><b class="" data-count="1087" data-pre="" data-suf="" data-fmt="">1 087</b><span>автотестов</span></div><div><b class="" data-count="5" data-pre="" data-suf="" data-fmt="">5</b><span>тестировщиц</span></div></div>
+        <div class="tech fx"><h4>КАК СОБРАН</h4><p>Python, aiogram, SQLite, кабинет на aiohttp; модели через OpenRouter, речь — Groq Whisper, голос — Yandex SpeechKit; туннель и сторож на домашнем ПК.</p></div></div>
+      <div class="fx"><figure><div class="shot dark"><div class="bar"><i></i><i></i><i></i><span>omnerio · что я о тебе помню</span></div><img src="uploads/omnerio.png" alt="Omnerio · кабинет памяти · демо‑данные" loading="lazy"></div><figcaption class="cap">Omnerio · кабинет памяти · демо‑данные</figcaption></figure></div>
+    </div>
+  </div>
+</section>
+<section id="autobahn" data-stop="Autobahn" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">08</span><i></i><b>Продукт для заказчика</b></div>
+    <div class="node">
+      <div class="txt"><h2 class="h-m mask"><span>Autobahn: от объявления до публикации</span></h2><p class="lead fx">Оффер‑конвейер для компании по импорту автомобилей из Германии, Китая, Кореи и США: карточки машин с расчётом «под ключ» и проверенные посты для канала.</p>
+        <div class="chain" style="margin:8px 0 22px"><ol style="grid-template-columns:repeat(2,minmax(0,1fr))"><li class=me><div class="k">01</div><h4>Ссылка</h4><p>объявление с autoscout24, che168 или encar уходит парсеру</p></li><li><div class="k">02</div><h4>Карточка</h4><p>фото, характеристики и цена «под ключ» с таможней и утильсбором</p></li><li class=me><div class="k">03</div><h4>Согласование</h4><p>предпросмотр в закрытом чате, кнопки «в план» и «отклонить»</p></li><li><div class="k">04</div><h4>Публикация</h4><p>по слотам в Telegram; посты пишут пять агентов: стратег → исследователь → автор → фактчекер → редактор</p></li></ol></div>
+        <div class="mini"><div><b class="" data-count="30" data-pre="" data-suf="" data-fmt="">30</b><span>офферов опубликовано</span></div><div><b class="" data-count="3" data-pre="" data-suf="" data-fmt="">3</b><span>парсера площадок</span></div><div><b class="" data-count="476" data-pre="" data-suf="" data-fmt="">476</b><span>автотестов</span></div><div><b class="" data-count="5" data-pre="" data-suf="" data-fmt="">5</b><span>агентов в конвейере постов</span></div></div>
+        <div class="tech fx"><h4>КАК СОБРАН</h4><p>Python, BeautifulSoup, Pillow, SQLite, Docker на сервере, GitHub Actions, Telegram Bot API; тексты — агенты Claude с обязательной проверкой фактов.</p></div></div>
+      <div class="fx"><div class="phone"><div class="scr"><div class="hd"><span>Autobahn · оффер‑бот</span><span>●</span></div><div class="msg me">https://www.autoscout24.de/… BMW X5 xDrive30d 2022<small>14:02</small></div><div class="msg">Разобрал объявление: BMW X5 30d, 2022, 41 000 км. Цена под ключ — 7 950 000 ₽ (таможня, утильсбор, доставка). Карточка готова.<small>14:03</small></div><div class="msg" style="background:transparent;padding:0"><span class="pill">В план 19:54</span><span class="pill">Переснять фото</span><span class="pill">Отклонить</span></div><div class="msg">Опубликовано в канале 19:54. Следующий слот — завтра 09:15.<small>19:54</small></div></div></div>
+        <p class="cap" style="text-align:center">Переписка с ботом — макет, цифры вымышленные</p></div>
+    </div>
+  </div>
+</section>
+<section id="training" data-stop="Обучение" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">09</span><i></i><b>Обучение</b></div>
+    <div class="node flip">
+      <div class="txt"><h2 class="h-m mask"><span>ИИ для сотрудников холдинга</span></h2><p class="lead fx">Программа из трёх встреч для ресторанов, земли и девелопмента, направления в Дубае: участники работают со своими задачами в Claude и ChatGPT.</p>
+        <div class="fx"><ul class="feat"><li><b>Встреча 1</b><span>Дисциплина диалога: задача, проверка результата, проекты как папки с правилами.</span></li><li><b>Встреча 2</b><span>Своё ТЗ и доступы: три пути запуска — проект, скрипт, агент; живое демо агента.</span></li><li><b>Встреча 3</b><span>Агенты на повторяемых задачах: папка и права, реестр из 40 файлов, приложение за 15 минут.</span></li></ul></div>
+        <h3 class="h-s fx" style="margin:26px 0 8px">Бот «Помощник ТЗ»</h3><p class="prose fx">Ведёт участника по восьми шагам интервью и отдаёт пакет: ТЗ в Markdown и DOCX, файл правил под выбранный путь, инструкцию запуска и образец результата.</p>
+        <div class="mini"><div><b class="" data-count="20" data-pre="" data-suf="" data-fmt="">20</b><span>сотрудников в группе</span></div><div><b class="" data-count="15" data-pre="" data-suf="" data-fmt="">15</b><span>начали интервью в боте</span></div><div><b class="" data-count="6" data-pre="" data-suf="" data-fmt="">6</b><span>получили пакет ТЗ</span></div><div><b class="">0,5 $</b><span>стоимость моделей на участника</span></div></div>
+        <p class="mono fx" style="margin-top:18px">Публичные колоды: <a href="https://zakrasava.github.io/ai-training-deck/" target="_blank" rel="noopener" style="border-bottom:1.5px solid var(--signal)">Колода встречи 1</a> · <a href="https://zakrasava.github.io/ai-training-deck/lesson-2/" target="_blank" rel="noopener" style="border-bottom:1.5px solid var(--signal)">Колода встречи 2</a></p></div>
+      <div class="fx"><figure><div class="shot"><div class="bar"><i></i><i></i><i></i><span>zakrasava.github.io/ai-training-deck/lesson-2</span></div><img src="uploads/training-title.png" alt="Встреча 2 · «Свой помощник: от ТЗ до запуска» · колода на 25 слайдов" loading="lazy"></div><figcaption class="cap">Встреча 2 · «Свой помощник: от ТЗ до запуска» · колода на 25 слайдов</figcaption></figure></div>
+    </div>
+  </div>
+</section>
+<section id="how" data-stop="Как работаю" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">10</span><i></i><b>Как работаю</b></div>
+    <div class="sec-head"><h2 class="h-l mask"><span>Как работаю</span></h2><p class="lead fx">Команда платформы — я, разработчик и ИИ‑агенты Claude Code и Codex. Я ставлю задачи, принимаю, внедряю и считаю эффект.</p></div>
+    <div class="chain"><ol style="grid-template-columns:repeat(7,minmax(0,1fr))"><li class=me><div class="k">01</div><h4>Процесс</h4><p>Разбираю процесс с пользователем и замеряю время операции до.</p></li><li class=me><div class="k">02</div><h4>Требования</h4><p>Фиксирую результат, границы данных и критерии приёмки.</p></li><li class=me><div class="k">03</div><h4>План</h4><p>Выбираю инструмент: проект, скрипт или агент; делю на проверяемые шаги.</p></li><li><div class="k">04</div><h4>Тесты и код</h4><p>Разработчик и агенты пишут тесты и реализацию по плану.</p></li><li><div class="k">05</div><h4>Ревью</h4><p>Вторая модель проверяет изменение; релизные ворота — зелёные.</p></li><li class=me><div class="k">06</div><h4>Выпуск</h4><p>Резервная копия, деплой, инструкция и новость сотрудникам.</p></li><li class=me><div class="k">07</div><h4>Эффект</h4><p>Сравниваю время после с временем до; правки — обратная связь.</p></li></ol></div>
+    <ul class="princ" style="margin-top:64px"><li class="fx"><b>Эффект в часах</b>Считаю по фактическому времени операций до и после, а не по ощущениям.</li><li class="fx"><b>Данные в контуре</b>В корпоративной платформе документы не покидают сервер компании.</li><li class="fx"><b>Ревью второй моделью</b>Перед каждым выпуском изменение проверяет модель, которая его не писала.</li><li class="fx"><b>Инструкция к релизу</b>Внедрение — это обучение: новость и инструкция к каждому выпуску.</li><li class="fx"><b>Проект, а не агент</b>Не делаю агента там, где хватит проекта с файлом правил.</li><li class="fx"><b>Люди проверяют</b>Модель предлагает, человек подтверждает; правки становятся данными для обучения.</li></ul>
+  </div>
+</section>
+<section id="cv" data-stop="Резюме" data-in>
+  <div class="wrap">
+    <div class="kicker"><span class="n">11</span><i></i><b>Опыт</b></div>
+    <div class="sec-head"><h2 class="h-l mask"><span>Девять лет: закупки, люди, автоматизация</span></h2>
+      <p class="lead fx">Закупки и тендеры дали знание процессов; отделы и филиал — опыт внедрения изменений и работы с людьми. <a href="resume.html" style="border-bottom:1.5px solid var(--signal)">Полное резюме</a> · <a href="resume.pdf" download style="border-bottom:1.5px solid var(--signal)">PDF</a></p></div>
+    <ul class="cv"><li class="fx"><div class="d">10.2023 — сейчас</div><div><h4>Главный специалист управления конкурсных процедур и информационно‑управляющих систем</h4><div class="c">ООО «ГСП‑Комплектация» (группа Газстройпром) · Санкт‑Петербург</div><ul><li>Владелец ИИ‑платформы компании: требования, роадмап, приёмка каждого выпуска, внедрение по управлениям, замер эффекта.</li></ul></div></li><li class="fx"><div class="d">07.2022 — 09.2023</div><div><h4>Ведущий специалист управления конкурсных процедур</h4><div class="c">ООО «ГСП‑Комплектация» · Санкт‑Петербург</div><ul><li>Урегулировал закупочные процедуры на ~2 млрд ₽: стандартизировал маршрут, убрал лишние шаги.</li></ul></div></li><li class="fx"><div class="d">10.2021 — 03.2022</div><div><h4>Ведущий менеджер (проекты и ИКТ), руководитель открытия филиала</h4><div class="c">ООО «Уралпроектинжиниринг» · Санкт‑Петербург</div><ul><li>Открыл филиал в Санкт‑Петербурге: обосновал решение, организовал офис и серверную; штат 5 + 7.</li></ul></div></li><li class="fx"><div class="d">07.2020 — 06.2022</div><div><h4>Начальник продаж (по совместительству)</h4><div class="c">ООО «Единая экология» · Санкт‑Петербург</div><ul><li>Сформировал коммерческий отдел из 2 человек; контрактов на ~30 млн ₽.</li></ul></div></li><li class="fx"><div class="d">05.2019 — 01.2020</div><div><h4>Менеджер отеля</h4><div class="c">УК «Гранд Палас» · Санкт‑Петербург</div><ul><li>Операционное управление: обучение персонала и регулярная отчётность.</li></ul></div></li><li class="fx"><div class="d">2015 — 2017</div><div><h4>Тендерный специалист, руководитель тендерного отдела</h4><div class="c">АО «Питерэнергомаш» · Санкт‑Петербург</div><ul><li>Создал тендерный отдел из 3 человек; выиграл тендеров на ~1,5 млрд ₽ (Минобороны).</li></ul></div></li></ul>
+    <div class="two" style="margin-top:48px;align-items:start">
+      <div class="fx"><h3 class="h-s" style="margin-bottom:14px">Навыки</h3><div class="skills"><span>Управление продуктом</span><span>Управление проектами</span><span>Автоматизация процессов</span><span>Внедрение и обучение</span><span>Регламенты и SLA</span><span>Закупки 44‑ФЗ и 223‑ФЗ</span><span>ЭТП</span><span>Договорная работа</span><span>ЗРДС</span><span>Переговоры</span><span>Claude Code</span><span>Codex</span><span>Python</span><span>FastAPI</span><span>Django</span><span>SQLAlchemy</span><span>SQLite · PostgreSQL</span><span>Локальные LLM (Ollama, Qwen)</span><span>RAG и Qdrant</span><span>OCR</span><span>Whisper</span><span>Telegram‑боты (aiogram)</span><span>Playwright</span><span>Docker</span><span>Linux · systemd · nginx</span><span>GitHub Actions</span><span>TDD · pytest</span><span>Excel · Power Query · VBA</span><span>SQL</span><span>1С (ЕСЭД, ЕСЦУЗ)</span><span>AVEVA</span></div></div>
+      <div class="fx"><h3 class="h-s" style="margin-bottom:14px">Образование и языки</h3><p class="prose">Санкт‑Петербургский политехнический университет Петра Великого, 2017 — промышленный менеджмент в энергетике.</p><p class="prose" style="margin-top:10px">Русский — родной, английский B2.</p></div>
+    </div>
+  </div>
+</section>
+<section id="contact" data-stop="Контакты" data-in class="tight">
+  <div class="wrap">
+    <div class="contact fx">
+      <div><h2 class="h-m">Давайте поговорим</h2><p class="lead" style="margin-top:14px">Обсудим задачу автоматизации, продукт и внедрение. Покажу платформу на демо‑данных по договорённости.</p>
+        <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn" href="mailto:kirillzakrasovsky@yandex.ru">Написать письмо</a><a class="btn ghost" href="resume.pdf" download>Резюме в PDF</a><button class="btn ghost" type="button" data-copy>Скопировать ссылку</button></div></div>
+      <div class="lines"><div>Кирилл Паскаль</div><div><a href="tel:+79218598484">+7 (921) 859‑84‑84</a></div><div><a href="mailto:kirillzakrasovsky@yandex.ru">kirillzakrasovsky@yandex.ru</a></div><div><a href="https://github.com/Zakrasava" target="_blank" rel="noopener">github.com/Zakrasava</a></div><div>Санкт‑Петербург · английский B2</div></div>
+    </div>
+    <div class="foot"><p>Скриншоты сняты на демо‑данных: все имена, организации и суммы вымышленные.</p><p>Цифры со знаком ≈ — оценка по объёму потока и времени операций до и после; остальные измерены, взяты из еженедельных отчётов по модулям и журналов разработки.</p><p>Экономия времени не означает сокращение штата: освобождённые часы уходят на проверку и решения.</p><p>Кирилл Паскаль · Руководитель направления автоматизации и ИИ‑продуктов · 2026</p></div>
+  </div>
+</section></main><script src="assets/v2.js"></script></body></html>
