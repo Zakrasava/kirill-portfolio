@@ -26,7 +26,7 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .mono{font:400 13px/1.6 var(--m);letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
 .mono b{color:var(--ink);font-weight:500}
-section.s{position:relative;min-height:100vh;padding:112px 72px 48px 44px;display:grid;grid-template-rows:auto 1fr;grid-template-columns:minmax(0,1fr);gap:22px;scroll-snap-align:start;overflow:hidden}
+section.s{position:relative;min-height:100vh;padding:112px 72px 48px 44px;display:grid;grid-template-rows:auto 1fr;grid-template-columns:minmax(0,1fr);gap:28px;scroll-snap-align:start;overflow:hidden}
 .head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
 h2{font-weight:300;font-size:clamp(32px,3.6vw,54px);letter-spacing:-.035em;line-height:1.02}
 h2 b{font-weight:600}
@@ -89,44 +89,44 @@ h1 b{font-weight:600}
 .meter div span{display:block;margin-top:4px}
 
 /* ── 2 платформа: вкладки групп + обозреватель ── */
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{display:grid;grid-template-columns:1fr auto;gap:4px 18px;align-items:baseline;padding:12px 18px;border-radius:14px;border:1px solid var(--line);background:#fff;text-align:left;transition:background .25s,border-color .25s,transform .3s;min-width:300px;flex:1}
+.tabs{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.tab{display:grid;grid-template-columns:1fr auto;gap:4px 18px;align-items:baseline;padding:13px 18px;border-radius:14px;border:1px solid var(--line);background:#fff;text-align:left;transition:background .25s,border-color .25s,transform .3s;min-width:300px;flex:1}
 .tab:hover{transform:translateY(-2px);border-color:var(--glow)}
 .tab.cur{background:var(--ink);color:#fff;border-color:var(--ink)}
 .tab b{font-weight:500;font-size:17px;letter-spacing:-.015em}
 .tab em{font-style:normal;font:300 26px/1 var(--h);letter-spacing:-.04em;color:var(--glow)}.tab.cur em{color:#9DB4FF}
 .tab span{grid-column:1/-1;font-size:13px;color:var(--mute);line-height:1.35}.tab.cur span{color:rgba(255,255,255,.7)}
-.mb{display:grid;grid-template-columns:330px minmax(0,1fr);gap:36px;align-items:start;margin-top:4px}
+.mb{display:grid;grid-template-columns:330px minmax(0,1fr);gap:40px;align-items:center;margin-top:18px}
 .mlist{list-style:none;display:grid;gap:3px}
 .mlist li{display:grid;grid-template-columns:28px 1fr 14px;gap:10px;align-items:baseline;padding:9px 12px;border-radius:10px;cursor:pointer;transition:background .2s,transform .3s}
 .mlist li:hover{background:var(--panel)}
 .mlist li.cur{background:var(--ink);color:#fff;transform:translateX(4px)}
 .mlist li i{font:400 11px var(--m);color:var(--mute)}.mlist li.cur i{color:rgba(255,255,255,.6)}
-.mlist li b{font-weight:500;font-size:15.5px;letter-spacing:-.01em}
+.mlist li b{font-weight:500;font-size:16px;letter-spacing:-.01em}
 .mlist li::after{content:'›';font:400 16px/1 var(--h);color:var(--mute);opacity:.5;transition:transform .25s,opacity .25s}
 .mlist li:hover::after,.mlist li.cur::after{opacity:1;transform:translateX(3px)}.mlist li.cur::after{color:#fff}
 .mhint{margin-top:10px;display:flex;align-items:center;gap:10px}
 .hand{width:10px;height:10px;border-radius:50%;background:var(--glow);animation:ping 1.8s ease-out infinite}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(36,86,230,.5)}70%{box-shadow:0 0 0 10px rgba(36,86,230,0)}100%{box-shadow:0 0 0 0 rgba(36,86,230,0)}}
-.mdet{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:34px;align-items:start}
+.mdet{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:36px;align-items:center}
 .mshot{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 60px 110px -40px rgba(18,20,23,.45),0 0 0 1px rgba(18,20,23,.08);background:#fff}
-.mshot img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;transition:opacity .35s}
+.mshot img{display:block;width:100%;aspect-ratio:16/9.2;object-fit:cover;object-position:top;transition:opacity .35s}
 .mshot img.sw{opacity:0}
 .tag{position:absolute;left:14px;top:12px;display:flex;gap:8px;align-items:center;font:500 11px var(--m);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:rgba(255,255,255,.9);padding:6px 10px;border-radius:999px;border:1px solid var(--line)}
-.mtx h3{font-weight:500;font-size:30px;letter-spacing:-.03em;margin:8px 0 10px}
-.mtx p{font-size:16px;line-height:1.45}
+.mtx h3{font-weight:500;font-size:32px;letter-spacing:-.03em;margin:8px 0 12px}
+.mtx p{font-size:17px;line-height:1.5}
 .ws{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
 .ws ul{list-style:none;margin-top:6px}
-.ws li{position:relative;padding:6px 0 6px 16px;border-top:1px solid var(--line);font-size:14px;line-height:1.35;color:var(--mute)}
+.ws li{position:relative;padding:8px 0 8px 16px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.4;color:var(--mute)}
 .ws li::before{content:"";position:absolute;left:0;top:12px;width:7px;height:7px;border-radius:50%;border:1.5px solid var(--mute)}
 .ws div:last-child li{color:var(--ink)}.ws div:last-child li::before{background:var(--glow);border-color:var(--glow)}
-.mres{margin-top:18px;padding-top:14px;border-top:2px solid var(--ink);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline}
+.mres{margin-top:22px;padding-top:16px;border-top:2px solid var(--ink);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline}
 .mres b{font:300 40px/1 var(--h);letter-spacing:-.04em;color:var(--glow);white-space:nowrap}
 .mres span{font-size:14px;line-height:1.35;color:var(--mute)}
 
 /* ── 3 маршрут акта ── */
 .m7grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-rows:auto 1fr;gap:12px 36px;align-items:start}
-.m7grid .shot img{max-height:300px;object-fit:cover;object-position:top}
+.m7grid .shot img{max-height:250px;object-fit:cover;object-position:top}
 .m7grid .route{grid-column:1/-1;position:relative}
 .route svg{width:100%;max-width:100%;height:auto;overflow:visible;display:block}
 .rt{fill:none;stroke:rgba(18,20,23,.2);stroke-width:2}
@@ -136,7 +136,7 @@ h1 b{font-weight:600}
 .node.lit{fill:var(--glow);stroke:var(--glow)}
 .rlab{font:500 17px var(--h);fill:var(--ink)}.rsub{font:400 12px var(--m);fill:var(--mute)}
 .m7steps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.m7s{position:relative;padding:11px 14px 11px 42px;border-radius:12px;background:#fff;border:1px solid var(--line);transition:transform .3s,border-color .3s}
+.m7s{position:relative;padding:10px 14px 10px 42px;border-radius:12px;background:#fff;border:1px solid var(--line);transition:transform .3s,border-color .3s}
 .m7s:hover{transform:translateY(-3px);border-color:var(--glow)}
 .m7s i{position:absolute;left:14px;top:15px;font:500 11px var(--m);color:var(--glow);font-style:normal}
 .m7s b{display:block;font-weight:500;font-size:15px;letter-spacing:-.01em}
@@ -145,8 +145,8 @@ h1 b{font-weight:600}
 .shot{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 60px 110px -40px rgba(18,20,23,.45),0 0 0 1px rgba(18,20,23,.08);background:#fff}
 .shot img{display:block;width:100%}
 .kpis{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.kpi{padding:14px 16px;border-radius:12px;background:#fff;border:1px solid var(--line);flex:1 1 40%}
-.kpi b{display:block;font:300 30px/1 var(--h);letter-spacing:-.04em}
+.kpi{padding:11px 14px;border-radius:12px;background:#fff;border:1px solid var(--line);flex:1 1 40%}
+.kpi b{display:block;font:300 26px/1 var(--h);letter-spacing:-.04em}
 .kpi span{display:block;margin-top:6px;font:400 11px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
 .js .m7s{opacity:0;transform:translateY(10px);transition:opacity .5s,transform .6s cubic-bezier(.2,.8,.2,1)}.js .in .m7s{opacity:1;transform:none}
 .js .in .m7s:nth-child(2){transition-delay:.1s}.js .in .m7s:nth-child(3){transition-delay:.2s}.js .in .m7s:nth-child(4){transition-delay:.3s}.js .in .m7s:nth-child(5){transition-delay:.4s}.js .in .m7s:nth-child(6){transition-delay:.5s}
@@ -189,6 +189,31 @@ h1 b{font-weight:600}
 .counts b{display:block;font:300 30px/1 var(--h);letter-spacing:-.04em}.counts span{display:block;font:400 10.5px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-top:2px}
 .alive-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:14px}
 .alive-cap{font-size:15px;line-height:1.4;color:var(--ink);min-height:1.5em;max-width:40em}
+
+
+/* ── 4 цепочка ── */
+.alive-wrap{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr)}
+.act{padding:10px 14px}.act b{font-size:17px}.act p{font-size:13px}.act .m{padding-top:4px}
+.chainbox{position:relative}
+.chain{width:100%;height:auto;display:block;overflow:visible}
+.track{fill:none;stroke:rgba(18,20,23,.12);stroke-width:10;stroke-linecap:round}
+.glow{fill:none;stroke:url(#cg);stroke-width:10;stroke-linecap:round;filter:url(#soft);transition:stroke-dashoffset 1s cubic-bezier(.2,.8,.2,1)}
+.tok{fill:#fff;stroke:var(--glow);stroke-width:4;filter:url(#soft)}
+.cn .c{fill:#fff;stroke:var(--ink);stroke-width:3;transition:fill .35s,stroke .35s}
+.cn .halo{fill:var(--glow);opacity:0;transition:opacity .4s}
+.cn .n{font:600 15px var(--h);fill:var(--ink);transition:fill .35s}
+.cn .cm{font:500 12px var(--m);fill:var(--glow);letter-spacing:.06em;text-transform:uppercase}
+.cn .lab{fill:#fff;stroke:var(--line);filter:url(#shadow);transition:fill .35s,stroke .35s}
+.cn .lt{font:500 14px var(--h);fill:var(--ink);transition:fill .35s}
+.cn.done .c{fill:var(--ink)}.cn.done .n{fill:#fff}
+.cn.cur .c{fill:var(--glow);stroke:var(--glow)}.cn.cur .n{fill:#fff}.cn.cur .halo{opacity:.18;animation:halo 1.8s ease-out infinite}
+.cn.cur .lab{fill:var(--ink);stroke:var(--ink)}.cn.cur .lt{fill:#fff}
+.cn.fin .c{stroke-dasharray:5 6}.cn.fin .n{font-size:26px}
+.cn.fin.cur .c{stroke-dasharray:none}
+@keyframes halo{0%{transform:scale(.7);opacity:.3}100%{transform:scale(1.4);opacity:0}}
+.cn .halo{transform-box:fill-box;transform-origin:center}
+.js .cn{opacity:0;transition:opacity .5s}.js .in .cn{opacity:1}
+.js .in .cn:nth-child(2){transition-delay:.15s}.js .in .cn:nth-child(3){transition-delay:.3s}.js .in .cn:nth-child(4){transition-delay:.45s}.js .in .cn:nth-child(5){transition-delay:.6s}.js .in .cn:nth-child(6){transition-delay:.75s}.js .in .cn:nth-child(7){transition-delay:.9s}
 
 /* ── 5 как работает ── */
 svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;display:block;overflow:visible;margin:0 auto}
@@ -246,7 +271,7 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 .prod p{margin-top:8px;font-size:13.5px;line-height:1.45;color:var(--mute)}
 .prod .nums{display:flex;gap:20px;margin-top:14px}
 .prod .nums b{display:block;font:300 26px/1 var(--h);letter-spacing:-.04em}.prod .nums span{display:block;margin-top:3px;font:400 10px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
-.train{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center}
+.train{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center;min-height:520px}
 .feat{list-style:none;border-top:1px solid var(--line);margin-top:18px}
 .feat li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.4}
 .feat li b{font-weight:500}.feat li span{color:var(--mute)}
@@ -281,11 +306,11 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 <body>
 <header class="top">
   <a class="who" href="#start"><img src="uploads/photo.jpg" alt=""><b>Кирилл Паскаль</b><span>· руководитель автоматизации и ИИ</span></a>
-  <nav><a href="#platform">Платформа</a><a href="#m7">Доказательство</a><a href="#built">С нуля</a><a href="#how">Как работает</a><a href="#about">Обо мне</a><a href="#more">Продукты</a><a href="#contact">Контакт</a></nav>
+  <nav><a href="#platform">Платформа</a><a href="#m7">Доказательство</a><a href="#built">С нуля</a><a href="#how">Как работает</a><a href="#about">Обо мне</a><a href="#more">Продукты</a><a href="#training">Обучение</a><a href="#contact">Контакт</a></nav>
   <div class="right">Санкт‑Петербург<br><span id="clock"></span></div>
   <button class="burger" id="burger" aria-label="Меню"><i></i></button>
 </header>
-<div class="menu" id="menu"><button class="x" id="menux" aria-label="Закрыть">×</button><a href="#platform">Платформа</a><a href="#m7">Доказательство</a><a href="#built">Как построено</a><a href="#how">Как работает</a><a href="#about">Обо мне</a><a href="#more">Продукты и обучение</a><a href="#contact">Контакт</a></div>
+<div class="menu" id="menu"><button class="x" id="menux" aria-label="Закрыть">×</button><a href="#platform">Платформа</a><a href="#m7">Доказательство</a><a href="#built">Как построено</a><a href="#how">Как работает</a><a href="#about">Обо мне</a><a href="#more">Продукты</a><a href="#training">Обучение</a><a href="#contact">Контакт</a></div>
 <nav class="dots" aria-label="Экраны"></nav>
 
 <!-- 1 -->
@@ -329,7 +354,7 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 <section class="s" id="platform" data-in data-name="Платформа">
   <div class="head">
     <div><div class="mono r" style="margin-bottom:14px">02 · Платформа · корпоративный портал ГСП‑Комплектации (группа Газстройпром)</div>
-      <h2 class="r">Один портал для всей компании: <b>рутину — машине, решения — людям</b></h2></div>
+      <h2 class="r">Один портал для компании: <b>рутину — машине, решения — людям</b></h2></div>
     <span class="live r">16 модулей · в эксплуатации с лета 2026 · 650+ сотрудников</span>
   </div>
   <div>
@@ -359,7 +384,7 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
   </div>
   <div class="m7grid">
     <div class="route r">
-      <svg viewBox="0 0 1512 215" aria-label="Маршрут акта">
+      <svg viewBox="0 0 1512 205" aria-label="Маршрут акта">
         <path class="rt" d="M110 110 H1402"/><path class="rt go" d="M110 110 H1402"/>
         <g id="rnodes">
           <circle class="node lit" cx="110" cy="110" r="14"/><text class="rlab" x="110" y="160" text-anchor="middle">Письмо поставщика</text><text class="rsub" x="110" y="182" text-anchor="middle">вложения: акт PDF, таблица</text>
@@ -392,25 +417,39 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 <section class="s" id="built" data-in data-name="С нуля" style="padding-top:96px;gap:14px">
   <div class="head">
     <div><div class="mono r" style="margin-bottom:14px">04 · Как построено с нуля · четыре месяца</div>
-      <h2 class="r">Сначала вход и подпись, потом документы, <b>и только потом автоматизация</b></h2></div>
-    <p class="lead r">Один и тот же экран портала — так он оживал по месяцам. Нажми на шаг или смотри, как собирается само.</p>
+      <h2 class="r">Сначала контур, <b>потом автоматизация</b></h2></div>
+    <p class="lead r">Порядок, в котором собиралась платформа: без прав и подписи нельзя пускать документы, без документооборота нечего автоматизировать. Четыре месяца — и 16 модулей в работе.</p>
   </div>
   <div class="alive-wrap">
     <div class="acts r" id="acts">
-      <button class="act cur" data-a="0"><span class="m">июнь</span><div><b>Кто может войти и что видит</b><p>вход, роли, права по подразделениям, журнал каждого действия. Без этого нельзя пускать документы.</p></div></button>
-      <button class="act" data-a="1"><span class="m">июль</span><div><b>Документ с подписью и историей</b><p>письма и спецификации заходят в систему; согласование с простой электронной подписью, версии, кто и когда решил.</p></div></button>
-      <button class="act" data-a="2"><span class="m">август — сентябрь</span><div><b>Документы идут сами</b><p>роботы разбирают акты и письма, сверяют с учётной системой, считают цены; человек подтверждает. Плюс отпуска, задачи, протоколы, метрики.</p></div></button>
+      <button class="act cur" data-a="0"><span class="m">июнь</span><div><b>Авторизация и права доступа</b><p>вход, роли, доступ по подразделениям; с первого дня каждый видит только свои документы</p></div></button>
+      <button class="act" data-a="1"><span class="m">июнь</span><div><b>Документооборот</b><p>входящие письма: карточка из скана, реестр, очередь, которая переживает перезапуск</p></div></button>
+      <button class="act" data-a="2"><span class="m">июль</span><div><b>Электронная подпись и согласования</b><p>версии, голоса комиссии, журнал «кто · что · когда»</p></div></button>
+      <button class="act" data-a="3"><span class="m">июль</span><div><b>Автоматизация закупок</b><p>акты приёмки, сверка спецификаций с 1С, история цен, роботы портала</p></div></button>
+      <button class="act" data-a="4"><span class="m">август</span><div><b>Безопасность и закон</b><p>модели на сервере, персональные данные по закону, резервные копии, проверка перед выпуском</p></div></button>
+      <button class="act" data-a="5"><span class="m">сентябрь</span><div><b>Люди, метрики, обучение</b><p>отпуска и командировки, задачи, экраны руководства, новости сотрудникам к каждому выпуску</p></div></button>
     </div>
-    <div class="r alive-col">
-      <div class="alive s0" id="alive">
-        <img src="uploads/home.png" alt="">
-        <div class="lock"><div><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><b>Вход в портал</b><span>только свои документы · журнал действий</span></div></div>
-        <div class="badge" id="abadge">июнь · 1 модуль</div>
-        <div class="docs" id="docs"></div>
-        <div class="sign"><b>Спецификация № 214 · версия 3</b><small>согласовано 10 из 10 · подпись</small><svg viewBox="0 0 230 54"><path d="M6 40 C 20 10, 34 10, 44 36 S 64 48, 76 28 S 96 8, 108 30 S 128 46, 142 26 S 160 14, 176 30 S 198 44, 222 20"/></svg><span class="stamp">подписано</span></div>
-        <div class="counts" id="acounts"><div><b id="c1">2</b><span>модуля</span></div><div><b id="c2">40</b><span>сотрудников</span></div><div><b id="c3">0</b><span>часов в год вернули</span></div></div>
-      </div>
-      <div class="alive-foot"><div class="alive-cap" id="acap">Июнь: сначала права. Каждый видит только своё, каждое действие записано.</div><button class="btn" id="replay" style="height:40px;padding:0 16px;font-size:14px;white-space:nowrap;flex-shrink:0">Показать заново</button></div>
+    <div class="r chainbox">
+      <svg class="chain" viewBox="0 0 1000 480" aria-label="Как собиралась платформа">
+        <defs>
+          <linearGradient id="cg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2456E6"/><stop offset="1" stop-color="#6F8CFF"/></linearGradient>
+          <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#121417" flood-opacity=".18"/></filter>
+        </defs>
+        <path class="track" id="ctrack" d="M90 90 H770 A70 70 0 0 1 840 160 A70 70 0 0 1 770 230 H230 A70 70 0 0 0 160 300 A70 70 0 0 0 230 370 H860"/>
+        <path class="glow" id="cglow" d="M90 90 H770 A70 70 0 0 1 840 160 A70 70 0 0 1 770 230 H230 A70 70 0 0 0 160 300 A70 70 0 0 0 230 370 H860"/>
+        <circle class="tok" r="7"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#ctrack"/></animateMotion></circle>
+        <g id="cn">
+          <g class="cn" transform="translate(90,90)"><text class="cm" y="-40" text-anchor="middle">июнь</text><circle class="halo" r="30"/><circle class="c" r="19"/><text class="n" y="5" text-anchor="middle">1</text><rect class="lab" x="-96" y="34" width="192" height="40" rx="10"/><text class="lt" y="59" text-anchor="middle">Авторизация и права</text></g>
+          <g class="cn" transform="translate(430,90)"><text class="cm" y="-40" text-anchor="middle">июнь</text><circle class="halo" r="30"/><circle class="c" r="19"/><text class="n" y="5" text-anchor="middle">2</text><rect class="lab" x="-82" y="34" width="164" height="40" rx="10"/><text class="lt" y="59" text-anchor="middle">Документооборот</text></g>
+          <g class="cn" transform="translate(770,90)"><text class="cm" y="-40" text-anchor="middle">июль</text><circle class="halo" r="30"/><circle class="c" r="19"/><text class="n" y="5" text-anchor="middle">3</text><rect class="lab" x="-110" y="34" width="220" height="40" rx="10"/><text class="lt" y="59" text-anchor="middle">Подпись и согласования</text></g>
+          <g class="cn" transform="translate(600,230)"><text class="cm" y="-40" text-anchor="middle">июль</text><circle class="halo" r="30"/><circle class="c" r="19"/><text class="n" y="5" text-anchor="middle">4</text><rect class="lab" x="-108" y="34" width="216" height="40" rx="10"/><text class="lt" y="59" text-anchor="middle">Автоматизация закупок</text></g>
+          <g class="cn" transform="translate(330,230)"><text class="cm" y="-40" text-anchor="middle">август</text><circle class="halo" r="30"/><circle class="c" r="19"/><text class="n" y="5" text-anchor="middle">5</text><rect class="lab" x="-100" y="34" width="200" height="40" rx="10"/><text class="lt" y="59" text-anchor="middle">Безопасность и закон</text></g>
+          <g class="cn" transform="translate(430,370)"><text class="cm" y="-40" text-anchor="middle">сентябрь</text><circle class="halo" r="30"/><circle class="c" r="19"/><text class="n" y="5" text-anchor="middle">6</text><rect class="lab" x="-84" y="34" width="168" height="40" rx="10"/><text class="lt" y="59" text-anchor="middle">Люди и метрики</text></g>
+          <g class="cn fin" transform="translate(860,370)"><circle class="halo" r="46"/><circle class="c" r="34"/><text class="n" y="8" text-anchor="middle">16</text><rect class="lab" x="-96" y="50" width="192" height="40" rx="10"/><text class="lt" y="75" text-anchor="middle">модулей в работе</text></g>
+        </g>
+      </svg>
+      <div class="alive-foot"><div class="alive-cap mono">нажми на шаг слева — цепочка доходит до него · 650+ сотрудников · в эксплуатации с лета 2026</div></div>
     </div>
   </div>
 </section>
@@ -490,8 +529,8 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 <!-- 7 -->
 <section class="s" id="more" data-in data-name="Продукты">
   <div class="head">
-    <div><div class="mono r" style="margin-bottom:14px">07 · Кроме платформы</div><h2 class="r">Три своих продукта <b>и программа обучения</b></h2></div>
-    <div class="seg r" id="seg"><button class="cur" data-p="0">Продукты</button><button data-p="1">Обучение работе с ИИ</button></div>
+    <div><div class="mono r" style="margin-bottom:14px">07 · Собственные продукты · все работают</div><h2 class="r">Три продукта, <b>которыми пользуются каждый день</b></h2></div>
+    <p class="lead r">Построены тем же способом, что и платформа: требования, ИИ‑агенты, тесты, проверка второй моделью, выпуск с инструкцией.</p>
   </div>
   <div>
     <div class="pane cur" id="pane0">
@@ -501,7 +540,17 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
         <article class="prod r"><div class="pic achain"><ol class="ach"><li><i>1</i><div><b>Менеджер присылает ссылку или скриншот объявления</b><span>площадки Германии, Китая, Кореи</span></div></li><li><i>2</i><div><b>Робот разбирает объявление</b><span>фото, характеристики, пробег</span></div></li><li><i>3</i><div><b>Считает цену «под ключ»</b><span>таможня, утильсбор, доставка</span></div></li><li><i>4</i><div><b>Карточка на согласование в чат</b><span>«в план» · «переснять» · «отклонить»</span></div></li><li><i>5</i><div><b>Публикация в канал по слотам</b><span>тексты с проверкой фактов</span></div></li></ol></div><div class="tx"><h3>Autobahn<span>работает</span></h3><p class="one">Конвейер офферов для компании, которая привозит автомобили из‑за рубежа.</p><p>От объявления на площадке до поста в канале без ручной работы; человек только подтверждает карточку.</p><div class="nums"><div><b>30</b><span>офферов</span></div><div><b>3</b><span>площадки</span></div></div></div></article>
       </div>
     </div>
-    <div class="pane" id="pane1">
+    </div>
+</section>
+
+<!-- 8 -->
+<section class="s" id="training" data-in data-name="Обучение">
+  <div class="head">
+    <div><div class="mono r" style="margin-bottom:14px">08 · Корпоративное обучение работе с ИИ</div><h2 class="r">Учу сотрудников <b>ставить задачи ИИ и запускать помощников</b></h2></div>
+    <span class="live r">программа идёт · 3 встречи · 20 сотрудников</span>
+  </div>
+  <div>
+    <div class="pane cur" id="pane1">
       <div class="train">
         <div>
           <p class="r" style="font-size:17px;line-height:1.5;max-width:36em">Программа для группы компаний: рестораны, земля и девелопмент, направление в Дубае. Три встречи по 90 минут, около 20 сотрудников. Каждый работает со своей задачей, а бот «Помощник ТЗ» превращает её в пакет для запуска: описание задачи, правила, инструкцию и образец результата.</p>
@@ -517,7 +566,7 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 <!-- 8 -->
 <section class="s" id="contact" data-in data-name="Контакт" style="min-height:0;grid-template-rows:auto auto;padding-top:64px;padding-bottom:28px">
   <div class="contact">
-    <div><div class="mono r" style="margin-bottom:14px">08 · Контакт</div><h2 class="r">Готов повторить это <b>в вашей компании.</b></h2><p class="lead r" style="text-align:left;margin-top:14px">Покажу платформу на демо‑данных, разберу вашу рутину и предложу план на первые месяцы. Ищу роль руководителя автоматизации и ИИ.</p>
+    <div><div class="mono r" style="margin-bottom:14px">09 · Контакт</div><h2 class="r">Готов повторить это <b>в вашей компании.</b></h2><p class="lead r" style="text-align:left;margin-top:14px">Покажу платформу на демо‑данных, разберу вашу рутину и предложу план на первые месяцы. Ищу роль руководителя автоматизации и ИИ.</p>
       <div class="cta r"><a class="btn solid" href="https://t.me/zakrasava" target="_blank" rel="noopener">Написать в Telegram</a><a class="btn" href="mailto:kirillzakrasovsky@yandex.ru">Письмо</a><a class="btn" href="resume.pdf">Резюме в PDF</a></div></div>
     <div class="lines r"><div>Кирилл Паскаль</div><div><a href="tel:+79218598484">+7 (921) 859‑84‑84</a></div><div><a href="https://t.me/zakrasava" target="_blank" rel="noopener">t.me/zakrasava</a></div><div><a href="mailto:kirillzakrasovsky@yandex.ru">kirillzakrasovsky@yandex.ru</a></div><div><a href="https://github.com/Zakrasava" target="_blank" rel="noopener">github.com/Zakrasava</a></div><div>Санкт‑Петербург · английский B2</div></div>
   </div>
@@ -578,23 +627,17 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
     if(e.key==='ArrowDown'&&pos<idx.length-1){e.preventDefault();show(idx[pos+1])}if(e.key==='ArrowUp'&&pos>0){e.preventDefault();show(idx[pos-1])}},true);
   // маршрут акта
   var nodes=[].slice.call(document.querySelectorAll('#rnodes .node')),ni=0;if(!reduce)setInterval(function(){ni=(ni+1)%nodes.length;nodes.forEach(function(n,i){n.classList.toggle('lit',i<=ni)})},900);
-  // как построено: один экран оживает
-  var alive=document.getElementById('alive'),acts=[].slice.call(document.querySelectorAll('#acts .act')),docs=document.getElementById('docs'),cap=document.getElementById('acap'),badge=document.getElementById('abadge'),timers=[],sched=[],streamT=null;
-  var caps=['Июнь: сначала права. Каждый видит только своё, каждое действие записано.','Июль: документы заходят в систему. Согласование с подписью: видно, кто и когда решил.','Август — сентябрь: документы идут сами, человек только подтверждает. Плюс отпуска, задачи, протоколы, метрики.'];
-  var names=['Письмо поставщика','Акт приёмки','Спецификация','Заявка на расходы','Счёт','Протокол'];
-  function clearT(){timers.forEach(clearTimeout);timers=[];clearInterval(streamT);docs.innerHTML=''}
-  function count(el,to,suf){var from=+el.textContent.replace(/[^\d]/g,'')||0,t0=null;if(reduce){el.textContent=to.toLocaleString('ru')+(suf||'');return}(function st(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1400);k=1-Math.pow(1-k,3);el.textContent=Math.round(from+(to-from)*k).toLocaleString('ru')+(suf||'');if(k<1)requestAnimationFrame(st)})(performance.now())}
-  function flyDoc(delay,speed){timers.push(setTimeout(function(){var d=document.createElement('div');d.className='doc fly';d.style.top=(25+Math.random()*45)+'%';d.style.setProperty('--dx',(alive.clientWidth*0.78+Math.random()*60)+'px');d.style.setProperty('--dy',(Math.random()*80-40)+'px');d.style.animationDuration=(speed||1.6)+'s';d.innerHTML='<b>'+names[(Math.random()*names.length)|0]+'</b><i></i><i style="width:40%"></i>';docs.appendChild(d);setTimeout(function(){d.remove()},(speed||1.6)*1000+100)},delay))}
-  function act(n){clearT();acts.forEach(function(a,i){a.classList.toggle('cur',i===n)});alive.className='alive s'+n;cap.textContent=caps[n];
-    if(n===0){badge.textContent='июнь · права и журнал';}
-    if(n===1){badge.textContent='июль · документы и подпись';flyDoc(200,1.8);flyDoc(1400,1.8)}
-    if(n===2){badge.textContent='август — сентябрь · автоматизация';var k=0;streamT=setInterval(function(){flyDoc(0,1.1);k++;if(k>60)clearInterval(streamT)},reduce?1e9:260);
-      count(document.getElementById('c1'),16);count(document.getElementById('c2'),650,'+');count(document.getElementById('c3'),59000)}}
-  function play(){sched.forEach(clearTimeout);sched=[];act(0);sched.push(setTimeout(function(){act(1)},reduce?0:2600));sched.push(setTimeout(function(){act(2)},reduce?0:6400))}
-  acts.forEach(function(a){a.addEventListener('click',function(){sched.forEach(clearTimeout);sched=[];act(+a.dataset.a)})});document.getElementById('replay').addEventListener('click',play);
-  var played=false;new IntersectionObserver(function(es){if(es[0].isIntersecting&&!played){played=true;setTimeout(play,300)}},{threshold:.4}).observe(document.getElementById('built'));
+  // как построено: цепочка доходит до выбранного шага
+  var acts=[].slice.call(document.querySelectorAll('#acts .act')),cns=[].slice.call(document.querySelectorAll('#cn .cn')),cglow=document.getElementById('cglow'),ctrack=document.getElementById('ctrack');
+  var clen=ctrack.getTotalLength();cglow.style.strokeDasharray=clen;cglow.style.strokeDashoffset=clen;
+  // длина пути до каждого узла (м. getPointAtLength подбором)
+  function lenAt(x,y){var best=0,bd=1e9;for(var l=0;l<=clen;l+=4){var pt=ctrack.getPointAtLength(l),d=(pt.x-x)*(pt.x-x)+(pt.y-y)*(pt.y-y);if(d<bd){bd=d;best=l}}return best}
+  var marks=cns.map(function(g){var m=/translate\((\d+),(\d+)\)/.exec(g.getAttribute('transform'));return lenAt(+m[1],+m[2])});
+  var ctimer=null;
+  function chainTo(n){cns.forEach(function(c,i){c.classList.toggle('done',i<n);c.classList.toggle('cur',i===n)});acts.forEach(function(a,i){a.classList.toggle('cur',i===Math.min(n,5))});cglow.style.strokeDashoffset=Math.max(0,clen-marks[n])}
+  acts.forEach(function(a){a.addEventListener('click',function(){clearInterval(ctimer);chainTo(+a.dataset.a)})});
+  var played=false;new IntersectionObserver(function(es){if(es[0].isIntersecting&&!played){played=true;var k=0;ctimer=setInterval(function(){chainTo(k);k++;if(k>6)clearInterval(ctimer)},reduce?0:700)}},{threshold:.35}).observe(document.getElementById('built'));
   // продукты / обучение
-  var seg=[].slice.call(document.querySelectorAll('#seg button'));seg.forEach(function(b){b.addEventListener('click',function(){seg.forEach(function(o){o.classList.remove('cur')});b.classList.add('cur');document.getElementById('pane0').classList.toggle('cur',b.dataset.p==='0');document.getElementById('pane1').classList.toggle('cur',b.dataset.p==='1');animateNums(document.getElementById('more'))})});
   var ach=[].slice.call(document.querySelectorAll('.ach li')),ai=0;if(!reduce)setInterval(function(){ai=(ai+1)%(ach.length+2);ach.forEach(function(l,i){l.classList.toggle('lit',i<=ai)})},800);
   // титул: сеть точек и стена
   var c=document.getElementById('net'),x=c.getContext('2d'),W,H,DPR=Math.min(2,devicePixelRatio||1),P=[],mx=-1e4,my=-1e4;
