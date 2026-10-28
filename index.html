@@ -138,7 +138,7 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
 @keyframes flow{to{stroke-dashoffset:-14}}
 .dot.ok{fill:var(--ok)}.pill{fill:#fff;stroke:var(--line)}
 /* ── 5 построено с нуля: изометрические блоки ── */
-.iso{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center}
+.iso{position:relative;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:center}
 .steps{list-style:none;display:grid;gap:8px}
 .steps li{display:grid;grid-template-columns:70px 1fr;gap:16px;padding:12px 16px;border-radius:12px;border:1px solid transparent;transition:background .25s,border-color .25s;cursor:pointer}
 .steps li:hover,.steps li.cur{background:var(--panel);border-color:var(--line)}
@@ -170,6 +170,27 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
 .js .in .blk{opacity:1;transform:translateZ(0)}
 .js .in .blk:nth-child(2){transition-delay:.15s}.js .in .blk:nth-child(3){transition-delay:.3s}.js .in .blk:nth-child(4){transition-delay:.45s}.js .in .blk:nth-child(5){transition-delay:.6s}.js .in .blk:nth-child(6){transition-delay:.75s}
 .isohint{position:absolute;left:0;bottom:0}
+
+/* ── 5 дорожная карта ── */
+.road{position:relative;padding:8px 0 0}
+.months{display:grid;grid-template-columns:repeat(4,1fr);padding-left:0;margin-bottom:10px}
+.months span{font:400 12px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--glow);padding-left:12px;border-left:1px dashed rgba(36,86,230,.35)}
+.lanes{position:relative;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:70px;row-gap:10px;background-image:repeating-linear-gradient(90deg,rgba(18,20,23,.12) 0 1px,transparent 1px 25%);}
+.bar{grid-column:var(--c1)/var(--c2);display:grid;grid-template-columns:56px 1fr;gap:10px;align-items:center;margin:0 10px;padding:6px 12px 6px 6px;border-radius:12px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 40px -30px rgba(18,20,23,.4);cursor:pointer;transform-origin:left center;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .5s,background .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+.bar img{width:56px;height:56px;object-fit:cover;object-position:top left;border-radius:7px;border:1px solid var(--line)}
+.bar b{display:block;font-weight:500;font-size:14px;line-height:1.15;letter-spacing:-.01em}
+.bar span{display:block;font-size:11.5px;line-height:1.2;color:var(--mute);margin-top:3px}
+.bar:hover{border-color:var(--glow);transform:translateY(-2px)}
+.bar.cur{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:0 30px 50px -30px rgba(18,20,23,.6)}
+.bar.cur span{color:rgba(255,255,255,.65)}
+.js .bar{opacity:0;transform:scaleX(.15)}
+.js .in .bar{opacity:1;transform:none}
+.js .in .bar:nth-child(2){transition-delay:.35s}.js .in .bar:nth-child(3){transition-delay:.7s}.js .in .bar:nth-child(4){transition-delay:1.05s}.js .in .bar:nth-child(5){transition-delay:1.4s}.js .in .bar:nth-child(6){transition-delay:1.75s}
+.sweep{position:absolute;top:-10px;bottom:-10px;left:0;width:2px;background:var(--glow);box-shadow:0 0 14px rgba(36,86,230,.7);opacity:0}
+.js .in .sweep{animation:sweep 2.6s cubic-bezier(.2,.8,.2,1) .1s forwards}
+@keyframes sweep{0%{left:0;opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
+.roadfoot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:18px}
+
 /* ── 6 маршрут акта ── */
 .route{position:relative}
 .route svg{width:100%;max-width:100%;height:auto;overflow:visible;display:block}
@@ -274,7 +295,7 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
   .wall{opacity:.35;transform:translate(-18%,-35%) scale(.55) rotateY(-24deg) rotateX(8deg)}
   .ui{position:relative;padding:76px 18px 0;display:block}
   .bottom{grid-template-columns:1fr;gap:22px}.meter{justify-self:stretch;text-align:left;margin-top:8px}.meter div b{font-size:36px}
-  .body,.iso,.train,.about,.about2,.contact,.mb,.mdet,.m7grid{grid-template-columns:1fr}.m7steps{grid-template-columns:1fr}.mlist{max-height:none}.mshot{transform:none}.live{white-space:normal}.prods{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}
+  .body,.iso,.train,.about,.about2,.contact,.mb,.mdet,.m7grid{grid-template-columns:1fr}.lanes{grid-auto-rows:60px}.bar{grid-column:1/-1!important;margin:0}.months{display:none}.lanes{background:none}.m7steps{grid-template-columns:1fr}.mlist{max-height:none}.mshot{transform:none}.live{white-space:normal}.prods{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}
   .stage{margin-top:12px}.shot,.mshot{transform:none}
   .kpis,.rk{position:static;display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.kpi{min-width:0;flex:1 1 40%}
   .mlist{max-height:none;grid-template-columns:1fr}
@@ -432,23 +453,18 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
       <li data-b="4"><span class="m">август</span><div><b>Безопасность и законодательство</b><p>модели на сервере, 152‑ФЗ и требования к сайту, резервные копии, релизные ворота</p></div></li>
       <li data-b="5"><span class="m">сентябрь</span><div><b>Люди, метрики, обучение</b><p>отпуска и командировки, задачи, экраны руководства, «Журнал внедрений» для сотрудников</p></div></li>
     </ol>
-    <div class="chainwrap r">
-      <svg class="chainsvg" viewBox="0 0 900 420" aria-label="Цепочка создания платформы">
-        <defs><filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-        <path class="cl" id="clpath" d="M70 70 H830 M830 70 V210 H70 M70 210 V350 H830"/>
-        <path class="cl go" id="clgo" d="M70 70 H830 M830 70 V210 H70 M70 210 V350 H830"/>
-        <g id="cnodes">
-          <g class="cn cur" transform="translate(70,70)"><circle r="22"/><text class="cm" y="-36" text-anchor="middle">июнь</text><text class="ct" y="52" text-anchor="middle">Авторизация и права</text></g>
-          <g class="cn" transform="translate(450,70)"><circle r="22"/><text class="cm" y="-36" text-anchor="middle">июнь</text><text class="ct" y="52" text-anchor="middle">Документооборот</text></g>
-          <g class="cn" transform="translate(830,70)"><circle r="22"/><text class="cm" y="-36" text-anchor="middle">июль</text><text class="ct" y="52" text-anchor="middle">Подпись и согласования</text></g>
-          <g class="cn" transform="translate(70,210)"><circle r="22"/><text class="cm" y="-36" text-anchor="middle">июль</text><text class="ct" y="52" text-anchor="middle">Автоматизация закупок</text></g>
-          <g class="cn" transform="translate(450,210)"><circle r="22"/><text class="cm" y="-36" text-anchor="middle">август</text><text class="ct" y="52" text-anchor="middle">Безопасность · 152‑ФЗ</text></g>
-          <g class="cn" transform="translate(830,210)"><circle r="22"/><text class="cm" y="-36" text-anchor="middle">сентябрь</text><text class="ct" y="52" text-anchor="middle">Люди и метрики</text></g>
-          <g class="cn end" transform="translate(450,350)"><circle r="22"/><text class="ct" y="52" text-anchor="middle">16 модулей в работе</text></g>
-        </g>
-        <circle class="ctok" r="8"><animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#clpath"/></animateMotion></circle>
-      </svg>
-      <div class="isohint mono">клик по шагу слева — цепочка доходит до него</div>
+    <div class="road r" id="road">
+      <div class="months"><span>июнь</span><span>июль</span><span>август</span><span>сентябрь</span></div>
+      <div class="lanes">
+        <div class="bar cur" data-b="0" style="--c1:1;--c2:2"><img src="uploads/admin.png" alt=""><div><b>Авторизация и права</b><span>вход, роли, управления</span></div></div>
+        <div class="bar" data-b="1" style="--c1:1;--c2:3"><img src="uploads/letters.png" alt=""><div><b>Документооборот</b><span>письма: карточка из скана, реестр</span></div></div>
+        <div class="bar" data-b="2" style="--c1:2;--c2:3"><img src="uploads/spec_approval.png" alt=""><div><b>Подпись и согласования</b><span>версии, голоса, журнал</span></div></div>
+        <div class="bar" data-b="3" style="--c1:2;--c2:4"><img src="uploads/m7.png" alt=""><div><b>Автоматизация закупок</b><span>акты М‑7, сверка, цены, роботы</span></div></div>
+        <div class="bar" data-b="4" style="--c1:3;--c2:5"><img src="uploads/udo_metrics.png" alt=""><div><b>Безопасность · 152‑ФЗ</b><span>модели на сервере, копии, ворота</span></div></div>
+        <div class="bar" data-b="5" style="--c1:4;--c2:5"><img src="uploads/absences.png" alt=""><div><b>Люди и метрики</b><span>отпуска, задачи, экраны</span></div></div>
+        <i class="sweep"></i>
+      </div>
+      <div class="roadfoot"><span class="live">16 модулей в работе · 650+ сотрудников</span><span class="mono">полоса — когда блок собирался · клик по шагу слева подсвечивает его</span></div>
     </div>
   </div>
 </section>
@@ -643,15 +659,13 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
   function keyable(el){el.setAttribute('tabindex','0');el.setAttribute('role','button');el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click()}})}
   groups.forEach(keyable);groups.forEach(function(g){g.addEventListener('click',function(){groups.forEach(function(o){o.classList.remove('cur')});g.classList.add('cur');pshot.src='uploads/'+g.dataset.shot;ptag.textContent=g.querySelector('h3').textContent+' · в работе';
     pk.innerHTML=['k1','k2','k3'].map(function(k){var v=g.dataset[k].split('|');return '<div class="kpi"><b>'+v[0]+'</b><span>'+v[1]+'</span></div>'}).join('')})});
-  // построено с нуля: цепочка доходит до выбранного шага
-  var steps=[].slice.call(document.querySelectorAll('#steps li')),cnodes=[].slice.call(document.querySelectorAll('#cnodes .cn')),clgo=document.getElementById('clgo');
-  var clen=clgo.getTotalLength();clgo.style.strokeDasharray=clen;
-  // длина пути до каждого узла: отрезки 380,380,140+760,380,380, финал 140+380
-  var marks=[0,380,760,1660,2040,2420,2940];
-  function chainTo(n){cnodes.forEach(function(c,i){c.classList.toggle('done',i<n);c.classList.toggle('cur',i===n)});clgo.style.strokeDashoffset=Math.max(0,clen-marks[n])}
-  steps.forEach(keyable);steps.forEach(function(st){st.addEventListener('click',function(){steps.forEach(function(o){o.classList.remove('cur')});st.classList.add('cur');chainTo(+st.dataset.b)})});
-  clgo.style.strokeDashoffset=clen;
-  new IntersectionObserver(function(es){if(es[0].isIntersecting){var k=0;(function tick(){if(k>6)return;chainTo(k);steps.forEach(function(o,i){o.classList.toggle('cur',i===k)});k++;setTimeout(tick,650)})()}},{threshold:.4}).observe(document.getElementById('built'));
+  // построено с нуля: шаг слева ↔ полоса на карте
+  var steps=[].slice.call(document.querySelectorAll('#steps li')),bars=[].slice.call(document.querySelectorAll('#road .bar'));
+  function pick(n){steps.forEach(function(o,i){o.classList.toggle('cur',i===n)});bars.forEach(function(b,i){b.classList.toggle('cur',i===n)})}
+  steps.forEach(keyable);bars.forEach(keyable);
+  steps.forEach(function(st){st.addEventListener('click',function(){pick(+st.dataset.b)})});
+  bars.forEach(function(b){b.addEventListener('click',function(){pick(+b.dataset.b)});b.addEventListener('mouseenter',function(){pick(+b.dataset.b)})});
+  new IntersectionObserver(function(es){if(es[0].isIntersecting&&!reduce){var k=0;(function tick(){if(k>5)return;pick(k);k++;setTimeout(tick,420)})()}},{threshold:.4}).observe(document.getElementById('built'));
   // маршрут акта: узлы зажигаются по очереди
   var nodes=[].slice.call(document.querySelectorAll('#rnodes .node')),ni=0;
   if(!reduce)setInterval(function(){ni=(ni+1)%nodes.length;nodes.forEach(function(n,i){n.classList.toggle('lit',i<=ni)})},900);
