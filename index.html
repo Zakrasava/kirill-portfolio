@@ -25,7 +25,7 @@ html,body{background:var(--bg);color:var(--ink);font-family:var(--h);overflow-x:
 a{color:inherit;text-decoration:none}
 .mono{font:400 12px/1.6 var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
 .mono b{color:var(--ink);font-weight:500}
-section.s{position:relative;min-height:100vh;padding:104px 44px 40px;display:grid;grid-template-rows:auto 1fr;grid-template-columns:minmax(0,1fr);gap:18px;scroll-snap-align:start;overflow:hidden}
+section.s{position:relative;min-height:100vh;padding:104px 72px 40px 44px;display:grid;grid-template-rows:auto 1fr;grid-template-columns:minmax(0,1fr);gap:18px;scroll-snap-align:start;overflow:hidden}
 .head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
 h2{font-weight:300;font-size:clamp(32px,3.6vw,54px);letter-spacing:-.035em;line-height:1.02}
 h2 b{font-weight:600}
@@ -49,7 +49,7 @@ h2 b{font-weight:600}
 .dots a{width:8px;height:8px;border-radius:50%;background:rgba(18,20,23,.2);display:block;position:relative;transition:background .25s,transform .25s}
 .dots a.cur{background:var(--glow);transform:scale(1.35)}
 .dots a span{position:absolute;right:18px;top:50%;transform:translateY(-50%);font:400 11px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);white-space:nowrap;opacity:0;transition:opacity .2s}
-.dots a:hover span,.dots a.cur span{opacity:1}
+.dots a:hover span{opacity:1}
 /* ── 1 титул ── */
 .scene{position:relative;height:100vh;min-height:760px;overflow:hidden;perspective:1400px;perspective-origin:62% 45%;scroll-snap-align:start}
 canvas#net{position:absolute;inset:0;width:100%;height:100%;display:block}
@@ -111,8 +111,8 @@ h1 b{font-weight:600}
 .mlist li em{font:400 11px var(--m);font-style:normal;color:var(--ok)}.mlist li.cur em{color:#7EE2B0}
 .mlist li.grp{cursor:default;padding:14px 12px 4px;grid-template-columns:1fr}.mlist li.grp:hover{background:transparent}
 .mlist li.grp span{font:400 11px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
-.mdet{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px;align-items:start}
-.mshot{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 60px 110px -40px rgba(18,20,23,.45),0 0 0 1px rgba(18,20,23,.08);background:#fff;transform:perspective(1600px) rotateY(-5deg);transform-origin:left center}
+.mdet{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:36px;align-items:start}
+.mshot{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 60px 110px -40px rgba(18,20,23,.45),0 0 0 1px rgba(18,20,23,.08);background:#fff}
 .mshot img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;transition:opacity .35s}
 .mshot img.sw{opacity:0}
 .mshot .tag{position:absolute;left:14px;top:12px;display:flex;gap:8px;align-items:center;font:500 11px var(--m);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:rgba(255,255,255,.88);padding:6px 10px;border-radius:999px;border:1px solid var(--line)}
@@ -147,12 +147,14 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
 .steps li p{font-size:14px;color:var(--mute);line-height:1.4;margin-top:3px}
 .chainwrap{position:relative;padding:12px 70px 28px 20px}.chainsvg{width:100%;height:auto;display:block;overflow:visible}
 .cl{fill:none;stroke:rgba(18,20,23,.18);stroke-width:3;stroke-linejoin:round}
-.cl.go{stroke:var(--glow);stroke-width:4;transition:stroke-dashoffset .9s cubic-bezier(.2,.8,.2,1)}
-.cn circle{fill:#fff;stroke:var(--ink);stroke-width:3;transition:fill .3s,stroke .3s,r .3s}
+.cl.go{stroke:var(--glow);stroke-width:5;filter:url(#glow);transition:stroke-dashoffset .9s cubic-bezier(.2,.8,.2,1)}
+.ctok{fill:#fff;stroke:var(--glow);stroke-width:4;filter:url(#glow)}
+.cn circle{fill:#fff;stroke:var(--ink);stroke-width:3;transition:fill .3s,stroke .3s,r .35s cubic-bezier(.2,.8,.2,1)}
+.cn.cur circle{r:30;filter:url(#glow)}.cn.done circle{r:24}
 .cn.done circle{fill:var(--ink)}.cn.cur circle{fill:var(--glow);stroke:var(--glow)}
 .cn.end circle{stroke-dasharray:4 5}
 .cn .cm{font:400 12px var(--m);fill:var(--glow);letter-spacing:.06em;text-transform:uppercase}
-.cn .ct{font:500 15px var(--h);fill:var(--ink)}
+.cn .ct{font:500 15px var(--h);fill:var(--ink)}.cn.cur .ct{font-weight:600;font-size:17px}.cn.cur .cm{font-weight:600}
 .js .cn{opacity:0;transform-box:fill-box;transition:opacity .5s}.js .in .cn{opacity:1}
 .js .in .cn:nth-child(2){transition-delay:.15s}.js .in .cn:nth-child(3){transition-delay:.3s}.js .in .cn:nth-child(4){transition-delay:.45s}.js .in .cn:nth-child(5){transition-delay:.6s}.js .in .cn:nth-child(6){transition-delay:.75s}.js .in .cn:nth-child(7){transition-delay:.9s}
 .isoscene{position:relative;height:560px;perspective:1800px;touch-action:none}
@@ -179,11 +181,24 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
 .rshot{position:absolute;right:0;bottom:0;width:520px;border-radius:12px;overflow:hidden;box-shadow:0 50px 90px -40px rgba(18,20,23,.5),0 0 0 1px rgba(18,20,23,.08);background:#fff}
 .rshot img{display:block;width:100%}
 .rk{position:absolute;left:0;bottom:0;display:flex;gap:10px}
+.m7grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);grid-template-rows:auto 1fr;gap:18px 40px;align-items:start}
+.m7grid .route{grid-column:1/-1}
+.m7steps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.m7s{position:relative;padding:14px 16px 14px 44px;border-radius:12px;background:#fff;border:1px solid var(--line);transition:transform .3s,border-color .3s}
+.m7s:hover{transform:translateY(-3px);border-color:var(--glow)}
+.m7s i{position:absolute;left:14px;top:15px;font:500 11px var(--m);color:var(--glow);font-style:normal}
+.m7s b{display:block;font-weight:500;font-size:14.5px;letter-spacing:-.01em}
+.m7s span{display:block;font-size:12.5px;line-height:1.35;color:var(--mute);margin-top:4px}
+.m7s em{position:absolute;right:14px;top:14px;font:400 11px var(--m);font-style:normal;color:var(--mute)}
+.m7side .rk{position:static;margin-top:14px;flex-wrap:wrap}
+.m7side .kpi{min-width:0;flex:1 1 40%}
+.js .m7s{opacity:0;transform:translateY(10px);transition:opacity .5s,transform .6s cubic-bezier(.2,.8,.2,1)}.js .in .m7s{opacity:1;transform:none}
+.js .in .m7s:nth-child(2){transition-delay:.1s}.js .in .m7s:nth-child(3){transition-delay:.2s}.js .in .m7s:nth-child(4){transition-delay:.3s}.js .in .m7s:nth-child(5){transition-delay:.4s}.js .in .m7s:nth-child(6){transition-delay:.5s}
 /* ── 7 продукты ── */
-.prods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-content:start}
+.prods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-content:center;align-self:center}
 .prod{position:relative;border-radius:16px;background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 30px 60px -40px rgba(18,20,23,.35);display:grid;grid-template-rows:auto 1fr;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
 .prod:hover{transform:translateY(-6px);box-shadow:0 50px 80px -40px rgba(18,20,23,.45)}
-.prod .pic{height:300px;overflow:hidden;background:#0B1220}
+.prod .pic{height:340px;overflow:hidden;background:#0B1220}
 .prod .pic img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .prod .pic.phone{display:grid;place-items:center;background:linear-gradient(180deg,#EDEBE5,#E3E1DA)}
 .phone{width:210px;background:#121417;border-radius:28px;padding:10px;box-shadow:0 40px 60px -30px rgba(18,20,23,.6)}
@@ -196,7 +211,7 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
 .prod .nums{display:flex;gap:20px;margin-top:14px}
 .prod .nums b{display:block;font:300 26px/1 var(--h);letter-spacing:-.04em}
 .prod .nums span{display:block;margin-top:3px;font:400 10px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
-.prod .pic.achain{height:300px;background:linear-gradient(180deg,#F8F7F3,#EFEDE7);padding:16px 18px;overflow:hidden}
+.prod .pic.achain{height:340px;background:linear-gradient(180deg,#F8F7F3,#EFEDE7);padding:16px 18px;overflow:hidden}
 .ach{list-style:none;position:relative;display:grid;gap:6px}
 .ach::before{content:"";position:absolute;left:13px;top:14px;bottom:14px;width:2px;background:rgba(18,20,23,.15)}
 .ach li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
@@ -233,15 +248,16 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
 .princ li b{display:block;font-weight:500;font-size:16px;color:var(--ink);margin-bottom:3px}
 .path{list-style:none;position:relative;display:grid;gap:4px;padding-left:18px}
 .path::before{content:"";position:absolute;left:5px;top:12px;bottom:12px;width:2px;background:rgba(18,20,23,.14)}
-.path li{position:relative;display:grid;grid-template-columns:64px 1fr;gap:12px;padding:10px 0}
+.path li{position:relative;display:grid;grid-template-columns:64px 1fr;gap:12px;padding:9px 0}
 .path li::before{content:"";position:absolute;left:-18px;top:16px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--ink)}
 .path li.now::before{background:var(--glow);border-color:var(--glow);box-shadow:0 0 0 6px rgba(36,86,230,.15)}
-.path .y{font:300 26px/1 var(--h);letter-spacing:-.04em;color:var(--mute)}.path li.now .y{color:var(--glow)}
-.path b{display:block;font-weight:500;font-size:16px}.path span{display:block;font-size:13px;color:var(--mute);line-height:1.4;margin-top:2px}
+.path .y{font:300 24px/1 var(--h);letter-spacing:-.04em;color:var(--mute)}.path .y small{display:block;font:400 10px var(--m);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}.path li.now .y{color:var(--glow)}
+.path em{display:block;font-style:normal;font-size:13px;color:var(--ink);margin-top:2px}
+.path b{display:block;font-weight:500;font-size:16px}.path span{display:block;font-size:12.5px;color:var(--mute);line-height:1.4;margin-top:3px}
 .js .path li{opacity:0;transform:translateY(10px);transition:opacity .5s,transform .6s cubic-bezier(.2,.8,.2,1)}.js .in .path li{opacity:1;transform:none}
 .js .in .path li:nth-child(2){transition-delay:.15s}.js .in .path li:nth-child(3){transition-delay:.3s}.js .in .path li:nth-child(4){transition-delay:.45s}.js .in .path li:nth-child(5){transition-delay:.6s}
 /* ── 10 контакт ── */
-.contact{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;padding-top:40px}
+.contact{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;padding-top:0}
 .contact h2{font-size:clamp(44px,6vw,96px)}
 .lines{font:400 16px/2 var(--m);text-align:right}
 .lines a{border-bottom:1px solid var(--line)}
@@ -258,7 +274,7 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
   .wall{opacity:.35;transform:translate(-18%,-35%) scale(.55) rotateY(-24deg) rotateX(8deg)}
   .ui{position:relative;padding:76px 18px 0;display:block}
   .bottom{grid-template-columns:1fr;gap:22px}.meter{justify-self:stretch;text-align:left;margin-top:8px}.meter div b{font-size:36px}
-  .body,.iso,.train,.about,.about2,.contact,.mb,.mdet{grid-template-columns:1fr}.mlist{max-height:none}.mshot{transform:none}.live{white-space:normal}.prods{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}
+  .body,.iso,.train,.about,.about2,.contact,.mb,.mdet,.m7grid{grid-template-columns:1fr}.m7steps{grid-template-columns:1fr}.mlist{max-height:none}.mshot{transform:none}.live{white-space:normal}.prods{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}
   .stage{margin-top:12px}.shot,.mshot{transform:none}
   .kpis,.rk{position:static;display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.kpi{min-width:0;flex:1 1 40%}
   .mlist{max-height:none;grid-template-columns:1fr}
@@ -311,7 +327,7 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
       <div class="meter mono r">
         <div><b>300</b><span>актов М‑7 в день · модуль в работе</span></div>
         <div><b>≈ 130 000</b><span>документов в год через платформу</span></div>
-        <div><b>≈ 49 000</b><span>часов в год вернули специалистам</span></div>
+        <div><b>≈ 59 000</b><span>часов в год вернули специалистам</span></div>
       </div>
     </div>
   </div>
@@ -328,14 +344,14 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
     <div class="groups">
       <div class="group cur r" data-shot="home.png" data-k1="16|модулей" data-k2="300|актов в день" data-k3="97,7 %|точность полей письма">
         <div class="gh"><h3>Закупки и документы</h3><div class="n mono"><b>≈ 130 000</b><span>документов в год</span></div></div>
-        <ul><li><b>Акты М‑7</b><span>300 в день · 90,3 % без исправлений</span></li><li><b>Входящие письма</b><span>≈ 20 000 в год · 97,7 % точность</span></li><li><b>Сверка спецификаций</b><span>≈ 25 000 в год · 19 проверок</span></li><li><b>Согласование спецификаций и заявок на расходование денежных средств</b><span>≈ 12 000 в год · 3 → 1 мин</span></li><li><b>Роботы: спецификации, история цен, Газпром Маркет</b><span>собирают документы и выгрузки по расписанию, без человека</span></li></ul>
+        <ul><li><b>Акты М‑7</b><span>300 в день · 90,3 % без исправлений</span></li><li><b>Входящие письма</b><span>≈ 20 000 в год · 97,7 % точность</span></li><li><b>Сверка спецификаций</b><span>≈ 25 000 в год · 19 проверок</span></li><li><b>Согласование спецификаций</b><span>≈ 500 в месяц · 10 согласующих · круги пересогласования → одна карточка</span></li><li><b>Заявки на расходование денежных средств</b><span>≈ 12 000 в год · 3 → 1 мин</span></li><li><b>Роботы: спецификации, история цен, Газпром Маркет</b><span>собирают документы и выгрузки по расписанию, без человека</span></li></ul>
       </div>
       <div class="group r" data-shot="absences.png" data-k1="650+|сотрудников" data-k2="минуты|вместо дня на заявку" data-k3="по ТК|график отпусков">
         <div class="gh"><h3>Люди и процессы</h3><div class="n mono"><b>650+</b><span>сотрудников в контуре</span></div></div>
         <ul><li><b>Отсутствия, командировки, отпуска</b><span>заявка и согласование за минуты, график отпусков по ТК</span></li><li><b>Задачи</b><span>исполнитель, срок, проверяющий, канбан</span></li><li><b>Протоколы совещаний</b><span>запись → протокол за 15 минут</span></li><li><b>Презентации и чат сотрудников</b><span>отчёт по шаблону, переписка внутри контура</span></li></ul>
       </div>
-      <div class="group r" data-shot="udo_metrics.png" data-k1="≈ 49 000 ч|возвращено в год" data-k2="152‑ФЗ|данные в контуре" data-k3="каждое|действие в журнале">
-        <div class="gh"><h3>ИИ и управление</h3><div class="n mono"><b>≈ 49 000 ч</b><span>возвращено в год</span></div></div>
+      <div class="group r" data-shot="udo_metrics.png" data-k1="≈ 59 000 ч|возвращено в год" data-k2="152‑ФЗ|данные в контуре" data-k3="каждое|действие в журнале">
+        <div class="gh"><h3>ИИ и управление</h3><div class="n mono"><b>≈ 59 000 ч</b><span>возвращено в год</span></div></div>
         <ul><li><b>ИИ‑помощник</b><span>ответ по данным компании в рамках прав</span></li><li><b>Метрики для руководства</b><span>поток, качество, динамика без запроса отчёта</span></li><li><b>Права, журнал, электронная подпись</b><span>доступ по управлениям, каждое действие записано, 152‑ФЗ</span></li></ul>
       </div>
     </div>
@@ -397,7 +413,7 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
       <rect class="box" x="1150" y="160" width="362" height="78" rx="12"/><text class="t" x="1170" y="192">1С — только чтение</text><text class="t s" x="1170" y="216">ЕСЦУЗ · ЕСЭД · сверка позиций</text>
       <rect class="box" x="1150" y="280" width="362" height="78" rx="12"/><text class="t" x="1170" y="312">Руководителю</text><text class="t s" x="1170" y="336">метрики · динамика · презентации</text>
       <rect class="box" x="1150" y="400" width="362" height="78" rx="12"/><text class="t" x="1170" y="432">Людям</text><text class="t s" x="1170" y="456">согласовано · протокол · ответ помощника</text></g>
-    <text class="t s" x="0" y="580">≈ 130 000 документов в год проходят этот путь · ≈ 49 000 часов возвращено людям</text><text class="t s" x="1512" y="580" text-anchor="end">облачные модели документы не видят</text>
+    <text class="t s" x="0" y="580">≈ 130 000 документов в год проходят этот путь · ≈ 59 000 часов возвращено людям</text><text class="t s" x="1512" y="580" text-anchor="end">облачные модели документы не видят</text>
   </svg>
 </section>
 
@@ -418,7 +434,8 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
     </ol>
     <div class="chainwrap r">
       <svg class="chainsvg" viewBox="0 0 900 420" aria-label="Цепочка создания платформы">
-        <path class="cl" d="M70 70 H830 M830 70 V210 H70 M70 210 V350 H830"/>
+        <defs><filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        <path class="cl" id="clpath" d="M70 70 H830 M830 70 V210 H70 M70 210 V350 H830"/>
         <path class="cl go" id="clgo" d="M70 70 H830 M830 70 V210 H70 M70 210 V350 H830"/>
         <g id="cnodes">
           <g class="cn cur" transform="translate(70,70)"><circle r="22"/><text class="cm" y="-36" text-anchor="middle">июнь</text><text class="ct" y="52" text-anchor="middle">Авторизация и права</text></g>
@@ -429,6 +446,7 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
           <g class="cn" transform="translate(830,210)"><circle r="22"/><text class="cm" y="-36" text-anchor="middle">сентябрь</text><text class="ct" y="52" text-anchor="middle">Люди и метрики</text></g>
           <g class="cn end" transform="translate(450,350)"><circle r="22"/><text class="ct" y="52" text-anchor="middle">16 модулей в работе</text></g>
         </g>
+        <circle class="ctok" r="8"><animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#clpath"/></animateMotion></circle>
       </svg>
       <div class="isohint mono">клик по шагу слева — цепочка доходит до него</div>
     </div>
@@ -441,22 +459,34 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
     <div><div class="mono r" style="margin-bottom:14px">06 · Маршрут одного документа · Акты М‑7</div><h2 class="r">От письма поставщика до реестра — <b>две минуты вместо двадцати</b></h2></div>
     <span class="live r">300 актов в день · модуль в работе</span>
   </div>
-  <div class="route r">
-    <svg viewBox="0 0 1512 300" aria-label="Маршрут акта М-7">
-      <path class="rt" d="M40 150 H1472"/><path class="rt go" d="M40 150 H1472"/>
-      <g id="rnodes">
-        <circle class="node lit" cx="40" cy="150" r="14"/><text class="rlab" x="40" y="200" text-anchor="middle">Письмо .msg</text><text class="rsub" x="40" y="222" text-anchor="middle">вложения: акт PDF, таблица</text>
-        <circle class="node" cx="326" cy="150" r="14"/><text class="rlab" x="326" y="200" text-anchor="middle">Разбор</text><text class="rsub" x="326" y="222" text-anchor="middle">OCR + модель · 33 поля</text>
-        <circle class="node" cx="612" cy="150" r="14"/><text class="rlab" x="612" y="200" text-anchor="middle">Подбор по 1С</text><text class="rsub" x="612" y="222" text-anchor="middle">выгрузка ЕСЦУЗ · позиции</text>
-        <circle class="node" cx="898" cy="150" r="14"/><text class="rlab" x="898" y="200" text-anchor="middle">Сверка PDF ↔ Excel</text><text class="rsub" x="898" y="222" text-anchor="middle">спорное подсвечено</text>
-        <circle class="node" cx="1184" cy="150" r="14"/><text class="rlab" x="1184" y="200" text-anchor="middle">Человек подтверждает</text><text class="rsub" x="1184" y="222" text-anchor="middle">90,3 % — без правок</text>
-        <circle class="node" cx="1472" cy="150" r="14"/><text class="rlab" x="1472" y="200" text-anchor="middle">Реестр и письмо</text><text class="rsub" x="1472" y="222" text-anchor="middle">33 столбца · бланк поставщику</text>
-      </g>
-      <text class="rsub" x="40" y="100">вручную: 20 минут на акт, таблицы разных форматов, ошибки находили через неделю</text>
-      <text class="rsub" x="1472" y="100" text-anchor="end">с платформой: 2 минуты, до 15 актов в минуту, до 300 актов в день</text>
-    </svg>
-    <div class="rk"><div class="kpi"><b>300</b><span>актов в день</span></div><div class="kpi"><b>90,3 %</b><span>без исправлений</span></div><div class="kpi"><b>≈ 70 000</b><span>актов в год</span></div><div class="kpi"><b>≈ 21 000 ч</b><span>возвращено в год</span></div></div>
-    <div class="rshot"><img src="uploads/m7.png" alt=""></div>
+  <div class="m7grid">
+    <div class="route r">
+      <svg viewBox="0 0 1512 240" aria-label="Маршрут акта М-7">
+        <path class="rt" d="M110 110 H1402"/><path class="rt go" d="M110 110 H1402"/>
+        <g id="rnodes">
+          <circle class="node lit" cx="110" cy="110" r="14"/><text class="rlab" x="110" y="160" text-anchor="middle">Письмо .msg</text><text class="rsub" x="110" y="182" text-anchor="middle">вложения: акт PDF, таблица</text>
+          <circle class="node" cx="368" cy="110" r="14"/><text class="rlab" x="368" y="160" text-anchor="middle">Разбор</text><text class="rsub" x="368" y="182" text-anchor="middle">OCR + модель · 33 поля</text>
+          <circle class="node" cx="627" cy="110" r="14"/><text class="rlab" x="627" y="160" text-anchor="middle">Подбор по 1С</text><text class="rsub" x="627" y="182" text-anchor="middle">выгрузка ЕСЦУЗ · позиции</text>
+          <circle class="node" cx="885" cy="110" r="14"/><text class="rlab" x="885" y="160" text-anchor="middle">Сверка PDF ↔ Excel</text><text class="rsub" x="885" y="182" text-anchor="middle">спорное подсвечено</text>
+          <circle class="node" cx="1144" cy="110" r="14"/><text class="rlab" x="1144" y="160" text-anchor="middle">Человек подтверждает</text><text class="rsub" x="1144" y="182" text-anchor="middle">90,3 % — без правок</text>
+          <circle class="node" cx="1402" cy="110" r="14"/><text class="rlab" x="1402" y="160" text-anchor="middle">Реестр и письмо</text><text class="rsub" x="1402" y="182" text-anchor="middle">33 столбца · бланк поставщику</text>
+        </g>
+        <text class="rsub" x="40" y="60">вручную: 20 минут на акт, таблицы разных форматов, ошибки находили через неделю</text>
+        <text class="rsub" x="1472" y="60" text-anchor="end">с платформой: 2 минуты, до 15 актов в минуту, до 300 актов в день</text>
+      </svg>
+    </div>
+    <div class="m7steps r">
+      <div class="m7s"><i>01</i><b>Письмо приходит в модуль</b><span>менеджер пересылает .msg или загружает акт и таблицу; очередь переживает перезапуск</span><em>≈ 0 мин</em></div>
+      <div class="m7s"><i>02</i><b>Робот читает акт</b><span>OCR и модель заполняют 33 поля: поставщик, объект, позиции, суммы, даты</span><em>≈ 40 сек</em></div>
+      <div class="m7s"><i>03</i><b>Подбирает позиции по 1С</b><span>выгрузка ЕСЦУЗ: номенклатура, договор, объект; неоднозначное помечает</span><em>≈ 20 сек</em></div>
+      <div class="m7s"><i>04</i><b>Сверяет PDF с Excel</b><span>расхождения между сканом и таблицей показаны списком, а не ищутся глазами</span><em>≈ 10 сек</em></div>
+      <div class="m7s"><i>05</i><b>Специалист подтверждает</b><span>смотрит подсвеченное, правит при необходимости; каждая правка учит модель</span><em>≈ 1 мин</em></div>
+      <div class="m7s"><i>06</i><b>Реестр и письмо поставщику</b><span>строка в реестре из 33 столбцов, письмо на бланке с реквизитами из ФНС</span><em>≈ 0 мин</em></div>
+    </div>
+    <div class="m7side r">
+      <div class="shot" style="transform:none"><span class="tag">акты м‑7 · реестр · в работе</span><img src="uploads/m7.png" alt="Реестр актов М-7" loading="lazy"></div>
+      <div class="rk"><div class="kpi"><b>300</b><span>актов в день</span></div><div class="kpi"><b>90,3 %</b><span>без исправлений</span></div><div class="kpi"><b>≈ 70 000</b><span>актов в год</span></div><div class="kpi"><b>≈ 21 000 ч</b><span>возвращено в год</span></div></div>
+    </div>
   </div>
 </section>
 
@@ -496,7 +526,7 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
 </section>
 
 <!-- 9 -->
-<section class="s" id="about" data-in data-name="Обо мне">
+<section class="s" id="about" data-in data-name="Обо мне" style="min-height:0;padding-bottom:40px">
   <div class="head"><div><div class="mono r" style="margin-bottom:14px">09 · Обо мне</div><h2 class="r">Из закупок — <b>в руководители автоматизации</b></h2></div><a class="btn r" href="resume.pdf">Резюме в PDF</a></div>
   <div class="about2">
     <div class="a-left r"><img class="photo" src="uploads/photo.jpg" alt="Кирилл Паскаль" loading="lazy">
@@ -511,19 +541,20 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
       </ul>
     </div>
     <ol class="path r">
-      <li><span class="y">2015</span><div><b>Питерэнергомаш</b><span>создал тендерный отдел; тендеров на ≈ 1,5 млрд ₽</span></div></li>
-      <li><span class="y">2020</span><div><b>Единая экология</b><span>коммерческий отдел с нуля, контракты ≈ 30 млн ₽</span></div></li>
-      <li><span class="y">2021</span><div><b>Уралпроектинжиниринг</b><span>открыл филиал в Петербурге, проекты и ИКТ; штат 5 + 7</span></div></li>
-      <li><span class="y">2022</span><div><b>ГСП‑Комплектация</b><span>конкурсные процедуры; согласование заявок 3 → 1 минута, ≈ 2 млрд ₽ процедур</span></div></li>
-      <li class="now"><span class="y">2026</span><div><b>Платформа с нуля</b><span>руководитель и владелец продукта: 16 модулей, 650+ сотрудников, ≈ 49 000 часов в год</span></div></li>
+      <li class="now"><span class="y">2023<br><small>сейчас</small></span><div><b>ГСП‑Комплектация · группа Газстройпром</b><em>главный специалист управления конкурсных процедур и информационно‑управляющих систем, владелец ИИ‑платформы</em><span>требования, роадмап, приёмка каждого выпуска, внедрение по управлениям; 16 модулей, 650+ сотрудников, ≈ 59 000 часов в год возвращено специалистам</span></div></li>
+      <li><span class="y">2022</span><div><b>ГСП‑Комплектация</b><em>ведущий специалист конкурсных процедур</em><span>урегулировал закупочные процедуры на ≈ 2 млрд ₽; подключил данные 1С в маршрут согласования заявок: 3 → 1 минута</span></div></li>
+      <li><span class="y">2021</span><div><b>Уралпроектинжиниринг</b><em>ведущий менеджер по проектам и ИКТ, руководитель открытия филиала</em><span>обосновал и открыл филиал в Петербурге: офис, серверная, штат 5 + 7; плагин AVEVA — −30 % времени на операцию</span></div></li>
+      <li><span class="y">2020</span><div><b>Единая экология</b><em>начальник продаж</em><span>сформировал коммерческий отдел с нуля; контрактов на ≈ 30 млн ₽</span></div></li>
+      <li><span class="y">2015</span><div><b>Питерэнергомаш</b><em>тендерный специалист, руководитель тендерного отдела</em><span>создал отдел из трёх человек; тендеров на ≈ 1,5 млрд ₽</span></div></li>
+      <li><span class="y">2017</span><div><b>Политех Петра Великого</b><em>промышленный менеджмент в энергетике</em><span>английский B2</span></div></li>
     </ol>
   </div>
 </section>
 
 <!-- 10 -->
-<section class="s" id="contact" data-in data-name="Контакт" style="min-height:0;grid-template-rows:auto auto;padding-bottom:28px">
+<section class="s" id="contact" data-in data-name="Контакт" style="min-height:0;grid-template-rows:auto auto;padding-top:48px;padding-bottom:28px">
   <div class="contact">
-    <div><div class="mono r" style="margin-bottom:14px">10 · Контакт</div><h2 class="r">Давайте обсудим <b>вашу рутину.</b></h2><p class="lead r" style="text-align:left;margin-top:14px">Расскажу, как платформа устроена изнутри, и покажу её на демо‑данных. Открыт к роли руководителя автоматизации и ИИ.</p><div class="cta r"><a class="btn solid" href="mailto:kirillzakrasovsky@yandex.ru">Написать письмо</a><a class="btn" href="resume.pdf">Резюме в PDF</a></div></div>
+    <div><div class="mono r" style="margin-bottom:14px">10 · Контакт</div><h2 class="r">Готов повторить это <b>в вашей компании.</b></h2><p class="lead r" style="text-align:left;margin-top:14px">Покажу платформу на демо‑данных, разберу вашу рутину и предложу план на первые месяцы. Ищу роль руководителя автоматизации и ИИ.</p><div class="cta r"><a class="btn solid" href="mailto:kirillzakrasovsky@yandex.ru">Написать письмо</a><a class="btn" href="resume.pdf">Резюме в PDF</a></div></div>
     <div class="lines r"><div>Кирилл Паскаль</div><div><a href="tel:+79218598484">+7 (921) 859‑84‑84</a></div><div><a href="mailto:kirillzakrasovsky@yandex.ru">kirillzakrasovsky@yandex.ru</a></div><div><a href="https://github.com/Zakrasava">github.com/Zakrasava</a></div><div>Санкт‑Петербург · английский B2</div></div>
   </div>
   <div class="foot mono"><span>Скриншоты на демо‑данных: имена, организации и суммы вымышленные</span><span>Цифры со знаком ≈ — оценка по объёму потока и времени операций до и после</span></div>
@@ -552,7 +583,7 @@ svg.sch{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
    {k:'letters',t:'Входящие письма',who:'Регистраторы корреспонденции',what:'Карточка письма заполняется из скана; регистратор видит скан и карточку рядом и подтверждает одним нажатием.',was:['Скан на три страницы читали целиком, карточку из двух десятков полей заводили вручную','Строку переносили в реестр Excel, потом в 1С; часть писем терялась'],now:['Письмо попадает в модуль само, система заполняет 14 полей карточки','Регистратор исправляет и подтверждает; каждая правка учит модель','Решение «регистрировать / нет» верно в 99,5 %'],res:'97,7 %',note:'точность полей · ≈ 20 000 писем в год · 12 минут → 1',shot:'letters.png'},
    {k:'m7',t:'Акты М‑7',who:'Комплектация и склад',what:'Акты приёмки материалов разбираются из писем, PDF и таблиц в реестр из 33 столбцов с подбором по выгрузке 1С.',was:['Акты приходили таблицами разного формата; сводили в реестр вручную, позиция за позицией','Ошибки находили через неделю'],now:['Модуль принимает .msg, PDF и XLSX, подбирает позиции по ЕСЦУЗ, сверяет PDF с Excel','По готовым актам сам собирает письмо поставщику на бланке'],res:'300 в день',note:'90,3 % без исправлений · 20 минут → 2 · ≈ 70 000 актов в год',shot:'m7.png'},
    {k:'sverka',t:'Сверка спецификаций',who:'Комплектация, УМТО, УУиР',what:'Каждая позиция спецификации сверяется с 1С: 19 проверок и готовое замечание вместо сверки глазами.',was:['Наименование, количество и цену каждой позиции сверяли с 1С глазами','Расхождения искали построчно, часть пропускали'],now:['19 проверок на документ, расхождения списком, маршрут УМТО → УУиР с историей','До 100 документов в день на специалиста'],res:'19 проверок',note:'≈ 25 000 документов в год · 19 специалистов · 1,5 часа → 20 минут',shot:'sverka.png'},
-   {k:'spec_approval',t:'Согласование спецификаций',who:'Закупщики, руководители, согласующие службы',what:'Версии, замечания, голоса комиссии и предложение ИИ в одной карточке; электронная подпись решения.',was:['Версии гоняли по почте: «см. вложение, версия 7 финальная 2»','Кто согласовал и когда — восстанавливали по письмам'],now:['Одна карточка с версиями, замечания привязаны к позиции','Комиссия голосует, ИИ предлагает, решение подписывает человек'],res:'1 версия',note:'вместо десяти писем · история согласования в системе',shot:'spec_approval.png'},
+   {k:'spec_approval',t:'Согласование спецификаций',who:'Закупщики, руководители, согласующие службы',what:'Версии, замечания, голоса комиссии и предложение ИИ в одной карточке; электронная подпись решения.',was:['Версии гоняли по почте: «см. вложение, версия 7 финальная 2»','Один голос «против» — и все десять согласующих проверяют спецификацию заново','Кто согласовал и когда — восстанавливали по письмам'],now:['Одна карточка с версиями, замечания привязаны к позиции','Комиссия голосует, ИИ предлагает, решение подписывает человек'],res:'≈ 10 000 ч',note:'в год: ≈ 500 спецификаций в месяц, 10 согласующих по 5 минут, и каждый голос «против» раньше запускал круг заново',shot:'spec_approval.png'},
    {k:'spec',t:'Генеральные спецификации',who:'Комплектация и закупки',what:'Зеркальная генеральная спецификация формируется из PDF поставщика, а не перепечатывается.',was:['Данные документов поставщика переносили в форму вручную','Одни и те же позиции набирали из файла в файл'],now:['Загрузил PDF — получил спецификацию для проверки и выгрузки'],res:'из PDF',note:'без повторного набора позиций',shot:'spec.png'},
    {k:'specs',t:'Формирование спецификаций',who:'Комплектация и закупки',what:'Спецификация к договору собирается из исходных таблиц поставщика в нужной форме, с суммой прописью.',was:['Собирали вручную из писем, таблиц и прайсов'],now:['Исходники xls, xlsb, xlsx → документ по шаблону → Excel и PDF'],res:'минуты',note:'вместо часов на спецификацию к договору',shot:'specs.png'},
    {k:'prices',t:'История цен',who:'Закупщики и руководители',what:'Единая база закупленных позиций: поиск по названию, график цены по времени, поставщик, договор.',was:['«Почём брали трубу 57×3,5 в прошлом году?» — поиск по папкам и памяти коллег, час‑два'],now:['Поиск по названию, график, выгрузка выборки в Excel'],res:'секунды',note:'аргумент для переговоров с поставщиком всегда под рукой',shot:'prices.png'},
