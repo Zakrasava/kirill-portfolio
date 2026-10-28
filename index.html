@@ -49,6 +49,7 @@ h2 b{font-weight:600}
 .top .who{display:flex;align-items:center;gap:12px;font:500 15px var(--h);letter-spacing:-.01em}
 .top .who img{width:34px;height:34px;border-radius:50%;object-fit:cover}
 .top .who span{color:var(--mute);font-weight:400}
+.top .who{transition:opacity .35s,transform .35s,visibility 0s}.top.home .who{opacity:0;transform:translateY(-6px);pointer-events:none;visibility:hidden;transition:opacity .35s,transform .35s,visibility 0s .35s}
 .top nav{display:flex;gap:30px}
 .top nav a{font:400 14px var(--m);letter-spacing:.05em;text-transform:uppercase;color:#3C4350;padding:4px 0;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
 .top nav a:hover,.top nav a.cur{color:var(--ink);border-color:var(--glow)}
@@ -278,6 +279,46 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 .feat li b{font-weight:500}.feat li span{color:var(--mute)}
 .mini{display:flex;gap:26px;flex-wrap:wrap;margin-top:18px}
 .mini div b{display:block;font:300 34px/1 var(--h);letter-spacing:-.04em}.mini div span{display:block;margin-top:4px;font:400 11px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.mini div span{max-width:17em;line-height:1.35}
+/* метод обучения: рельс с бегущей точкой + четыре станции */
+.meth{position:relative}
+.rail{display:block;width:100%;height:44px;overflow:visible;transition:opacity .3s}.rail.wait{opacity:0}
+.rl{fill:none;stroke:rgba(18,20,23,.18);stroke-width:2}
+.rl.go{stroke:var(--glow);stroke-opacity:.8;stroke-dasharray:4 12;animation:flow 1.4s linear infinite}
+.rn{fill:#fff;stroke:var(--ink);stroke-width:2;animation:rnlit 8s linear infinite}
+.rn:nth-of-type(2){animation-delay:2s}.rn:nth-of-type(3){animation-delay:4s}.rn:nth-of-type(4){animation-delay:6s}
+@keyframes rnlit{0%,24%{fill:var(--glow);stroke:var(--glow);r:9}25%,100%{fill:#fff;stroke:var(--ink);r:7}}
+.rtok{fill:var(--glow);filter:drop-shadow(0 0 8px rgba(36,86,230,.7))}
+.mst{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:10px}
+.st{position:relative;display:flex;flex-direction:column;gap:8px;padding:18px 18px 16px;border-radius:14px;background:#fff;border:1px solid var(--line);cursor:pointer;animation:stlit 8s linear infinite;transition:border-color .3s,box-shadow .3s,transform .3s}
+.st:nth-child(2){animation-delay:2s}.st:nth-child(3){animation-delay:4s}.st:nth-child(4){animation-delay:6s}
+@keyframes stlit{0%,23%{border-color:var(--glow);box-shadow:0 26px 50px -30px rgba(36,86,230,.55);transform:translateY(-4px)}25%,100%{border-color:var(--line);box-shadow:none;transform:none}}
+.meth.hold .st,.meth.hold .st *,.meth.hold .rn{animation:none!important}
+.meth.hold .st{border-color:var(--line);box-shadow:none;transform:none}
+.meth.hold .st.cur{border-color:var(--glow);box-shadow:0 26px 50px -30px rgba(36,86,230,.55);transform:translateY(-4px)}
+.meth.hold .rn{fill:#fff;stroke:var(--ink);r:7}.meth.hold .rn.cur{fill:var(--glow);stroke:var(--glow);r:9}.meth.hold .rtok{opacity:0}
+.meth.hold .tg .bub,.meth.hold .done span{opacity:1;transform:none}.meth.hold .done .bar i{width:100%}.meth.hold .chips i:first-child{background:var(--ink);color:#fff;border-color:var(--ink)}.meth.hold .tracks i.pick{background:var(--glow);color:#fff;border-color:var(--glow)}
+.meth.reset .st,.meth.reset .st *,.meth.reset .rn{animation:none!important}
+.st .mono{font-size:11px}.st b{font-weight:500;font-size:17px;letter-spacing:-.015em;line-height:1.25}.st p{font-size:13.5px;line-height:1.4;color:var(--mute)}
+.demo{margin-top:auto;padding-top:12px;min-height:118px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px}
+.chips{flex-direction:row;flex-wrap:wrap;align-content:flex-end}
+.chips i,.tracks i{font-style:normal;font:500 12px var(--h);padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink);background:var(--bg)}
+.chips i:first-child{animation:chip 8s linear infinite}
+@keyframes chip{6%,24%{background:var(--ink);color:#fff;border-color:var(--ink)}0%,3%,27%,100%{background:var(--bg);color:var(--ink);border-color:var(--line)}}
+.tg .bub{font-size:12.5px;line-height:1.35;padding:7px 10px;border-radius:12px 12px 12px 4px;background:var(--bg);border:1px solid var(--line);max-width:92%;animation:bub 8s linear infinite;opacity:0;transform:translateY(8px)}
+.tg .bub em{display:block;font:500 10px var(--m);letter-spacing:.06em;text-transform:uppercase;color:var(--glow);font-style:normal;margin-bottom:2px}
+.tg .bub.me{align-self:flex-end;border-radius:12px 12px 4px 12px;background:var(--ink);color:#fff;border-color:var(--ink);animation-name:bub2}
+.tg .bub.ok{border-color:rgba(30,158,99,.5);color:var(--ok);font-weight:500;animation-name:bub3}
+@keyframes bub{0%,27%{opacity:0;transform:translateY(8px)}32%,100%{opacity:1;transform:none}}
+@keyframes bub2{0%,35%{opacity:0;transform:translateY(8px)}40%,100%{opacity:1;transform:none}}
+@keyframes bub3{0%,43%{opacity:0;transform:translateY(8px)}48%,100%{opacity:1;transform:none}}
+.tracks{flex-direction:column;align-items:flex-start}
+.tracks i.pick{animation:pick 8s linear infinite}
+@keyframes pick{0%,56%{background:var(--bg);color:var(--ink);border-color:var(--line)}61%,100%{background:var(--glow);color:#fff;border-color:var(--glow)}}
+.done .bar{height:6px;border-radius:3px;background:rgba(18,20,23,.08);overflow:hidden}.done .bar i{display:block;height:100%;width:0;background:var(--ok);animation:fill 8s linear infinite}
+@keyframes fill{0%,76%{width:0}96%,100%{width:100%}}
+.done span{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;line-height:1.35;color:var(--mute);opacity:0;animation:bub4 8s linear infinite}.done span b{color:var(--ok);font-weight:600}
+@keyframes bub4{0%,92%{opacity:0}97%,100%{opacity:1}}
 
 /* ── 8 контакт ── */
 .contact{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
@@ -294,14 +335,14 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
   .scene{min-height:0;height:auto}.wall{opacity:.3;transform:translate(-10%,-30%) scale(.55) rotateY(-24deg) rotateX(8deg)}
   .ui{position:relative;padding:70px 18px 0;display:block}.bottom{grid-template-columns:1fr;gap:22px}.meter{justify-self:stretch;text-align:left}.meter div b{font-size:36px}
   .tab{min-width:0;width:100%;flex:1 1 100%}.tab em{font-size:22px}.live{white-space:normal;line-height:1.3}.alive-col{max-width:none}.mb,.mdet,.m7grid,.alive-wrap,.about2,.train,.contact{grid-template-columns:1fr}.prods{grid-template-columns:1fr}.m7steps{grid-template-columns:1fr}
-  .safe{grid-template-columns:1fr}
+  .safe{grid-template-columns:1fr}.mst{grid-template-columns:1fr}.rail{display:none}.demo{min-height:0}
   svg.sch{display:none}.how-m{display:grid;gap:10px}
   .how-m div{padding:12px 14px;border-radius:10px;background:#fff;border:1px solid var(--line)}.how-m b{display:block;font-weight:500}.how-m span{font-size:13px;color:var(--mute)}
   .how-m .core{background:var(--ink);color:#fff;border-color:var(--ink)}.how-m .core span{color:rgba(255,255,255,.7)}
   .photo{max-width:240px}.big{font-size:22px}.lines{text-align:left}.foot{flex-direction:column;gap:6px}
   .alive-foot{flex-direction:column;align-items:flex-start}
 }
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .r,.js .m7s,.js .path li{opacity:1;transform:none}html{scroll-behavior:auto}.alive.s0>img{filter:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .r,.js .m7s,.js .path li,.tg .bub,.done span{opacity:1;transform:none}.done .bar i{width:100%}.rtok{display:none}html{scroll-behavior:auto}.alive.s0>img{filter:none}}
 </style>
 </head>
 <body>
@@ -478,7 +519,7 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
         <rect class="box" x="460" y="300" width="228" height="90" rx="14"/><text class="t" x="480" y="334">Права</text><text class="t s" x="480" y="358">по подразделениям · роли</text>
         <rect class="box" x="712" y="300" width="228" height="90" rx="14"/><text class="t" x="732" y="334">Журнал и подпись</text><text class="t s" x="732" y="358">кто · что · когда</text>
         <rect class="pill" x="540" y="430" width="320" height="56" rx="28"/><circle class="dot ok" cx="570" cy="458" r="6"/><text class="t" x="588" y="463">Человек проверяет и подтверждает</text></g>
-      <path class="ln" d="M700 270 L700 300"/><path class="ln" d="M700 390 L700 430"/>
+      <path class="ln" d="M574 270 V300"/><path class="ln go" style="animation-delay:.4s" d="M574 270 V300"/><path class="ln" d="M826 270 V300"/><path class="ln go" style="animation-delay:.7s" d="M826 270 V300"/><path class="ln" d="M574 390 C574 418,700 404,700 430"/><path class="ln go" style="animation-delay:1s" d="M574 390 C574 418,700 404,700 430"/><path class="ln" d="M826 390 C826 418,700 404,700 430"/><path class="ln go" style="animation-delay:1.3s" d="M826 390 C826 418,700 404,700 430"/>
       <path class="ln" d="M980 230 C 1060 230, 1070 79, 1150 79"/><path class="ln go" style="animation-delay:.2s" d="M980 230 C 1060 230, 1070 79, 1150 79"/>
       <path class="ln" d="M980 250 C 1060 250, 1070 199, 1150 199"/><path class="ln go" style="animation-delay:.5s" d="M980 250 C 1060 250, 1070 199, 1150 199"/>
       <path class="ln" d="M980 270 C 1060 270, 1070 319, 1150 319"/><path class="ln go" style="animation-delay:.8s" d="M980 270 C 1060 270, 1070 319, 1150 319"/>
@@ -530,15 +571,15 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 <!-- 7 -->
 <section class="s" id="more" data-in data-name="Продукты">
   <div class="head">
-    <div><div class="mono r" style="margin-bottom:14px">07 · Собственные продукты · все работают</div><h2 class="r">Три продукта, <b>которыми пользуются каждый день</b></h2></div>
+    <div><div class="mono r" style="margin-bottom:14px">07 · Собственные продукты · все в эксплуатации</div><h2 class="r">Три продукта, <b>которыми пользуются каждый день</b></h2></div>
     <p class="lead r">Построены тем же способом, что и платформа: я проектирую и разрабатываю с ИИ‑агентами, тесты, проверка второй моделью, выпуск с инструкцией.</p>
   </div>
   <div>
     <div class="pane cur" id="pane0">
       <div class="prods">
         <article class="prod r"><div class="pic"><img src="uploads/taskmanager.png" alt=""></div><div class="tx"><h3>Ритм Дела<span>в эксплуатации</span></h3><p class="one">Таск‑менеджер для руководства компании, который работает даже когда внешние сервисы закрыты.</p><p>Платформа внесена в реестр Минцифры: во время «белых списков» доступ к ней сохраняется. Таск‑менеджер развёрнут на её домене: задачи с исполнителем, сроком и проверяющим, четыре роли, закрытый чат; веб, телефон, Telegram.</p><div class="nums"><div><b>4</b><span>роли</span></div><div><b>24/7</b><span>при белых списках</span></div><div><b>566</b><span>автотестов</span></div></div></div></article>
-        <article class="prod r"><div class="pic"><img src="uploads/omnerio.png" alt=""></div><div class="tx"><h3>Omnerio<span>работает</span></h3><p class="one">ИИ‑собеседник в Telegram, который по‑настоящему помнит человека.</p><p>Развитое древо памяти: семья, работа, события, привычки связаны между собой, и собеседник сам возвращается к ним в разговоре. Голос, напоминания из живой речи, кабинет, где видно, что он помнит. Не выдумывает факты.</p><div class="nums"><div><b>5</b><span>тестировщиц</span></div><div><b>1 087</b><span>автотестов</span></div></div></div></article>
-        <article class="prod r"><div class="pic achain"><ol class="ach"><li><i>1</i><div><b>Менеджер присылает ссылку или скриншот объявления</b><span>площадки Германии, Китая, Кореи</span></div></li><li><i>2</i><div><b>Робот разбирает объявление</b><span>фото, характеристики, пробег</span></div></li><li><i>3</i><div><b>Считает цену «под ключ»</b><span>таможня, утильсбор, доставка</span></div></li><li><i>4</i><div><b>Карточка на согласование в чат</b><span>«в план» · «переснять» · «отклонить»</span></div></li><li><i>5</i><div><b>Публикация в канал по слотам</b><span>тексты с проверкой фактов</span></div></li></ol></div><div class="tx"><h3>Autobahn<span>работает</span></h3><p class="one">Конвейер офферов для компании, которая привозит автомобили из‑за рубежа.</p><p>От объявления на площадке до поста в канале без ручной работы; человек только подтверждает карточку.</p><div class="nums"><div><b>30</b><span>офферов</span></div><div><b>3</b><span>площадки</span></div></div></div></article>
+        <article class="prod r"><div class="pic"><img src="uploads/omnerio.png" alt=""></div><div class="tx"><h3>Omnerio<span>в эксплуатации</span></h3><p class="one">ИИ‑собеседник в Telegram, который по‑настоящему помнит человека.</p><p>Развитое древо памяти: семья, работа, события, привычки связаны между собой, и собеседник сам возвращается к ним в разговоре. Голос, напоминания из живой речи, кабинет, где видно, что он помнит. Не выдумывает факты.</p><div class="nums"><div><b>5</b><span>тестировщиц</span></div><div><b>1 087</b><span>автотестов</span></div></div></div></article>
+        <article class="prod r"><div class="pic achain"><ol class="ach"><li><i>1</i><div><b>Менеджер присылает ссылку или скриншот объявления</b><span>площадки Германии, Китая, Кореи</span></div></li><li><i>2</i><div><b>Робот разбирает объявление</b><span>фото, характеристики, пробег</span></div></li><li><i>3</i><div><b>Считает цену «под ключ»</b><span>таможня, утильсбор, доставка</span></div></li><li><i>4</i><div><b>Карточка на согласование в чат</b><span>«в план» · «переснять» · «отклонить»</span></div></li><li><i>5</i><div><b>Публикация в канал по слотам</b><span>тексты с проверкой фактов</span></div></li></ol></div><div class="tx"><h3>Autobahn<span>в эксплуатации</span></h3><p class="one">Конвейер офферов для компании, которая привозит автомобили из‑за рубежа.</p><p>От объявления на площадке до поста в канале без ручной работы; человек только подтверждает карточку.</p><div class="nums"><div><b>30</b><span>офферов</span></div><div><b>3</b><span>площадки</span></div></div></div></article>
       </div>
     </div>
     </div>
@@ -548,19 +589,30 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 <section class="s" id="training" data-in data-name="Обучение">
   <div class="head">
     <div><div class="mono r" style="margin-bottom:14px">08 · Корпоративное обучение работе с ИИ</div><h2 class="r">Учу сотрудников <b>ставить задачи ИИ и запускать помощников</b></h2></div>
-    <span class="live r">программа идёт · 3 встречи · 20 сотрудников</span>
+    <p class="lead r">Не лекции про ИИ, а работа каждого со своей задачей. Группы до 20 человек, три встречи по 90 минут. К концу у сотрудника свой помощник, который делает его рутину.</p>
   </div>
   <div>
-    <div class="pane cur" id="pane1">
-      <div class="train">
-        <div>
-          <p class="r" style="font-size:17px;line-height:1.5;max-width:36em">Программа для группы компаний: рестораны, земля и девелопмент, направление в Дубае. Три встречи по 90 минут, около 20 сотрудников. Каждый работает со своей задачей, а бот «Помощник ТЗ» превращает её в пакет для запуска: описание задачи, правила, инструкцию и образец результата.</p>
-          <ul class="feat r"><li><b>Встреча 1</b><span>как разговаривать с ИИ: задача, проверка результата, проекты как папки с правилами</span></li><li><b>Встреча 2</b><span>своё техзадание и доступы: проект, скрипт или агент; живое демо агента на задаче участника</span></li><li><b>Встреча 3</b><span>агенты на повторяемых задачах: папка и права, реестр из 40 файлов, приложение за 15 минут</span></li></ul>
-          <div class="mini r"><div><b>20</b><span>сотрудников</span></div><div><b>3</b><span>встречи по 90 минут</span></div><div><b>6</b><span>уже получили свой пакет</span></div></div>
-        </div>
-        <div class="r"><div class="shot"><span class="tag">встреча 2 · колода · открыта в сети</span><img src="uploads/training-title.png" alt="Колода второй встречи" loading="lazy"></div></div>
-      </div>
+    <div class="meth r" id="meth">
+      <svg class="rail" id="rail" viewBox="0 0 1512 44" aria-hidden="true">
+        <path class="rl" d="M182 22 H1330"/>
+        <path class="rl go" d="M182 22 H1330"/>
+        <circle class="rn" cx="182" cy="22" r="7"/><circle class="rn" cx="565" cy="22" r="7"/><circle class="rn" cx="947" cy="22" r="7"/><circle class="rn" cx="1330" cy="22" r="7"/>
+        <circle class="rtok" r="9"><animateMotion dur="8s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.75;1" calcMode="linear"><mpath href="#railpath"/></animateMotion></circle>
+        <path id="railpath" d="M182 22 H1330" fill="none" stroke="none"/>
+      </svg>
+      <ol class="mst" id="mst" role="group" aria-label="Метод обучения: четыре шага">
+        <li class="st" data-s="0"><span class="mono">1 · до встречи</span><b>Задача участника</b><p>Каждый приходит со своей рутиной, а не с учебным примером.</p>
+          <div class="demo chips"><i>КП поставщику</i><i>сводка рейсов</i><i>справка по объекту</i><i>ответ арендатору</i></div></li>
+        <li class="st" data-s="1"><span class="mono">2 · в Telegram</span><b>Бот «Помощник ТЗ» берёт интервью</b><p>Восемь шагов: источники, образец результата, когда и куда. На выходе пакет для запуска.</p>
+          <div class="demo tg"><div class="bub"><em>Шаг 3 из 8 · Источники</em>Откуда берутся данные? Пришлите образец файла</div><div class="bub me">таблица рейсов из 1С, каждый понедельник</div><div class="bub ok">Пакет готов: ТЗ · правила · инструкция · образец результата</div></div></li>
+        <li class="st" data-s="2"><span class="mono">3 · на встрече</span><b>Участник сам собирает помощника</b><p>Выбирает способ по задаче и запускает при мне, на своих данных.</p>
+          <div class="demo tracks"><i>проект в ChatGPT или Claude</i><i class="pick">агент на компьютере</i><i>скрипт или бот</i></div></li>
+        <li class="st" data-s="3"><span class="mono">4 · после</span><b>Помощник работает в его задачах</b><p>Вопросы и результаты в общем чате группы; следующая задача — новое ТЗ тем же ботом.</p>
+          <div class="demo done"><div class="bar"><i></i></div><span><b>✓</b>сводка рейсов за понедельник готова · 2 минуты вместо часа</span></div></li>
+      </ol>
+      <div class="alive-foot"><div class="alive-cap mono" id="methcap" aria-live="polite">нажми на шаг — схема остановится на нём</div></div>
     </div>
+    <div class="mini r" style="margin-top:22px"><div><b>650+</b><span>сотрудников освоили платформу по моим инструкциям и выпускам</span></div><div><b>20</b><span>руководителей и специалистов в текущей программе</span></div><div><b>3</b><span>направления бизнеса: рестораны, девелопмент, Дубай</span></div><div><b>3 × 90</b><span>минут — вся программа</span></div></div>
   </div>
 </section>
 
@@ -577,6 +629,7 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
 (function(){
   if(!('IntersectionObserver' in window)){document.documentElement.className='no-js';return}
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,narrow=matchMedia('(max-width:1000px)').matches,noHover=matchMedia('(hover: none)').matches;
+  var top=document.querySelector('.top');function topState(){top.classList.toggle('home',scrollY<innerHeight*.55)}topState();addEventListener('scroll',topState,{passive:true});
   function keyable(el){el.setAttribute('tabindex','0');if(el.tagName!=='BUTTON')el.setAttribute('role','button');el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click()}})}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.15});
   var secs=[].slice.call(document.querySelectorAll('[data-in]'));secs.forEach(function(s){io.observe(s)});
@@ -630,6 +683,16 @@ svg.sch{width:100%;max-width:100%;max-height:calc(100vh - 420px);height:auto;dis
   function m7show(n,manual){nodes.forEach(function(x,i){x.classList.toggle('lit',i<=n)});m7cards.forEach(function(c,i){c.classList.toggle('cur',manual&&i===n)});m7tag.textContent=manual?('шаг '+(n+1)+' · '+rlabs[n].textContent.toLowerCase()):'акты приёмки · реестр · в работе'}
   m7cards.forEach(function(c,i){keyable(c);c.addEventListener('click',function(){ni=i;hold=Date.now()+8000;m7show(i,true)})});
   if(!reduce)setInterval(function(){if(Date.now()<hold)return;ni=(ni+1)%nodes.length;m7show(ni,false)},900);
+  var meth=document.getElementById('meth'),mrail=meth.querySelector('.rail'),msts=[].slice.call(meth.querySelectorAll('.st')),mcap=document.getElementById('methcap'),mtimer=0,
+  mnames=['задача участника','интервью в Telegram','сборка помощника на встрече','помощник в работе'];
+  function railLayout(){if(!mrail.clientWidth||narrow)return;var w=meth.clientWidth,r0=meth.getBoundingClientRect(),cs=msts.map(function(c){var r=c.getBoundingClientRect();return Math.round(r.left-r0.left+r.width/2)});
+    mrail.setAttribute('viewBox','0 0 '+w+' 44');var d='M'+cs[0]+' 22 H'+cs[3];[].forEach.call(mrail.querySelectorAll('.rl, #railpath'),function(p){p.setAttribute('d',d)});[].forEach.call(mrail.querySelectorAll('.rn'),function(c,i){c.setAttribute('cx',cs[i])})}
+  function methSync(){meth.classList.add('reset');void meth.offsetWidth;meth.classList.remove('reset');requestAnimationFrame(function(){try{mrail.setCurrentTime(0);mrail.unpauseAnimations()}catch(e){}})}
+  function methRelease(){meth.classList.remove('hold');msts.forEach(function(x){x.classList.remove('cur')});[].forEach.call(meth.querySelectorAll('.rn'),function(x){x.classList.remove('cur')});mcap.textContent='нажми на шаг — схема остановится на нём';methSync()}
+  railLayout();addEventListener('resize',railLayout);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(railLayout);
+  document.addEventListener('visibilitychange',function(){if(!document.hidden&&!meth.classList.contains('hold'))methSync()});
+  msts.forEach(function(c,i){keyable(c);c.addEventListener('click',function(){clearTimeout(mtimer);meth.classList.add('hold');msts.forEach(function(x,j){x.classList.toggle('cur',j===i)});[].forEach.call(meth.querySelectorAll('.rn'),function(x,j){x.classList.toggle('cur',j===i)});mcap.textContent='шаг '+(i+1)+' · '+mnames[i];try{mrail.pauseAnimations()}catch(e){}
+    mtimer=setTimeout(methRelease,9000)})});
   // как построено: цепочка доходит до выбранного шага
   var acts=[].slice.call(document.querySelectorAll('#acts .act')),cns=[].slice.call(document.querySelectorAll('#cn .cn')),cglow=document.getElementById('cglow'),ctrack=document.getElementById('ctrack');
   var clen=ctrack.getTotalLength();cglow.style.strokeDasharray=clen;cglow.style.strokeDashoffset=clen;
